@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Инженер в IT</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root{
+    --bg: #10141c;
+    --surface: #171c26;
+    --surface-2: #1e2431;
+    --ink: #eef1f6;
+    --muted: #93a0b4;
+    --accent: #d98a52;
+    --accent-ink: #1a1006;
+    --accent-2: #7fa9c9;
+    --line: rgba(238,241,246,0.12);
+    --grid: rgba(127,169,201,0.16);
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="light"]){
+      --bg: #f3efe6;
+      --surface: #ffffff;
+      --surface-2: #ece5d6;
+      --ink: #1c1a15;
+      --muted: #6b6355;
+      --accent: #b95f24;
+      --accent-ink: #fff7ef;
+      --accent-2: #3f6a86;
+      --line: rgba(28,26,21,0.12);
+      --grid: rgba(63,106,134,0.14);
+    }
+  }
+  :root[data-theme="light"]{
+    --bg: #f3efe6;
+    --surface: #ffffff;
+    --surface-2: #ece5d6;
+    --ink: #1c1a15;
+    --muted: #6b6355;
+    --accent: #b95f24;
+    --accent-ink: #fff7ef;
+    --accent-2: #3f6a86;
+    --line: rgba(28,26,21,0.12);
+    --grid: rgba(63,106,134,0.14);
+  }
+  :root[data-theme="dark"]{
+    --bg: #10141c;
+    --surface: #171c26;
+    --surface-2: #1e2431;
+    --ink: #eef1f6;
+    --muted: #93a0b4;
+    --accent: #d98a52;
+    --accent-ink: #1a1006;
+    --accent-2: #7fa9c9;
+    --line: rgba(238,241,246,0.12);
+    --grid: rgba(127,169,201,0.16);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:960px;
+    margin-inline:auto;
+    padding-inline:24px;
+  }
+  h1,h2,h3{
+    font-family:"Fraunces", Georgia, serif;
+    text-wrap:balance;
+    margin:0;
+    font-weight:600;
+  }
+  .mono{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-variant-numeric:tabular-nums;
+  }
+  a{color:inherit;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding-block:96px 72px;
+    border-bottom:1px solid var(--line);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size:40px 40px;
+    background-position:center top;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(ellipse 60% 50% at 50% 0%, transparent 0%, var(--bg) 78%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; z-index:1;}
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--accent-2);
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:18px; height:1px;
+    background:var(--accent-2);
+    display:inline-block;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 6vw, 4.2rem);
+    line-height:1.02;
+    letter-spacing:-0.01em;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--accent);
+  }
+  .hero-tagline{
+    margin-top:22px;
+    max-width:52ch;
+    font-size:1.05rem;
+    color:var(--muted);
+  }
+  .hero-cta{
+    margin-top:36px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .btn{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:13px;
+    letter-spacing:.03em;
+    padding:13px 22px;
+    border-radius:3px;
+    border:1px solid var(--line);
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:transform .15s ease, border-color .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{
+    background:var(--accent);
+    color:var(--accent-ink);
+    border-color:var(--accent);
+    font-weight:500;
+  }
+  .btn-ghost{
+    color:var(--ink);
+  }
+  .btn-ghost:hover{border-color:var(--accent-2);}
+
+  .hero-meta{
+    margin-top:56px;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    border-top:1px solid var(--line);
+    padding-top:22px;
+  }
+  .hero-meta div{font-family:"IBM Plex Mono", monospace; font-size:12px; color:var(--muted);}
+  .hero-meta strong{display:block; color:var(--ink); font-size:14px; font-weight:500; margin-bottom:4px;}
+
+  /* ---------- SECTION SCAFFOLDING ---------- */
+  section{padding-block:64px;}
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    margin-bottom:40px;
+    flex-wrap:wrap;
+  }
+  .section-num{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:.08em;
+  }
+  .section-head h2{font-size:clamp(1.5rem, 3vw, 2.1rem);}
+
+  /* ---------- PILLARS ---------- */
+  .pillars{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:4px;
+    overflow:hidden;
+  }
+  @media (max-width:920px){ .pillars{grid-template-columns:repeat(2, 1fr);} }
+  @media (max-width:520px){ .pillars{grid-template-columns:1fr;} }
+  .pillar{
+    background:var(--surface);
+    padding:32px 26px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .pillar-icon{
+    width:44px; height:44px;
+    color:var(--accent-2);
+  }
+  .pillar-icon svg{width:100%; height:100%; display:block;}
+  .pillar h3{font-size:1.18rem;}
+  .pillar p{color:var(--muted); font-size:.94rem; margin:0; flex:1;}
+  .pillar-link{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    color:var(--accent);
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+  }
+  .pillar-link svg{width:12px; height:12px;}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:48px;
+    align-items:start;
+  }
+  @media (max-width:760px){ .about-grid{grid-template-columns:1fr;} }
+  .about-grid p{color:var(--muted); margin:0 0 16px;}
+  .about-grid p:last-child{margin-bottom:0;}
+  .pull{
+    font-family:"Fraunces", serif;
+    font-size:1.3rem;
+    font-weight:500;
+    color:var(--ink);
+    line-height:1.4;
+    margin-bottom:16px;
+  }
+  .timeline{
+    border-left:1px solid var(--line);
+    padding-left:22px;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+  }
+  .timeline-item .mono{font-size:11.5px; color:var(--accent-2); display:block; margin-bottom:4px;}
+  .timeline-item strong{font-size:.97rem; display:block; margin-bottom:2px;}
+  .timeline-item span{font-size:.87rem; color:var(--muted);}
+
+  /* ---------- SKILLS ---------- */
+  .skill-groups{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+  }
+  @media (max-width:760px){ .skill-groups{grid-template-columns:1fr;} }
+  .skill-group h4{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:0 0 14px;
+  }
+  .tag-row{display:flex; flex-wrap:wrap; gap:8px;}
+  .tag{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12px;
+    padding:6px 11px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    color:var(--ink);
+  }
+
+  /* ---------- WORK ---------- */
+  .work-list{display:flex; flex-direction:column;}
+  .work-item{
+    display:grid;
+    grid-template-columns:110px 1fr auto;
+    gap:24px;
+    align-items:center;
+    padding-block:22px;
+    border-top:1px solid var(--line);
+  }
+  .work-list .work-item:last-child{border-bottom:1px solid var(--line);}
+  @media (max-width:640px){
+    .work-item{grid-template-columns:1fr; gap:8px;}
+    .work-item .work-arrow{display:none;}
+  }
+  .work-item .mono{color:var(--muted); font-size:12px;}
+  .work-title{font-family:"Fraunces", serif; font-size:1.15rem; font-weight:500;}
+  .work-desc{color:var(--muted); font-size:.9rem; margin-top:4px;}
+  .work-arrow{color:var(--accent); font-size:20px;}
+
+  /* ---------- CONTACT ---------- */
+  .contact-box{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:44px 36px;
+    text-align:left;
+    background-image:linear-gradient(135deg, var(--surface) 60%, var(--surface-2) 100%);
+  }
+  .contact-box h2{font-size:clamp(1.6rem,4vw,2.3rem); max-width:16ch;}
+  .contact-box p{color:var(--muted); max-width:44ch; margin:14px 0 28px;}
+  .contact-links{display:flex; flex-wrap:wrap; gap:14px;}
+
+  footer{
+    padding-block:28px;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11.5px;
+    color:var(--muted);
+  }
+
+  ::selection{background:var(--accent); color:var(--accent-ink);}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap hero-inner">
+    <div class="eyebrow">Минск, Беларусь · открыт(а) к проектам и стажировкам</div>
+    <h1>Имя Фамилия —<br>пишу <em>код</em>, который <em>работает</em>.</h1>
+    <p class="hero-tagline">
+      Занимаюсь программированием: веб-разработка и создание приложений — от идеи и логики
+      до готового интерфейса. Люблю разбираться, как всё устроено внутри, и доводить решение
+      до рабочего состояния.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#work">Смотреть проекты</a>
+      <a class="btn btn-ghost" href="#contact">Связаться</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>4</strong>направления работы</div>
+      <div><strong>6+</strong>языков программирования в работе</div>
+      <div><strong>RU / EN</strong>языки коммуникации</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section id="directions">
+    <div class="section-head">
+      <div>
+        <div class="section-num mono">01 — Направления</div>
+        <h2>Три опоры того, чем я занимаюсь</h2>
+      </div>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="4" y="8" width="36" height="28" rx="2"/>
+            <path d="M4 15h36"/>
+            <circle cx="9" cy="11.5" r="1"/>
+            <circle cx="13" cy="11.5" r="1"/>
+            <path d="M11 22h10M11 27h16"/>
+          </svg>
+        </div>
+        <h3>Веб-разработка</h3>
+        <p>Сайты, лендинги и веб-приложения от макета до деплоя: HTML, CSS, JavaScript, работа с бэкендом и базами данных. Чистая вёрстка и поддерживаемый код.</p>
+        <a class="pillar-link" href="#work">подробнее
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 6h8M7 2l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="10" y="4" width="24" height="36" rx="4"/>
+            <path d="M10 32h24"/>
+            <circle cx="22" cy="36" r="1.4" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <h3>Разработка приложений</h3>
+        <p>Мобильные и десктопные приложения: от прототипа логики до рабочей версии, с упором на понятный интерфейс и стабильную работу.</p>
+        <a class="pillar-link" href="#work">подробнее
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 6h8M7 2l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M14 12L4 22l10 10"/>
+            <path d="M30 12l10 10-10 10"/>
+            <path d="M26 8l-8 28"/>
+          </svg>
+        </div>
+        <h3>Программирование</h3>
+        <p>Логика, алгоритмы и работа с разными языками и инструментами — под задачу подбираю подходящий стек, а не подгоняю задачу под один язык.</p>
+        <a class="pillar-link" href="#work">подробнее
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 6h8M7 2l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="22" cy="22" r="7"/>
+            <path d="M22 4v6M22 34v6M4 22h6M34 22h6M9.5 9.5l4.2 4.2M30.3 30.3l4.2 4.2M9.5 34.5l4.2-4.2M30.3 13.7l4.2-4.2"/>
+          </svg>
+        </div>
+        <h3>Автоматизация</h3>
+        <p>Превращаю рутину в скрипт: беру повторяющуюся ручную работу и делаю так, чтобы она выполнялась сама — быстрее человека и без ошибок по усталости. Меньше рутины — больше времени на важное.</p>
+        <a class="pillar-link" href="#work">подробнее
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 6h8M7 2l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-head">
+      <div>
+        <div class="section-num mono">02 — О себе</div>
+        <h2>Пишу код и разбираюсь, как всё устроено</h2>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p class="pull">«Мне интересно не просто писать код, а понимать, почему он работает именно так — и как сделать это лучше.»</p>
+        <p>Занимаюсь программированием: веб-разработкой и созданием приложений — от логики и структуры данных до готового интерфейса, с которым удобно работать.</p>
+        <p>Постоянно пробую новые языки и инструменты, чтобы под каждую задачу подбирать подходящее решение, а не одно универсальное. Ищу проекты, где можно применить это на практике.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="mono">этап 1</span>
+          <strong>Основы</strong>
+          <span>HTML, CSS, JavaScript, логика и алгоритмы</span>
+        </div>
+        <div class="timeline-item">
+          <span class="mono">этап 2</span>
+          <strong>Практика</strong>
+          <span>Pet-проекты: сайты, приложения, автоматизация</span>
+        </div>
+        <div class="timeline-item">
+          <span class="mono">сейчас</span>
+          <strong>В поиске</strong>
+          <span>Проекты, заказы и стажировки в разработке</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-head">
+      <div>
+        <div class="section-num mono">03 — Навыки</div>
+        <h2>Языки и инструменты, с которыми работаю</h2>
+      </div>
+    </div>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h4>Веб</h4>
+        <div class="tag-row">
+          <span class="tag">HTML / CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Приложения и логика</h4>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">Java</span>
+          <span class="tag">Kotlin</span>
+          <span class="tag">C++</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Инструменты</h4>
+        <div class="tag-row">
+          <span class="tag">Git</span>
+          <span class="tag">VS Code</span>
+          <span class="tag">Figma</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="section-head">
+      <div>
+        <div class="section-num mono">04 — Проекты</div>
+        <h2>Что я делал(а)</h2>
+      </div>
+    </div>
+    <div class="work-list">
+      <div class="work-item">
+        <span class="mono">2025</span>
+        <div>
+          <div class="work-title">Название проекта 1</div>
+          <div class="work-desc">Краткое описание: что за проект, какая задача решалась, какой результат.</div>
+        </div>
+        <span class="work-arrow">↗</span>
+      </div>
+      <div class="work-item">
+        <span class="mono">2025</span>
+        <div>
+          <div class="work-title">Название проекта 2</div>
+          <div class="work-desc">Краткое описание: что за проект, какая задача решалась, какой результат.</div>
+        </div>
+        <span class="work-arrow">↗</span>
+      </div>
+      <div class="work-item">
+        <span class="mono">2024</span>
+        <div>
+          <div class="work-title">Название проекта 3</div>
+          <div class="work-desc">Краткое описание: что за проект, какая задача решалась, какой результат.</div>
+        </div>
+        <span class="work-arrow">↗</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-box">
+      <h2>Обсудим проект или стажировку?</h2>
+      <p>Открыт(а) к фрилансу, стажировкам и учебным проектам. Отвечаю быстро — пишите в любой удобный канал.</p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:gerasi833@gmail.com">Написать письмо</a>
+        <a class="btn btn-ghost" href="https://t.me/Egorchi9">Telegram</a>
+        <a class="btn btn-ghost" href="#">Резюме (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="wrap">
+  <span>© Имя Фамилия, Минск</span>
+  <span>Сделано вручную — placeholder-контент, замени на свой</span>
+</footer>
+
+</body>
+</html>
