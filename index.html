@@ -9,66 +9,74 @@
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
   :root{
-    --bg: #10141c;
-    --surface: #171c26;
-    --surface-2: #1e2431;
-    --ink: #eef1f6;
-    --muted: #93a0b4;
-    --accent: #d98a52;
-    --accent-ink: #1a1006;
-    --accent-2: #7fa9c9;
-    --line: rgba(238,241,246,0.12);
-    --grid: rgba(127,169,201,0.16);
-    --grid-soft: rgba(127,169,201,0.05);
-    --blob-1: rgba(217,138,82,0.16);
-    --blob-2: rgba(127,169,201,0.14);
+    --bg: #1c1712;
+    --surface: #241d17;
+    --surface-2: #2e2419;
+    --ink: #f5ede1;
+    --muted: #a89686;
+    --accent: #e08a5b;
+    --accent-ink: #201007;
+    --accent-2: #c9a877;
+    --line: rgba(245,237,225,0.12);
+    --grid: rgba(224,138,91,0.14);
+    --grid-soft: rgba(224,138,91,0.05);
+    --blob-1: rgba(224,138,91,0.16);
+    --blob-2: rgba(201,168,119,0.14);
+    --surface-glass: rgba(36,29,23,0.62);
+    --glow: rgba(224,138,91,0.35);
   }
   @media (prefers-color-scheme: light){
     :root:not([data-theme="light"]){
-      --bg: #f3efe6;
-      --surface: #ffffff;
-      --surface-2: #ece5d6;
-      --ink: #1c1a15;
-      --muted: #6b6355;
-      --accent: #b95f24;
-      --accent-ink: #fff7ef;
-      --accent-2: #3f6a86;
-      --line: rgba(28,26,21,0.12);
-      --grid: rgba(63,106,134,0.14);
-      --grid-soft: rgba(63,106,134,0.06);
-      --blob-1: rgba(185,95,36,0.10);
-      --blob-2: rgba(63,106,134,0.10);
+      --bg: #faf5ec;
+      --surface: #fffdf9;
+      --surface-2: #f1e6d6;
+      --ink: #2b241d;
+      --muted: #8a7a68;
+      --accent: #c1633c;
+      --accent-ink: #fff8f2;
+      --accent-2: #9c7b53;
+      --line: rgba(43,36,29,0.12);
+      --grid: rgba(156,123,83,0.14);
+      --grid-soft: rgba(156,123,83,0.06);
+      --blob-1: rgba(193,99,60,0.12);
+      --blob-2: rgba(156,123,83,0.12);
+      --surface-glass: rgba(255,253,249,0.62);
+      --glow: rgba(193,99,60,0.28);
     }
   }
   :root[data-theme="light"]{
-    --bg: #f3efe6;
-    --surface: #ffffff;
-    --surface-2: #ece5d6;
-    --ink: #1c1a15;
-    --muted: #6b6355;
-    --accent: #b95f24;
-    --accent-ink: #fff7ef;
-    --accent-2: #3f6a86;
-    --line: rgba(28,26,21,0.12);
-    --grid: rgba(63,106,134,0.14);
-    --grid-soft: rgba(63,106,134,0.06);
-    --blob-1: rgba(185,95,36,0.10);
-    --blob-2: rgba(63,106,134,0.10);
+    --bg: #faf5ec;
+    --surface: #fffdf9;
+    --surface-2: #f1e6d6;
+    --ink: #2b241d;
+    --muted: #8a7a68;
+    --accent: #c1633c;
+    --accent-ink: #fff8f2;
+    --accent-2: #9c7b53;
+    --line: rgba(43,36,29,0.12);
+    --grid: rgba(156,123,83,0.14);
+    --grid-soft: rgba(156,123,83,0.06);
+    --blob-1: rgba(193,99,60,0.12);
+    --blob-2: rgba(156,123,83,0.12);
+    --surface-glass: rgba(255,253,249,0.62);
+    --glow: rgba(193,99,60,0.28);
   }
   :root[data-theme="dark"]{
-    --bg: #10141c;
-    --surface: #171c26;
-    --surface-2: #1e2431;
-    --ink: #eef1f6;
-    --muted: #93a0b4;
-    --accent: #d98a52;
-    --accent-ink: #1a1006;
-    --accent-2: #7fa9c9;
-    --line: rgba(238,241,246,0.12);
-    --grid: rgba(127,169,201,0.16);
-    --grid-soft: rgba(127,169,201,0.05);
-    --blob-1: rgba(217,138,82,0.16);
-    --blob-2: rgba(127,169,201,0.14);
+    --bg: #1c1712;
+    --surface: #241d17;
+    --surface-2: #2e2419;
+    --ink: #f5ede1;
+    --muted: #a89686;
+    --accent: #e08a5b;
+    --accent-ink: #201007;
+    --accent-2: #c9a877;
+    --line: rgba(245,237,225,0.12);
+    --grid: rgba(224,138,91,0.14);
+    --grid-soft: rgba(224,138,91,0.05);
+    --blob-1: rgba(224,138,91,0.16);
+    --blob-2: rgba(201,168,119,0.14);
+    --surface-glass: rgba(36,29,23,0.62);
+    --glow: rgba(224,138,91,0.35);
   }
 
   *{box-sizing:border-box;}
@@ -77,10 +85,8 @@
   section[id]{scroll-margin-top:86px;}
   body{
     background:var(--bg);
-    background-image:
-      linear-gradient(var(--grid-soft) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid-soft) 1px, transparent 1px);
-    background-size:44px 44px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    background-repeat:repeat;
     color:var(--ink);
     font-family:"IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
     padding-inline:0;
@@ -148,17 +154,13 @@
     --my:20%;
     position:relative;
     padding-block:96px 72px;
-    background-image:
-      linear-gradient(var(--grid) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-    background-size:40px 40px;
-    background-position:center top;
+    background-image:radial-gradient(ellipse 900px 420px at 50% 0%, var(--grid-soft), transparent 70%);
     overflow:hidden;
   }
   .hero::before{
     content:"";
     position:absolute; inset:0;
-    background:radial-gradient(480px circle at var(--mx) var(--my), rgba(217,138,82,.10), transparent 60%);
+    background:radial-gradient(480px circle at var(--mx) var(--my), rgba(224,138,91,.10), transparent 60%);
     pointer-events:none;
     transition:background .25s ease;
   }
@@ -169,22 +171,67 @@
     pointer-events:none;
   }
   .hero-inner{position:relative; z-index:1;}
-  .eyebrow{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:12.5px;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    color:var(--accent-2);
-    margin-bottom:22px;
+
+  /* ---------- HERO DECORATIVE LAYERS (parallax + particles + 3D) ---------- */
+  .hero-shape{
+    position:absolute;
+    top:-60px; right:-80px;
+    width:460px; height:460px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background:radial-gradient(circle at 35% 30%, var(--blob-1), transparent 60%);
+    filter:blur(2px);
+    pointer-events:none;
+    will-change:transform;
   }
-  .eyebrow::before{
-    content:"";
-    width:18px; height:1px;
-    background:var(--accent-2);
-    display:inline-block;
+  @media (max-width:900px){ .hero-shape{width:300px; height:300px; top:-40px; right:-90px;} }
+  .hero-particles{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    pointer-events:none;
+    display:block;
+  }
+  .hero-scrim{
+    position:absolute;
+    top:-10%; left:-6%;
+    width:min(680px, 78vw);
+    height:120%;
+    background:radial-gradient(ellipse 60% 55% at 30% 40%, var(--bg) 0%, transparent 72%);
+    opacity:.78;
+    pointer-events:none;
+  }
+  .hero-3d{
+    position:absolute;
+    top:64px;
+    right:clamp(16px, 6vw, 72px);
+    width:min(300px, 30vw);
+    height:min(300px, 30vw);
+    z-index:2;
+    cursor:grab;
+    touch-action:none;
+  }
+  .hero-3d:active{cursor:grabbing;}
+  .hero-3d canvas{display:block; width:100%; height:100%;}
+  .hero-3d-fallback{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    opacity:.7;
+  }
+  .hero-3d-fallback svg{width:78%; height:78%;}
+  .hero-3d.is-ready .hero-3d-fallback{display:none;}
+  @media (max-width:900px){
+    .hero-3d{width:150px; height:150px; top:20px; right:16px; opacity:.85;}
+  }
+  @media (max-width:640px){
+    .hero-3d{display:none;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero-shape{will-change:auto;}
+  }
+  .eyebrow{
+    font-size:.95rem;
+    color:var(--muted);
+    margin-bottom:18px;
   }
   .hero h1{
     font-size:clamp(2.4rem, 6vw, 4.2rem);
@@ -193,7 +240,20 @@
   }
   .hero h1 em{
     font-style:italic;
-    color:var(--accent);
+    background-image:linear-gradient(100deg, var(--accent) 0%, var(--accent-2) 50%, var(--accent) 100%);
+    background-size:220% auto;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    animation:heroGradient 7s ease-in-out infinite;
+  }
+  @keyframes heroGradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero h1 em{animation:none; background-position:0% 50%;}
   }
   .hero-tagline{
     margin-top:22px;
@@ -239,6 +299,13 @@
     color:var(--accent-ink);
     border-color:var(--accent);
     font-weight:500;
+    box-shadow:0 0 0 0 var(--glow);
+    transition:transform .15s ease, border-color .15s ease, box-shadow .25s ease;
+  }
+  .btn-primary:hover{box-shadow:0 6px 24px -4px var(--glow);}
+  @media (prefers-reduced-motion: reduce){
+    .btn-primary{transition:border-color .15s ease;}
+    .btn-primary:hover{box-shadow:0 0 0 0 var(--glow);}
   }
   .btn-ghost{
     color:var(--ink);
@@ -248,32 +315,10 @@
     .btn::before{display:none;}
   }
 
-  .hero-meta{
-    margin-top:56px;
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:20px;
-    border-top:1px solid var(--line);
-    padding-top:22px;
-  }
-  .hero-meta div{font-family:"IBM Plex Mono", monospace; font-size:12px; color:var(--muted);}
-  .hero-meta strong{display:block; color:var(--ink); font-size:14px; font-weight:500; margin-bottom:4px;}
-
   /* ---------- SECTION SCAFFOLDING ---------- */
   section{padding-block:64px;}
   .section-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    gap:24px;
     margin-bottom:40px;
-    flex-wrap:wrap;
-  }
-  .section-num{
-    font-family:"IBM Plex Mono", monospace;
-    font-size:12px;
-    color:var(--muted);
-    letter-spacing:.08em;
   }
   .section-head h2{font-size:clamp(1.5rem, 3vw, 2.1rem);}
 
@@ -284,95 +329,31 @@
   }
   .direction{
     display:grid;
-    grid-template-columns:64px 1.1fr 1fr;
-    gap:32px;
-    padding-block:40px;
+    grid-template-columns:48px 1fr;
+    gap:22px;
+    padding-block:32px;
     background-image:linear-gradient(90deg, transparent, var(--line) 18%, var(--line) 82%, transparent);
     background-repeat:no-repeat;
     background-position:top;
     background-size:100% 1px;
   }
-  @media (max-width:820px){
-    .direction{grid-template-columns:48px 1fr; grid-template-areas:"icon title" "empty body" "empty benefits";}
-    .direction-icon{grid-area:icon;}
-    .direction-main{grid-area:title;}
-    .direction-benefits{grid-area:benefits; margin-top:16px;}
+  @media (max-width:640px){
+    .direction{grid-template-columns:1fr; gap:12px;}
   }
   .direction-icon{
-    width:44px; height:44px;
+    width:40px; height:40px;
     color:var(--accent-2);
   }
   .direction-icon svg{width:100%; height:100%; display:block;}
-  .direction-main h3{font-size:1.4rem; margin-bottom:12px;}
-  .direction-main p{color:var(--muted); font-size:.95rem; margin:0;}
-  .direction-benefits{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-  }
-  .direction-benefits li{
-    list-style:none;
-    display:flex;
-    gap:10px;
-    font-size:.88rem;
-    color:var(--ink);
-    align-items:flex-start;
-  }
-  .direction-benefits li::before{
-    content:"";
-    width:6px; height:6px;
-    border-radius:50%;
-    background:var(--accent);
-    margin-top:7px;
-    flex-shrink:0;
-  }
+  .direction-main h3{font-size:1.2rem; margin-bottom:8px;}
+  .direction-main p{color:var(--muted); font-size:.93rem; margin:0; max-width:62ch;}
 
   /* ---------- ABOUT ---------- */
-  .about-grid{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:48px;
-    align-items:start;
-  }
-  @media (max-width:760px){ .about-grid{grid-template-columns:1fr;} }
-  .about-grid p{color:var(--muted); margin:0 0 16px;}
-  .about-grid p:last-child{margin-bottom:0;}
-  .pull{
-    font-family:"Fraunces", serif;
-    font-size:1.3rem;
-    font-weight:500;
-    color:var(--ink);
-    line-height:1.4;
-    margin-bottom:16px;
-  }
-  .timeline{
-    border-left:1px solid var(--line);
-    padding-left:22px;
-    display:flex;
-    flex-direction:column;
-    gap:22px;
-  }
-  .timeline-item .mono{font-size:11.5px; color:var(--accent-2); display:block; margin-bottom:4px;}
-  .timeline-item strong{font-size:.97rem; display:block; margin-bottom:2px;}
-  .timeline-item span{font-size:.87rem; color:var(--muted);}
-
+  .about-block{max-width:70ch;}
+  .about-block p{color:var(--muted); margin:0 0 16px; font-size:1rem;}
+  .about-block p:last-child{margin-bottom:0;}
   /* ---------- SKILLS ---------- */
-  .skill-groups{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:28px;
-  }
-  @media (max-width:860px){ .skill-groups{grid-template-columns:repeat(2, 1fr);} }
-  @media (max-width:480px){ .skill-groups{grid-template-columns:1fr;} }
-  .skill-group h4{
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11.5px;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    color:var(--muted);
-    margin:0 0 14px;
-  }
-  .tag-row{display:flex; flex-wrap:wrap; gap:8px;}
+  .tag-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:24px;}
   .tag{
     font-family:"IBM Plex Mono", monospace;
     font-size:12px;
@@ -381,35 +362,6 @@
     border-radius:20px;
     color:var(--ink);
   }
-
-  /* ---------- WORK ---------- */
-  .work-list{display:flex; flex-direction:column;}
-  .work-item{
-    display:grid;
-    grid-template-columns:110px 1fr auto;
-    gap:24px;
-    align-items:start;
-    padding-block:22px;
-    border-top:1px solid var(--line);
-  }
-  .work-list .work-item:last-child{border-bottom:1px solid var(--line);}
-  @media (max-width:640px){
-    .work-item{grid-template-columns:1fr; gap:8px;}
-    .work-item .work-arrow{display:none;}
-  }
-  .work-item .mono{color:var(--muted); font-size:12px;}
-  .work-title{font-family:"Fraunces", serif; font-size:1.15rem; font-weight:500;}
-  .work-desc{color:var(--muted); font-size:.9rem; margin-top:4px;}
-  .work-tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px;}
-  .work-tags span{
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11px;
-    color:var(--accent-2);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:3px 9px;
-  }
-  .work-arrow{color:var(--accent); font-size:20px;}
 
   /* ---------- PROCESS ---------- */
   .process{
@@ -447,6 +399,8 @@
   }
   @media (max-width:860px){ .projects{grid-template-columns:1fr;} }
   .project-card{
+    --rx:0deg; --ry:0deg; --mx:50%; --my:50%;
+    position:relative;
     border:1px solid var(--line);
     border-radius:8px;
     overflow:hidden;
@@ -455,36 +409,27 @@
     flex-direction:column;
     text-decoration:none;
     color:inherit;
-    transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+    transform:perspective(900px) rotateX(var(--rx)) rotateY(var(--ry));
+    transition:transform .2s ease, border-color .15s ease, box-shadow .15s ease;
   }
   .project-card:hover{border-color:var(--accent-2); box-shadow:0 18px 34px -18px rgba(0,0,0,.45);}
+  .project-card::before{
+    content:"";
+    position:absolute; inset:0;
+    z-index:3;
+    background:radial-gradient(360px circle at var(--mx) var(--my), rgba(255,255,255,.16), transparent 60%);
+    opacity:0;
+    transition:opacity .25s ease;
+    pointer-events:none;
+  }
+  .project-card:hover::before{opacity:1;}
   @media (prefers-reduced-motion: reduce){
     .project-card{transform:none !important; transition:border-color .15s ease;}
+    .project-card::before{display:none;}
   }
   @media (hover:none){
     .project-card{transform:none !important;}
-  }
-  .browser-chrome{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    padding:9px 12px;
-    background:var(--surface-2);
-    border-bottom:1px solid var(--line);
-  }
-  .browser-dots{display:flex; gap:5px; flex-shrink:0;}
-  .browser-dots span{width:7px; height:7px; border-radius:50%; background:var(--line);}
-  .browser-url{
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11px;
-    color:var(--muted);
-    background:var(--bg);
-    border-radius:10px;
-    padding:4px 10px;
-    flex:1;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
+    .project-card::before{display:none;}
   }
   .project-visual{
     height:150px;
@@ -493,8 +438,31 @@
     justify-content:center;
     position:relative;
     overflow:hidden;
+    transition:transform .5s cubic-bezier(.2,.7,.3,1);
   }
-  .project-visual svg{width:56px; height:56px; position:relative; z-index:1;}
+  .project-card:hover .project-visual{transform:scale(1.12);}
+  .project-visual svg{
+    width:56px; height:56px; position:relative; z-index:1;
+    transition:transform .5s cubic-bezier(.2,.7,.3,1);
+  }
+  .project-card:hover .project-visual svg{transform:scale(1.08);}
+  .project-visual::after{
+    content:"";
+    position:absolute;
+    top:0; left:-70%;
+    width:45%; height:100%;
+    background:linear-gradient(115deg, transparent, rgba(255,255,255,.28), transparent);
+    transform:skewX(-18deg);
+    transition:left .65s ease;
+    pointer-events:none;
+    z-index:2;
+  }
+  .project-card:hover .project-visual::after{left:130%;}
+  @media (prefers-reduced-motion: reduce), (hover:none){
+    .project-visual, .project-visual svg{transition:none;}
+    .project-card:hover .project-visual, .project-card:hover .project-visual svg{transform:none;}
+    .project-visual::after{display:none;}
+  }
   .project-visual::before{
     content:"";
     position:absolute; inset:0;
@@ -534,55 +502,7 @@
   .contact-box h2{font-size:clamp(1.6rem,4vw,2.3rem); max-width:16ch;}
   .contact-box p{color:var(--muted); max-width:44ch; margin:14px 0 28px;}
   .contact-links{display:flex; flex-wrap:wrap; gap:14px;}
-
-  .trust-row{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:24px;}
-  .trust-item{
-    flex:1 1 200px;
-    display:flex;
-    gap:10px;
-    align-items:flex-start;
-    background:var(--surface-2);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:13px 15px;
-  }
-  .trust-item svg{flex:0 0 auto; margin-top:1px; color:var(--accent-2);}
-  .trust-item span{font-size:11.8px; color:var(--ink); line-height:1.45;}
-
-  .faq{margin-top:30px; max-width:640px;}
-  .faq-label{
-    font-family:"IBM Plex Mono", monospace;
-    font-size:10.5px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--muted);
-    padding-bottom:4px;
-  }
-  .faq-item{
-    background-image:linear-gradient(90deg, transparent, var(--line) 12%, var(--line) 88%, transparent);
-    background-repeat:no-repeat;
-    background-position:top;
-    background-size:100% 1px;
-  }
-  .faq-btn{
-    all:unset;
-    cursor:pointer;
-    box-sizing:border-box;
-    width:100%;
-    min-height:44px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:14px;
-    padding:15px 2px;
-  }
-  .faq-btn:focus-visible{outline:2px solid var(--accent-2); outline-offset:2px;}
-  .faq-q{font-size:13.5px; color:var(--ink);}
-  .faq-chevron{flex:0 0 auto; transition:transform .18s ease; color:var(--accent-2);}
-  .faq-item.open .faq-chevron{transform:rotate(180deg);}
-  .faq-answer{max-height:0; overflow:hidden; transition:max-height .25s ease;}
-  .faq-item.open .faq-answer{max-height:220px;}
-  .faq-answer-inner{padding:0 2px 17px; font-size:12.3px; color:var(--muted); line-height:1.55;}
+  .contact-note{margin-top:26px; font-size:.87rem; color:var(--muted); max-width:48ch; line-height:1.6;}
 
   footer{
     padding-block:28px;
@@ -640,16 +560,23 @@
   .topbar{
     position:fixed;
     top:calc(16px + env(safe-area-inset-top, 0px));
-    left:16px;
+    left:50%;
+    transform:translateX(-50%);
     z-index:50;
     display:flex;
     align-items:center;
     gap:12px;
-    background:var(--surface);
+    background:var(--surface-glass);
+    backdrop-filter:blur(16px) saturate(160%);
+    -webkit-backdrop-filter:blur(16px) saturate(160%);
     border:1px solid var(--line);
     border-radius:20px;
     padding:6px 8px 6px 16px;
     box-shadow:0 4px 14px rgba(0,0,0,.18);
+    max-width:calc(100vw - 32px);
+  }
+  @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+    .topbar{background:var(--surface);}
   }
   .topbar-brand{
     font-family:"Fraunces", serif;
@@ -690,7 +617,7 @@
     transform:scaleX(0);
     transform-origin:left;
     z-index:60;
-    box-shadow:0 0 8px rgba(217,138,82,.55);
+    box-shadow:0 0 8px rgba(224,138,91,.55);
   }
   @media (prefers-reduced-motion: reduce){ .scroll-progress{transition:none;} }
 
@@ -745,7 +672,7 @@
 </head>
 <body>
 
-<div class="bg-ambient" aria-hidden="true"></div>
+<div class="bg-ambient" aria-hidden="true" data-parallax-speed="0.06"></div>
 
 <div class="scroll-progress" id="scrollProgress"></div>
 
@@ -765,22 +692,29 @@
 </div>
 
 <div class="hero">
+  <div class="hero-shape" aria-hidden="true" data-parallax-speed="0.22"></div>
+  <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
+  <div class="hero-scrim" aria-hidden="true"></div>
   <div class="wrap hero-inner">
-    <div class="eyebrow" data-i18n="eyebrow">Минск, Беларусь · открыты к проектам и заказам</div>
+    <p class="eyebrow" data-i18n="eyebrow">Минск, Беларусь</p>
     <h1 data-i18n-html="hero-h1">Loopcraft —<br>пишем <em>код</em>, который <em>работает</em>.</h1>
     <p class="hero-tagline" data-i18n="hero-tagline">
-      Занимаемся разработкой сайтов и приложений: от идеи и логики до готового интерфейса.
-      Разбираемся, как всё устроено внутри, и доводим решение до рабочего состояния —
+      Занимаюсь разработкой сайтов и приложений: от идеи и логики до готового интерфейса.
+      Разбираюсь, как всё устроено внутри, и довожу решение до рабочего состояния —
       без лишних обещаний.
     </p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#work" data-i18n="btn-projects">Смотреть проекты</a>
       <a class="btn btn-ghost" href="#contact" data-i18n="btn-contact">Связаться</a>
     </div>
-    <div class="hero-meta">
-      <div><strong><span class="count-up" data-count-to="5">0</span></strong><span data-i18n="meta1-label">направлений работы</span></div>
-      <div><strong><span class="count-up" data-count-to="6" data-count-suffix="+">0</span></strong><span data-i18n="meta2-label">языков программирования в работе</span></div>
-      <div><strong>RU / EN</strong><span data-i18n="meta3-label">языки коммуникации</span></div>
+  </div>
+  <div class="hero-3d" id="hero3d" aria-hidden="true">
+    <div class="hero-3d-fallback">
+      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="60" cy="60" rx="46" ry="24" stroke="var(--accent)" stroke-width="2.4"/>
+        <ellipse cx="60" cy="60" rx="46" ry="24" stroke="var(--accent-2)" stroke-width="2.4" transform="rotate(60 60 60)"/>
+        <ellipse cx="60" cy="60" rx="46" ry="24" stroke="var(--accent)" stroke-width="2.4" opacity=".55" transform="rotate(120 60 60)"/>
+      </svg>
     </div>
   </div>
 </div>
@@ -789,17 +723,10 @@
 
   <section id="work">
     <div class="section-head">
-      <div>
-        <div class="section-num mono" data-i18n="sec5-num">01 — Проекты</div>
-        <h2 data-i18n="sec5-h2">Что мы делали</h2>
-      </div>
+      <h2 data-i18n="sec5-h2">Что я делал</h2>
     </div>
     <div class="projects">
       <a class="project-card reveal" href="https://animalfarm.by/" target="_blank" rel="noopener">
-        <div class="browser-chrome">
-          <div class="browser-dots"><span></span><span></span><span></span></div>
-          <div class="browser-url">animalfarm.by</div>
-        </div>
         <div class="project-visual visual-farm">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
             <path d="M24 8c-8 0-14 6-14 14 0 8 6 14 14 14s14-6 14-14c0-8-6-14-14-14z"/>
@@ -823,10 +750,6 @@
         </div>
       </a>
       <a class="project-card reveal" href="https://royaloak.by/" target="_blank" rel="noopener">
-        <div class="browser-chrome">
-          <div class="browser-dots"><span></span><span></span><span></span></div>
-          <div class="browser-url">royaloak.by</div>
-        </div>
         <div class="project-visual visual-pub">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
             <path d="M14 20h16v14a8 8 0 01-16 0V20z"/>
@@ -848,10 +771,6 @@
         </div>
       </a>
       <a class="project-card reveal" href="https://www.noodles.by/" target="_blank" rel="noopener">
-        <div class="browser-chrome">
-          <div class="browser-dots"><span></span><span></span><span></span></div>
-          <div class="browser-url">noodles.by</div>
-        </div>
         <div class="project-visual visual-noodles">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
             <path d="M10 22a14 6 0 1028 0"/>
@@ -876,10 +795,7 @@
   </section>
   <section id="directions">
     <div class="section-head">
-      <div>
-        <div class="section-num mono" data-i18n="sec1-num">02 — Направления</div>
-        <h2 data-i18n="sec1-h2">Чем мы занимаемся</h2>
-      </div>
+      <h2 data-i18n="sec1-h2">Чем я занимаюсь</h2>
     </div>
     <div class="direction-list">
 
@@ -895,13 +811,8 @@
         </div>
         <div class="direction-main">
           <h3 data-i18n="dir1-h3">Веб-разработка</h3>
-          <p data-i18n="dir1-p">Сайты, лендинги и веб-приложения от макета до деплоя: HTML, CSS, JavaScript, работа с бэкендом и базами данных. Чистая вёрстка и код, который потом не страшно поддерживать.</p>
+          <p data-i18n="dir1-p">Сайты, лендинги и веб-приложения от макета до деплоя. Стараюсь делать так, чтобы вёрстку и код потом не было страшно поддерживать.</p>
         </div>
-        <ul class="direction-benefits">
-          <li data-i18n="dir1-b1">Сайт, который открывается быстро и одинаково хорошо выглядит с телефона и с компьютера</li>
-          <li data-i18n="dir1-b2">Структура и вёрстка, которая не разваливается при добавлении новых страниц</li>
-          <li data-i18n="dir1-b3">Возможность дальше вносить правки без переписывания всего проекта</li>
-        </ul>
       </div>
 
       <div class="direction reveal">
@@ -914,13 +825,8 @@
         </div>
         <div class="direction-main">
           <h3 data-i18n="dir2-h3">Разработка приложений</h3>
-          <p data-i18n="dir2-p">Мобильные и десктопные приложения: от прототипа логики до рабочей версии, с упором на понятный интерфейс и стабильную работу без падений.</p>
+          <p data-i18n="dir2-p">Мобильные и десктопные приложения: от прототипа логики до рабочей версии, с упором на понятный интерфейс.</p>
         </div>
-        <ul class="direction-benefits">
-          <li data-i18n="dir2-b1">Готовый инструмент под конкретную задачу, а не подгонка чужого шаблона</li>
-          <li data-i18n="dir2-b2">Прототип на раннем этапе — видно результат до того, как вложено много времени</li>
-          <li data-i18n="dir2-b3">Интерфейс, в котором разберётся человек без технического бэкграунда</li>
-        </ul>
       </div>
 
       <div class="direction reveal">
@@ -933,13 +839,8 @@
         </div>
         <div class="direction-main">
           <h3 data-i18n="dir3-h3">Программирование</h3>
-          <p data-i18n="dir3-p">Логика, алгоритмы и работа с разными языками и инструментами — под задачу подбираю подходящий стек, а не подгоняю задачу под один язык.</p>
+          <p data-i18n="dir3-p">Логика, алгоритмы, разные языки и инструменты — под задачу подбираю подходящий стек, а не подгоняю задачу под один язык.</p>
         </div>
-        <ul class="direction-benefits">
-          <li data-i18n="dir3-b1">Решение нестандартных задач, для которых нет готового сервиса</li>
-          <li data-i18n="dir3-b2">Выбор технологии под реальные ограничения проекта, а не «потому что модно»</li>
-          <li data-i18n="dir3-b3">Код, который можно объяснить и передать другому разработчику</li>
-        </ul>
       </div>
 
       <div class="direction reveal">
@@ -951,13 +852,8 @@
         </div>
         <div class="direction-main">
           <h3 data-i18n="dir4-h3">Автоматизация</h3>
-          <p data-i18n="dir4-p">Превращаю рутину в скрипт: сбор и обработка данных, регулярные отчёты, синхронизация между сервисами — то, что раньше делалось руками по расписанию, теперь работает само.</p>
+          <p data-i18n="dir4-p">Превращаю рутину в скрипт: сбор и обработка данных, регулярные отчёты, синхронизация между сервисами.</p>
         </div>
-        <ul class="direction-benefits">
-          <li data-i18n="dir4-b1">Меньше часов на однообразную ручную работу — время освобождается на важное</li>
-          <li data-i18n="dir4-b2">Меньше ошибок, которые возникают из-за усталости или невнимательности</li>
-          <li data-i18n="dir4-b3">Задача выполняется по расписанию, даже если о ней забыли</li>
-        </ul>
       </div>
 
       <div class="direction reveal">
@@ -972,23 +868,15 @@
         </div>
         <div class="direction-main">
           <h3 data-i18n="dir5-h3">AI-интеграции</h3>
-          <p data-i18n="dir5-p">Подключаю нейросети к реальным задачам: обработка текста и данных через API, чат-боты для базовых вопросов, автоматизация на основе языковых моделей — честно, там, где это действительно ускоряет работу, а не для галочки.</p>
+          <p data-i18n="dir5-p">Подключаю нейросети к реальным задачам: обработка текста и данных через API, чат-боты — там, где это правда ускоряет работу, а не для галочки.</p>
         </div>
-        <ul class="direction-benefits">
-          <li data-i18n="dir5-b1">Быстрые ответы на типовые вопросы клиентов без ожидания в очереди к человеку</li>
-          <li data-i18n="dir5-b2">Обработка больших объёмов текста или данных за минуты, а не часы вручную</li>
-          <li data-i18n="dir5-b3">Инструмент дополняет команду, а не заменяет её там, где нужен живой человек</li>
-        </ul>
       </div>
 
     </div>
   </section>
   <section id="process">
     <div class="section-head">
-      <div>
-        <div class="section-num mono" data-i18n="sec4-num">03 — Как мы работаем</div>
-        <h2 data-i18n="sec4-h2">Путь от заявки до готового решения</h2>
-      </div>
+      <h2 data-i18n="sec4-h2">Путь от заявки до готового решения</h2>
     </div>
     <div class="process">
       <div class="step reveal">
@@ -1011,78 +899,22 @@
   </section>
   <section id="about">
     <div class="section-head">
-      <div>
-        <div class="section-num mono" data-i18n="sec2-num">04 — О нас</div>
-        <h2 data-i18n="sec2-h2">Пишем код и разбираемся, как всё устроено</h2>
-      </div>
+      <h2 data-i18n="sec2-h2">Пишу код и разбираюсь, как всё устроено</h2>
     </div>
-    <div class="about-grid">
-      <div>
-        <p class="pull" data-i18n="about-quote">«Нам интересно не просто писать код, а понимать, почему он работает именно так — и как сделать это лучше.»</p>
-        <p data-i18n="about-p1">Loopcraft занимается разработкой сайтов и приложений — от логики и структуры данных до готового интерфейса, с которым удобно работать.</p>
-        <p data-i18n="about-p2">Постоянно пробуем новые языки и инструменты, чтобы под каждую задачу подбирать подходящее решение, а не одно универсальное. Ищем проекты, где можно применить это на практике.</p>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <span class="mono" data-i18n="tl1-label">этап 1</span>
-          <strong data-i18n="tl1-strong">Основы</strong>
-          <span data-i18n="tl1-span">HTML, CSS, JavaScript, логика и алгоритмы</span>
-        </div>
-        <div class="timeline-item">
-          <span class="mono" data-i18n="tl2-label">этап 2</span>
-          <strong data-i18n="tl2-strong">Практика</strong>
-          <span data-i18n="tl2-span">Pet-проекты: сайты, приложения, автоматизация</span>
-        </div>
-        <div class="timeline-item">
-          <span class="mono" data-i18n="tl3-label">сейчас</span>
-          <strong data-i18n="tl3-strong">В поиске</strong>
-          <span data-i18n="tl3-span">Открыты к проектам и заказам</span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="skills">
-    <div class="section-head">
-      <div>
-        <div class="section-num mono" data-i18n="sec3-num">05 — Навыки</div>
-        <h2 data-i18n="sec3-h2">Языки и инструменты, с которыми работаю</h2>
-      </div>
-    </div>
-    <div class="skill-groups">
-      <div class="skill-group">
-        <h4 data-i18n="sg1-h4">Веб</h4>
-        <div class="tag-row">
-          <span class="tag">HTML / CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">SQL</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4 data-i18n="sg2-h4">Приложения и логика</h4>
-        <div class="tag-row">
-          <span class="tag">Python</span>
-          <span class="tag">Java</span>
-          <span class="tag">Kotlin</span>
-          <span class="tag">C++</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4 data-i18n="sg3-h4">Автоматизация и AI</h4>
-        <div class="tag-row">
-          <span class="tag" data-i18n="sg3-tag1">Скрипты и планировщики</span>
-          <span class="tag" data-i18n="sg3-tag2">Работа с API</span>
-          <span class="tag">OpenAI API</span>
-          <span class="tag" data-i18n="sg3-tag4">Промпт-инжиниринг</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4 data-i18n="sg4-h4">Инструменты</h4>
-        <div class="tag-row">
-          <span class="tag">Git</span>
-          <span class="tag">VS Code</span>
-          <span class="tag">Figma</span>
-        </div>
+    <div class="about-block">
+      <p data-i18n="about-p1">Занимаюсь разработкой сайтов и приложений — от логики и структуры данных до готового интерфейса, с которым удобно работать.</p>
+      <p data-i18n="about-p2">Постоянно пробую новые языки и инструменты, чтобы под каждую задачу подбирать подходящее решение, а не одно универсальное. Сейчас в поиске проектов, где можно применить это на практике.</p>
+      <div class="tag-row">
+        <span class="tag">HTML / CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Python</span>
+        <span class="tag">Java</span>
+        <span class="tag">Kotlin</span>
+        <span class="tag">C++</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Git</span>
+        <span class="tag">OpenAI API</span>
       </div>
     </div>
   </section>
@@ -1090,59 +922,15 @@
   <section id="contact">
     <div class="contact-box">
       <h2 data-i18n="contact-h2">Обсудим ваш проект?</h2>
-      <p data-i18n="contact-p">Loopcraft берётся за сайты, приложения и автоматизацию. Отвечаем быстро — пишите в любой удобный канал.</p>
-      <div class="trust-row">
-        <div class="trust-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"></path></svg>
-          <span data-i18n="trust1">Бесплатная консультация перед стартом</span>
-        </div>
-        <div class="trust-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
-          <span data-i18n="trust2">Сроки и объём фиксируем до начала работы</span>
-        </div>
-        <div class="trust-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg>
-          <span data-i18n="trust3">Общаетесь напрямую с тем, кто пишет код</span>
-        </div>
-      </div>
+      <p data-i18n="contact-p">Берусь за сайты, приложения и автоматизацию. Написать проще всего в Telegram — отвечаю быстро.</p>
       <div class="contact-links">
-        <a class="btn btn-primary" href="mailto:gerasi833@gmail.com" data-i18n="contact-btn1">Написать письмо</a>
-        <a class="btn btn-ghost" href="https://t.me/Egorchi9">Telegram</a>
-        <a class="btn btn-ghost" href="#" data-i18n="contact-btn3">Резюме (PDF)</a>
+        <a class="btn btn-primary" href="https://t.me/Egorchi9" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.05 3.76 17.9 19.34c-.24 1.06-.87 1.32-1.76.82l-4.86-3.58-2.34 2.25c-.26.26-.48.48-.97.48l.35-4.94 8.99-8.12c.39-.35-.09-.54-.6-.2L6.1 12.64l-4.9-1.53c-1.06-.33-1.08-1.06.22-1.57L19.7 2.53c.89-.33 1.66.2 1.35 1.23Z"></path></svg>
+          <span data-i18n="contact-btn1">Написать в Telegram</span>
+        </a>
       </div>
-      <div class="live-clock"><span class="dot"></span><span id="minskClock">--:--</span> <span data-i18n="clock-label">по Минску — обычно отвечаем в течение дня</span></div>
-
-      <div class="faq">
-        <div class="faq-label" data-i18n="faq-label">Частые вопросы</div>
-        <div class="faq-item open">
-          <button class="faq-btn" type="button" aria-expanded="true">
-            <span class="faq-q" data-i18n="faq1-q">Сколько стоит сайт?</span>
-            <svg class="faq-chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq1-a">Зависит от объёма и функций — считаем индивидуально после короткого созвона или переписки, ориентир по цене называем сразу.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" type="button" aria-expanded="false">
-            <span class="faq-q" data-i18n="faq2-q">Сколько занимает разработка?</span>
-            <svg class="faq-chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq2-a">Сайт-визитка — обычно одна-две недели, интернет-магазин или приложение сложнее — дольше. Сроки фиксируем заранее, до начала работы.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" type="button" aria-expanded="false">
-            <span class="faq-q" data-i18n="faq3-q">Можно начать с малого и расширять позже?</span>
-            <svg class="faq-chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq3-a">Да, чаще всего так и делаем: сначала базовая версия сайта, потом добавляем функции по мере роста бизнеса.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" type="button" aria-expanded="false">
-            <span class="faq-q" data-i18n="faq4-q">Работаете по договору?</span>
-            <svg class="faq-chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq4-a">Да, до начала работы письменно фиксируем объём задач, сроки и стоимость.</div></div>
-        </div>
-      </div>
+      <div class="live-clock"><span class="dot"></span><span id="minskClock">--:--</span> <span data-i18n="clock-label">по Минску — обычно отвечаю в течение дня</span></div>
+      <p class="contact-note" data-i18n="contact-note">Опишите задачу в двух словах — отвечу с примерными сроками и ценой.</p>
     </div>
   </section>
 
@@ -1150,97 +938,55 @@
 
 <footer class="wrap">
   <span>© Loopcraft, <span data-i18n="footer-city">Минск</span></span>
-  <span data-i18n="footer-note">Сделано вручную — placeholder-контент, замени на свой</span>
+  <span data-i18n="footer-note">Сделано вручную</span>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
   var translations = {
-    "eyebrow": { en: "Minsk, Belarus · open to projects and orders" },
+    "eyebrow": { en: "Minsk, Belarus" },
     "hero-h1": { ru: "Loopcraft —<br>пишем <em>код</em>, который <em>работает</em>.", en: "Loopcraft —<br>we write <em>code</em> that <em>works</em>." },
-    "hero-tagline": { en: "We build websites and applications: from the idea and logic to a finished interface. We figure out how things work under the hood and take every solution all the way to production — no empty promises." },
+    "hero-tagline": { en: "I build websites and applications: from the idea and logic to a finished interface. I figure out how things work under the hood and take every solution all the way to production — no empty promises." },
     "btn-projects": { en: "View projects" },
     "btn-contact": { en: "Get in touch" },
     "nav-work": { en: "Projects" },
-    "nav-directions": { en: "What we do" },
-    "nav-process": { en: "Our process" },
+    "nav-directions": { en: "What I do" },
+    "nav-process": { en: "How I work" },
     "nav-contact": { en: "Discuss a project" },
-    "meta1-label": { en: "areas of work" },
-    "meta2-label": { en: "languages in daily use" },
-    "meta3-label": { en: "languages we speak" },
 
-    "sec1-num": { en: "02 — Services" },
-    "sec1-h2": { en: "What we do" },
+    "sec1-h2": { en: "What I do" },
 
     "dir1-h3": { en: "Web development" },
-    "dir1-p": { en: "Websites, landing pages and web apps from layout to deployment: HTML, CSS, JavaScript, backend and database work. Clean markup and code that's not scary to maintain later." },
-    "dir1-b1": { en: "A site that loads fast and looks equally good on phone and desktop" },
-    "dir1-b2": { en: "A structure and markup that doesn't fall apart as new pages are added" },
-    "dir1-b3": { en: "The ability to keep making changes without rewriting the whole project" },
+    "dir1-p": { en: "Websites, landing pages and web apps from layout to deployment. I try to make markup and code that isn't scary to maintain later." },
 
     "dir2-h3": { en: "App development" },
-    "dir2-p": { en: "Mobile and desktop apps: from a logic prototype to a working release, with a focus on a clear interface and stable, crash-free behavior." },
-    "dir2-b1": { en: "A tool built for the actual task, not a template stretched to fit" },
-    "dir2-b2": { en: "An early prototype — you see results before a lot of time is invested" },
-    "dir2-b3": { en: "An interface that a non-technical person can figure out on their own" },
+    "dir2-p": { en: "Mobile and desktop apps: from a logic prototype to a working release, with a focus on a clear interface." },
 
     "dir3-h3": { en: "Programming" },
-    "dir3-p": { en: "Logic, algorithms and work across different languages and tools — I pick the stack that fits the task instead of forcing the task to fit one language." },
-    "dir3-b1": { en: "Solutions for non-standard problems with no off-the-shelf service" },
-    "dir3-b2": { en: "Technology chosen for the project's real constraints, not because it's trendy" },
-    "dir3-b3": { en: "Code that can be explained and handed off to another developer" },
+    "dir3-p": { en: "Logic, algorithms, different languages and tools — I pick the stack that fits the task instead of forcing the task to fit one language." },
 
     "dir4-h3": { en: "Automation" },
-    "dir4-p": { en: "Turning routine into a script: collecting and processing data, recurring reports, syncing between services — what used to be done by hand on a schedule now runs on its own." },
-    "dir4-b1": { en: "Fewer hours on repetitive manual work — time freed up for what matters" },
-    "dir4-b2": { en: "Fewer mistakes caused by fatigue or a lapse in attention" },
-    "dir4-b3": { en: "The task runs on schedule, even if everyone forgot about it" },
+    "dir4-p": { en: "Turning routine into a script: collecting and processing data, recurring reports, syncing between services." },
 
     "dir5-h3": { en: "AI integrations" },
-    "dir5-p": { en: "Connecting AI models to real tasks: processing text and data through an API, chatbots for routine questions, automation built on language models — honestly, only where it genuinely speeds things up, not for show." },
-    "dir5-b1": { en: "Fast answers to routine customer questions without waiting in line for a person" },
-    "dir5-b2": { en: "Large volumes of text or data processed in minutes instead of hours by hand" },
-    "dir5-b3": { en: "A tool that supports the team, not a replacement where a human is still needed" },
+    "dir5-p": { en: "Connecting AI models to real tasks: processing text and data through an API, chatbots — where it genuinely speeds things up, not for show." },
 
-    "sec2-num": { en: "04 — About us" },
-    "sec2-h2": { en: "We write code and figure out how things work" },
-    "about-quote": { en: "“We're not just interested in writing code — we want to understand why it works the way it does, and how to make it better.”" },
-    "about-p1": { en: "Loopcraft builds websites and applications — from logic and data structure to a finished interface that's actually pleasant to use." },
-    "about-p2": { en: "We keep trying new languages and tools so we can pick the right solution for each task instead of one universal answer. We're looking for projects where that pays off in practice." },
+    "sec2-h2": { en: "I write code and figure out how things work" },
+    "about-p1": { en: "I build websites and applications — from logic and data structure to a finished interface that's actually pleasant to use." },
+    "about-p2": { en: "I keep trying new languages and tools so I can pick the right solution for each task instead of one universal answer. Right now I'm looking for projects where that pays off in practice." },
 
-    "tl1-label": { en: "stage 1" },
-    "tl1-strong": { en: "Basics" },
-    "tl1-span": { en: "HTML, CSS, JavaScript, logic and algorithms" },
-    "tl2-label": { en: "stage 2" },
-    "tl2-strong": { en: "Practice" },
-    "tl2-span": { en: "Pet projects: websites, apps, automation" },
-    "tl3-label": { en: "now" },
-    "tl3-strong": { en: "Open to work" },
-    "tl3-span": { en: "Open to projects and orders" },
-
-    "sec3-num": { en: "05 — Skills" },
-    "sec3-h2": { en: "Languages and tools we work with" },
-    "sg1-h4": { en: "Web" },
-    "sg2-h4": { en: "Apps & logic" },
-    "sg3-h4": { en: "Automation & AI" },
-    "sg3-tag1": { en: "Scripts & schedulers" },
-    "sg3-tag2": { en: "API integration" },
-    "sg3-tag4": { en: "Prompt engineering" },
-    "sg4-h4": { en: "Tools" },
-
-    "sec4-num": { en: "03 — How we work" },
     "sec4-h2": { en: "From request to finished result" },
     "step1-h4": { en: "Brief" },
     "step1-p": { en: "We discuss the task, the constraints and what the result should look like — there's no point moving forward without that." },
     "step2-h4": { en: "Prototype" },
-    "step2-p": { en: "We put together a rough version — a layout, a structure or a working script — to agree on direction before the main work starts." },
+    "step2-p": { en: "I put together a rough version — a layout, a structure or a working script — to agree on direction before the main work starts." },
     "step3-h4": { en: "Development" },
-    "step3-p": { en: "We write code iteratively, with intermediate versions — it's easier to catch mistakes and make changes along the way." },
+    "step3-p": { en: "I write code iteratively, with intermediate versions — it's easier to catch mistakes and make changes along the way." },
     "step4-h4": { en: "Delivery" },
-    "step4-p": { en: "We test, hand over the working version and the code, and explain how it works and how to maintain it if needed." },
+    "step4-p": { en: "I test, hand over the working version and the code, and explain how it works and how to maintain it if needed." },
 
-    "sec5-num": { en: "01 — Projects" },
-    "sec5-h2": { en: "What we've built" },
+    "sec5-h2": { en: "What I've built" },
     "proj1-desc": { en: "A site for a café with author's cuisine in Minsk: menu, table reservations, banquet and corporate event services." },
     "proj1-tag": { en: "Web development · venue website" },
     "proj2-desc": { en: "A site for an English gastropub in central Minsk: menu, interior and seating areas, delivery and booking contacts." },
@@ -1250,34 +996,20 @@
     "proj-go": { en: "visit ↗" },
 
     "contact-h2": { en: "Let's talk about your project" },
-    "contact-p": { en: "Loopcraft takes on websites, apps and automation. We reply quickly — write on whichever channel is easiest for you." },
-    "contact-btn1": { en: "Send an email" },
-    "contact-btn3": { en: "Resume (PDF)" },
+    "contact-p": { en: "I take on websites, apps and automation. The easiest way to reach me is Telegram — I reply quickly." },
+    "contact-btn1": { en: "Message on Telegram" },
+    "contact-note": { en: "Describe the task in a couple of sentences — I'll reply with a rough timeline and price." },
 
     "footer-city": { en: "Minsk" },
-    "footer-note": { en: "Built by hand — replace this placeholder content with your own" },
-    "clock-label": { en: "Minsk time — we usually reply within the day" },
+    "footer-note": { en: "Built by hand" },
+    "clock-label": { en: "Minsk time — I usually reply within the day" },
 
     "proj1-check1": { en: "Mobile-responsive layout" },
     "proj1-check2": { en: "Table booking and reservation form" },
     "proj2-check1": { en: "Online menu and events listing" },
     "proj2-check2": { en: "Table reservation form" },
     "proj3-check1": { en: "Online menu and order cart" },
-    "proj3-check2": { en: "Mobile-responsive layout" },
-
-    "trust1": { en: "Free consultation before we start" },
-    "trust2": { en: "Scope and timeline fixed upfront" },
-    "trust3": { en: "You talk directly to the person writing the code" },
-
-    "faq-label": { en: "FAQ" },
-    "faq1-q": { en: "How much does a website cost?" },
-    "faq1-a": { en: "Depends on scope and features — we quote individually after a short call or chat, and give a ballpark right away." },
-    "faq2-q": { en: "How long does it take?" },
-    "faq2-a": { en: "A simple landing page — usually one to two weeks; an online store or app takes longer. We fix the timeline upfront, before work starts." },
-    "faq3-q": { en: "Can we start small and expand later?" },
-    "faq3-a": { en: "Yes, that's the usual approach: ship a basic version first, then add features as the business grows." },
-    "faq4-q": { en: "Do you work under a contract?" },
-    "faq4-a": { en: "Yes, we fix scope, timeline and price in writing before starting." }
+    "proj3-check2": { en: "Mobile-responsive layout" }
   };
 
   // capture Russian originals as the default language
@@ -1353,24 +1085,6 @@
     setInterval(tickClock, 30000);
   }
 
-  // ---------- FAQ accordion ----------
-  document.querySelectorAll(".faq-item").forEach(function(item){
-    var btn = item.querySelector(".faq-btn");
-    if (!btn) return;
-    btn.addEventListener("click", function(){
-      var isOpen = item.classList.contains("open");
-      item.parentElement.querySelectorAll(".faq-item.open").forEach(function(openItem){
-        if (openItem !== item) {
-          openItem.classList.remove("open");
-          var b = openItem.querySelector(".faq-btn");
-          if (b) b.setAttribute("aria-expanded", "false");
-        }
-      });
-      item.classList.toggle("open", !isOpen);
-      btn.setAttribute("aria-expanded", (!isOpen).toString());
-    });
-  });
-
   // ---------- subtle hero cursor glow ----------
   var heroEl = document.querySelector(".hero");
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -1404,42 +1118,309 @@
     updateProgress();
   }
 
-  // ---------- count-up hero stats ----------
-  document.querySelectorAll(".count-up").forEach(function(el){
-    var target = parseInt(el.getAttribute("data-count-to"), 10) || 0;
-    var suffix = el.getAttribute("data-count-suffix") || "";
-    if (reduceMotion) {
-      el.textContent = target + suffix;
-      return;
-    }
-    var start = null;
-    var duration = 900;
-    function step(ts){
-      if (start === null) start = ts;
-      var progress = Math.min(1, (ts - start) / duration);
-      var eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(eased * target) + suffix;
-      if (progress < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  });
-
-  // ---------- project card tilt ----------
+  // ---------- project card 3D tilt (CSS-variable driven, + glare) ----------
   if (!reduceMotion && window.matchMedia && window.matchMedia("(hover: hover)").matches) {
     document.querySelectorAll(".project-card").forEach(function(card){
       card.addEventListener("mousemove", function(e){
         var rect = card.getBoundingClientRect();
-        var px = (e.clientX - rect.left) / rect.width - 0.5;
-        var py = (e.clientY - rect.top) / rect.height - 0.5;
-        var rotY = (px * 9).toFixed(2);
-        var rotX = (py * -9).toFixed(2);
-        card.style.transform = "perspective(800px) rotateX(" + rotX + "deg) rotateY(" + rotY + "deg) translateY(-2px)";
+        var px = (e.clientX - rect.left) / rect.width;
+        var py = (e.clientY - rect.top) / rect.height;
+        var rotY = ((px - 0.5) * 10).toFixed(2);
+        var rotX = ((0.5 - py) * 10).toFixed(2);
+        card.style.setProperty("--rx", rotX + "deg");
+        card.style.setProperty("--ry", rotY + "deg");
+        card.style.setProperty("--mx", (px * 100).toFixed(1) + "%");
+        card.style.setProperty("--my", (py * 100).toFixed(1) + "%");
       });
       card.addEventListener("mouseleave", function(){
-        card.style.transform = "";
+        card.style.setProperty("--rx", "0deg");
+        card.style.setProperty("--ry", "0deg");
       });
     });
   }
+
+  // ---------- scroll parallax layers ----------
+  var parallaxEls = Array.prototype.slice.call(document.querySelectorAll("[data-parallax-speed]"));
+  var isNarrow = window.matchMedia && window.matchMedia("(max-width: 640px)").matches;
+  if (parallaxEls.length && !reduceMotion) {
+    var tickingParallax = false;
+    function updateParallax(){
+      var y = window.scrollY || document.documentElement.scrollTop || 0;
+      parallaxEls.forEach(function(el){
+        var speed = parseFloat(el.getAttribute("data-parallax-speed")) || 0;
+        if (isNarrow) speed *= 0.4; // softer on mobile
+        el.style.transform = "translateY(" + (-(y * speed)).toFixed(1) + "px)";
+      });
+      tickingParallax = false;
+    }
+    window.addEventListener("scroll", function(){
+      if (!tickingParallax) {
+        tickingParallax = true;
+        requestAnimationFrame(updateParallax);
+      }
+    }, { passive: true });
+    window.addEventListener("resize", function(){
+      isNarrow = window.matchMedia && window.matchMedia("(max-width: 640px)").matches;
+    }, { passive: true });
+    updateParallax();
+  }
+
+  // ---------- hero particle field (canvas 2D, no libraries) ----------
+  (function initParticles(){
+    var canvas = document.getElementById("heroParticles");
+    var heroSection = document.querySelector(".hero");
+    if (!canvas || !heroSection || reduceMotion) return;
+    var ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w = 0, h = 0, particles = [], running = false, raf = null;
+    var pointer = { x: null, y: null };
+    var narrow = window.matchMedia && window.matchMedia("(max-width: 640px)").matches;
+
+    function styleColor(name, fallback){
+      try {
+        var v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+        return v || fallback;
+      } catch(e){ return fallback; }
+    }
+
+    function resize(){
+      var rect = heroSection.getBoundingClientRect();
+      w = rect.width; h = rect.height;
+      canvas.width = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      narrow = window.matchMedia && window.matchMedia("(max-width: 640px)").matches;
+      seed();
+    }
+
+    function seed(){
+      var count = Math.round((w * h) / (narrow ? 26000 : 15000));
+      count = Math.max(18, Math.min(count, 70));
+      particles = [];
+      for (var i = 0; i < count; i++){
+        particles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.18,
+          vy: (Math.random() - 0.5) * 0.18,
+          r: Math.random() * 1.6 + 0.6
+        });
+      }
+    }
+
+    var accentRGB = "224,138,91";
+    try {
+      var hex = styleColor("--accent", "#e08a5b").replace("#", "");
+      if (hex.length === 6) {
+        accentRGB = [parseInt(hex.slice(0,2),16), parseInt(hex.slice(2,4),16), parseInt(hex.slice(4,6),16)].join(",");
+      }
+    } catch(e){}
+
+    var linkDist = 120;
+
+    function step(){
+      if (!running) return;
+      ctx.clearRect(0, 0, w, h);
+      for (var i = 0; i < particles.length; i++){
+        var p = particles[i];
+        p.x += p.vx; p.y += p.vy;
+        if (pointer.x !== null) {
+          var dx = p.x - pointer.x, dy = p.y - pointer.y;
+          var d2 = dx*dx + dy*dy;
+          if (d2 < 14000) {
+            var d = Math.sqrt(d2) || 1;
+            p.x += (dx / d) * 0.5;
+            p.y += (dy / d) * 0.5;
+          }
+        }
+        if (p.x < -10) p.x = w + 10; if (p.x > w + 10) p.x = -10;
+        if (p.y < -10) p.y = h + 10; if (p.y > h + 10) p.y = -10;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(" + accentRGB + ",.45)";
+        ctx.fill();
+      }
+      for (var a = 0; a < particles.length; a++){
+        for (var b = a + 1; b < particles.length; b++){
+          var pa = particles[a], pb = particles[b];
+          var ddx = pa.x - pb.x, ddy = pa.y - pb.y;
+          var dist = Math.sqrt(ddx*ddx + ddy*ddy);
+          if (dist < linkDist) {
+            ctx.beginPath();
+            ctx.moveTo(pa.x, pa.y);
+            ctx.lineTo(pb.x, pb.y);
+            ctx.strokeStyle = "rgba(" + accentRGB + "," + (0.14 * (1 - dist / linkDist)).toFixed(3) + ")";
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+      raf = requestAnimationFrame(step);
+    }
+
+    function start(){ if (!running) { running = true; raf = requestAnimationFrame(step); } }
+    function stop(){ running = false; if (raf) cancelAnimationFrame(raf); }
+
+    heroSection.addEventListener("mousemove", function(e){
+      var rect = heroSection.getBoundingClientRect();
+      pointer.x = e.clientX - rect.left;
+      pointer.y = e.clientY - rect.top;
+    }, { passive: true });
+    heroSection.addEventListener("mouseleave", function(){ pointer.x = null; pointer.y = null; });
+
+    var resizeTimer;
+    window.addEventListener("resize", function(){
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(resize, 150);
+    }, { passive: true });
+
+    if ("IntersectionObserver" in window) {
+      var pio = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) start(); else stop();
+        });
+      }, { threshold: 0.05 });
+      pio.observe(heroSection);
+    } else {
+      start();
+    }
+
+    resize();
+  })();
+
+  // ---------- hero 3D object (Three.js, cursor-reactive + draggable) ----------
+  (function initHero3D(){
+    var mount = document.getElementById("hero3d");
+    if (!mount) return;
+    if (reduceMotion) return; // keep the static fallback under reduced motion
+    if (window.matchMedia && window.matchMedia("(max-width: 640px)").matches) return; // container is hidden anyway
+    if (typeof THREE === "undefined") return; // CDN blocked/offline — static fallback stays visible
+
+    var w = mount.clientWidth || 260, h = mount.clientHeight || 260;
+    var renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    } catch(e) { return; } // no WebGL — static fallback stays visible
+
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setSize(w, h);
+    mount.appendChild(renderer.domElement);
+    mount.classList.add("is-ready");
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(40, w / h, 0.1, 100);
+    camera.position.set(0, 0, 6.2);
+
+    var accentHex = 0xe08a5b, accent2Hex = 0xc9a877;
+    try {
+      var hex1 = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();
+      var hex2 = getComputedStyle(document.documentElement).getPropertyValue("--accent-2").trim();
+      if (/^#([0-9a-f]{6})$/i.test(hex1)) accentHex = parseInt(hex1.slice(1), 16);
+      if (/^#([0-9a-f]{6})$/i.test(hex2)) accent2Hex = parseInt(hex2.slice(1), 16);
+    } catch(e){}
+
+    var geometry = new THREE.TorusKnotGeometry(1.15, 0.34, 110, 12);
+    var material = new THREE.MeshStandardMaterial({
+      color: accentHex,
+      metalness: 0.35,
+      roughness: 0.32,
+      emissive: accent2Hex,
+      emissiveIntensity: 0.08
+    });
+    var knot = new THREE.Mesh(geometry, material);
+    scene.add(knot);
+
+    var keyLight = new THREE.DirectionalLight(0xffffff, 1.1);
+    keyLight.position.set(3, 4, 5);
+    scene.add(keyLight);
+    var fillLight = new THREE.DirectionalLight(accent2Hex, 0.6);
+    fillLight.position.set(-4, -2, 2);
+    scene.add(fillLight);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+
+    var targetX = 0, targetY = 0;
+    var dragging = false, lastX = 0, lastY = 0;
+    var dragRotX = 0, dragRotY = 0;
+    var hoverActive = window.matchMedia && window.matchMedia("(hover: hover)").matches;
+
+    if (hoverActive) {
+      document.addEventListener("mousemove", function(e){
+        if (dragging) return;
+        var rect = mount.getBoundingClientRect();
+        var cx = rect.left + rect.width / 2;
+        var cy = rect.top + rect.height / 2;
+        var dx = (e.clientX - cx) / (window.innerWidth / 2);
+        var dy = (e.clientY - cy) / (window.innerHeight / 2);
+        targetY = dx * 0.6;
+        targetX = dy * 0.4;
+      }, { passive: true });
+    }
+
+    function pointerDown(e){
+      dragging = true;
+      mount.style.cursor = "grabbing";
+      lastX = (e.touches ? e.touches[0].clientX : e.clientX);
+      lastY = (e.touches ? e.touches[0].clientY : e.clientY);
+    }
+    function pointerMove(e){
+      if (!dragging) return;
+      var cx = (e.touches ? e.touches[0].clientX : e.clientX);
+      var cy = (e.touches ? e.touches[0].clientY : e.clientY);
+      dragRotY += (cx - lastX) * 0.01;
+      dragRotX += (cy - lastY) * 0.01;
+      lastX = cx; lastY = cy;
+      e.preventDefault();
+    }
+    function pointerUp(){
+      dragging = false;
+      mount.style.cursor = "grab";
+    }
+    mount.addEventListener("mousedown", pointerDown);
+    mount.addEventListener("touchstart", pointerDown, { passive: true });
+    window.addEventListener("mousemove", pointerMove);
+    window.addEventListener("touchmove", pointerMove, { passive: false });
+    window.addEventListener("mouseup", pointerUp);
+    window.addEventListener("touchend", pointerUp);
+
+    var lastFrame = 0;
+    var frameInterval = 1000 / 60;
+    var idle = 0;
+    var raf3d;
+    var mountVisible = true;
+
+    function animate(ts){
+      raf3d = requestAnimationFrame(animate);
+      if (!mountVisible) return;
+      if (ts - lastFrame < frameInterval) return;
+      lastFrame = ts;
+      idle += 0.004;
+      knot.rotation.x += (targetX + dragRotX - knot.rotation.x + Math.sin(idle) * 0.05) * 0.06;
+      knot.rotation.y += (targetY + dragRotY - knot.rotation.y + idle * 0.15) * 0.06;
+      renderer.render(scene, camera);
+    }
+    raf3d = requestAnimationFrame(animate);
+
+    if ("IntersectionObserver" in window) {
+      var io3d = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){ mountVisible = entry.isIntersecting; });
+      }, { threshold: 0.05 });
+      io3d.observe(mount);
+    }
+
+    var resizeTimer3d;
+    window.addEventListener("resize", function(){
+      clearTimeout(resizeTimer3d);
+      resizeTimer3d = setTimeout(function(){
+        if (window.matchMedia && window.matchMedia("(max-width: 640px)").matches) return;
+        var nw = mount.clientWidth || w, nh = mount.clientHeight || h;
+        renderer.setSize(nw, nh);
+        camera.aspect = nw / nh;
+        camera.updateProjectionMatrix();
+      }, 150);
+    }, { passive: true });
+  })();
 })();
 </script>
 
