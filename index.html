@@ -2,1851 +2,944 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Loopcraft — веб-разработка, приложения, автоматизация и AI-интеграции. Минск.">
-<title>Loopcraft</title>
-<!-- TODO: заменить на реальный домен перед деплоем (canonical, og:url, sitemap.xml) -->
-<link rel="canonical" href="https://loopcraft.by/">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Loopcraft — веб-разработка, приложения, автоматизация и AI-интеграции. Минск, работаю удалённо.">
+<meta name="theme-color" content="#07080A">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Loopcraft">
 <meta property="og:title" content="Loopcraft — пишем код, который работает">
-<meta property="og:description" content="Сайты, приложения, автоматизация и AI-интеграции. Минск.">
-<meta property="og:url" content="https://loopcraft.by/">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0f0d'/%3E%3Cpath d='M9 16c0-4 2.6-6 5.2-6 4.6 0 4.6 12 9.2 12 2.6 0 5.2-2 5.2-6' stroke='%232fb583' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:description" content="Разработка полного цикла: сайты, приложения, автоматизация рутины и AI-интеграции. Минск, удалённо.">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307080A'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23E3974A'/%3E%3C/svg%3E">
+<title>Loopcraft</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Loopcraft",
-  "description": "Веб-разработка, приложения, автоматизация и AI-интеграции.",
-  "url": "https://loopcraft.by/",
-  "areaServed": "BY",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Минск",
-    "addressCountry": "BY"
-  },
-  "sameAs": ["https://t.me/Egorchi9"],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "sales",
-    "url": "https://t.me/Egorchi9",
-    "availableLanguage": ["ru", "en"]
-  }
-}
-</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
   :root{
-    --bg: #0b0f0d;
-    --surface: #121614;
-    --surface-2: #181d1a;
-    --ink: #f1f4f2;
-    --muted: #8b968f;
-    --accent: #2fb583;
-    --accent-ink: #04130c;
-    --accent-2: #5bd3a4;
-    --line: rgba(241,244,242,0.12);
-    --grid: rgba(47,181,131,0.14);
-    --grid-soft: rgba(47,181,131,0.05);
-    --blob-1: rgba(47,181,131,0.16);
-    --blob-2: rgba(91,211,164,0.12);
-    --surface-glass: rgba(18,22,20,0.62);
-    --glow: rgba(47,181,131,0.35); --spec: #d8cfc0;
+    color-scheme: dark;
+    --void:#07080A;
+    --ink:#0C0E11;
+    --plate:#12161A;
+    --plate-2:#171C21;
+    --line:rgba(190,206,219,.10);
+    --line-strong:rgba(190,206,219,.22);
+    --mist:#9AA5AE;
+    --chrome:#E9EDF0;
+    --amber:#E3974A;
+    --amber-soft:rgba(227,151,74,.14);
+    --amber-line:rgba(227,151,74,.42);
+    --display:'Unbounded','Golos Text','Trebuchet MS',system-ui,sans-serif;
+    --body:'Golos Text','Segoe UI',system-ui,sans-serif;
+    --mono:'JetBrains Mono','SF Mono',ui-monospace,monospace;
+    --gutter:clamp(20px,5vw,56px);
+    --maxw:1200px;
   }
-  @media (prefers-color-scheme: light){
-    :root:not([data-theme="light"]){
-      --bg: #f4f6f5;
-      --surface: #ffffff;
-      --surface-2: #eaf0ed;
-      --ink: #101512;
-      --muted: #5b665f;
-      --accent: #047857;
-      --accent-ink: #f4fdf9;
-      --accent-2: #059669;
-      --line: rgba(16,21,18,0.10);
-      --grid: rgba(4,120,87,0.13);
-      --grid-soft: rgba(4,120,87,0.06);
-      --blob-1: rgba(4,120,87,0.10);
-      --blob-2: rgba(5,150,105,0.09);
-      --surface-glass: rgba(255,255,255,0.62);
-      --glow: rgba(4,120,87,0.25); --spec: #8d8371;
-    }
-  }
-  :root[data-theme="light"]{
-    --bg: #f4f6f5;
-    --surface: #ffffff;
-    --surface-2: #eaf0ed;
-    --ink: #101512;
-    --muted: #5b665f;
-    --accent: #047857;
-    --accent-ink: #f4fdf9;
-    --accent-2: #059669;
-    --line: rgba(16,21,18,0.10);
-    --grid: rgba(4,120,87,0.13);
-    --grid-soft: rgba(4,120,87,0.06);
-    --blob-1: rgba(4,120,87,0.10);
-    --blob-2: rgba(5,150,105,0.09);
-    --surface-glass: rgba(255,255,255,0.62);
-    --glow: rgba(4,120,87,0.25); --spec: #8d8371;
-  }
-  :root[data-theme="dark"]{
-    --bg: #0b0f0d;
-    --surface: #121614;
-    --surface-2: #181d1a;
-    --ink: #f1f4f2;
-    --muted: #8b968f;
-    --accent: #2fb583;
-    --accent-ink: #04130c;
-    --accent-2: #5bd3a4;
-    --line: rgba(241,244,242,0.12);
-    --grid: rgba(47,181,131,0.14);
-    --grid-soft: rgba(47,181,131,0.05);
-    --blob-1: rgba(47,181,131,0.16);
-    --blob-2: rgba(91,211,164,0.12);
-    --surface-glass: rgba(18,22,20,0.62);
-    --glow: rgba(47,181,131,0.35); --spec: #d8cfc0;
-  }
-
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
-  section[id]{scroll-margin-top:86px;}
+  *{box-sizing:border-box}
   body{
-    background:var(--bg);
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-    background-repeat:repeat;
-    color:var(--ink);
-    font-family:"IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-    padding-inline:0;
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  /* ---------- AMBIENT BACKGROUND ---------- */
-  .bg-ambient{
-    position:fixed;
-    inset:0;
-    z-index:-1;
-    overflow:hidden;
-    pointer-events:none;
-  }
-  .bg-ambient::before,
-  .bg-ambient::after{
-    content:"";
-    position:absolute;
-    border-radius:50%;
-    /* 110px over a ~600px layer is a very large blur surface to keep in memory;
-       70px is visually equivalent behind 10% alpha and much cheaper */
-    filter:blur(70px);
-  }
-  .bg-ambient::before{
-    width:520px; height:520px;
-    background:var(--blob-1);
-    top:-140px; left:-120px;
-    animation:bgDrift1 28s ease-in-out infinite alternate;
-  }
-  .bg-ambient::after{
-    width:620px; height:620px;
-    background:var(--blob-2);
-    bottom:-200px; right:-160px;
-    animation:bgDrift2 34s ease-in-out infinite alternate;
-  }
-  @keyframes bgDrift1{ to{ transform:translate(70px, 50px) scale(1.08); } }
-  @keyframes bgDrift2{ to{ transform:translate(-60px, -40px) scale(1.05); } }
-  @media (prefers-reduced-motion: reduce){
-    .bg-ambient::before, .bg-ambient::after{ animation:none; }
-  }
-  @media (max-width:640px){
-    .bg-ambient::before{ width:340px; height:340px; }
-    .bg-ambient::after{ width:380px; height:380px; }
-  }
-
-  .wrap{
-    max-width:1180px;
-    margin-inline:auto;
-    padding-inline:clamp(24px, 4vw, 56px);
-  }
-  /* Unbounded is reserved for the wordmark and H1; everything else speaks
-     in Plex Sans, so the page has one display voice instead of three */
-  h1,h2,h3{
-    text-wrap:balance;
     margin:0;
-    font-weight:600;
+    background:var(--void);
+    color:var(--chrome);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
   }
-  h1{font-family:"Unbounded", ui-sans-serif, system-ui, sans-serif;}
-  h2,h3{letter-spacing:-0.012em;}
-  .mono{
-    font-family:"IBM Plex Mono", ui-monospace, monospace;
-    font-variant-numeric:tabular-nums;
-  }
-  a{color:inherit;}
+  a{color:inherit}
+  ::selection{background:var(--amber);color:#0A0B0C}
+  :focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
 
-  /* ---------- HERO ---------- */
-  .hero{
-    --mx:50%;
-    --my:20%;
-    position:relative;
-    min-height:100svh;
-    display:flex;
-    align-items:center;
-    padding-block:120px 88px;
-    background-image:radial-gradient(ellipse 900px 420px at 50% 0%, var(--grid-soft), transparent 70%);
-    overflow:hidden;
+  /* ---------- 3D canvas ---------- */
+  .bg-glow{
+    position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(68% 52% at 74% 34%,rgba(227,151,74,.11),transparent 70%),
+      radial-gradient(58% 48% at 16% 10%,rgba(126,163,196,.10),transparent 72%),
+      radial-gradient(120% 80% at 50% 118%,rgba(227,151,74,.05),transparent 62%);
   }
-  .hero::before{
-    content:"";
-    position:absolute; inset:0;
-    background:radial-gradient(480px circle at var(--mx) var(--my), rgba(47,181,131,.10), transparent 60%);
-    pointer-events:none;
-    transition:background .25s ease;
+  #stage{
+    position:fixed;inset:0;z-index:0;pointer-events:none;
+    opacity:0;transition:opacity 1.2s ease;
   }
-  .hero::after{
-    content:"";
-    position:absolute; inset:0;
-    background:radial-gradient(ellipse 60% 50% at 50% 0%, transparent 0%, var(--bg) 78%);
-    pointer-events:none;
+  #stage.ready{opacity:var(--stage-op,1)}
+  .grain{
+    position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.32;
+    background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);
+    background-size:3px 3px;mix-blend-mode:screen;
   }
-  .hero > .wrap{width:100%;}
-  .hero-inner{
-    position:relative;
-    z-index:1;
-    display:grid;
-    grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr);
-    align-items:center;
-    gap:0;
-  }
-  .hero-copy{grid-column:1; position:relative; z-index:3;}
-  @media (max-width:900px){
-    .hero-inner{grid-template-columns:1fr;}
-    .hero-copy{grid-column:auto;}
+  .vignette{
+    position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(120% 90% at 50% 0%,transparent 40%,rgba(7,8,10,.72) 100%);
   }
 
-  /* ---------- HERO DECORATIVE LAYERS (parallax + particles + gradient wave + 3D) ---------- */
-  /* Static haze. This used to be a second WebGL canvas (an animated noise
-     shader over the whole hero); at 40% opacity under a screen blend it cost
-     a full extra GPU context for an effect two CSS gradients reproduce. */
-  .hero-gradient{
-    position:absolute;
-    inset:0;
-    z-index:0;
-    pointer-events:none;
-    background:
-      radial-gradient(ellipse 70% 55% at 76% 42%, var(--blob-1), transparent 68%),
-      radial-gradient(ellipse 90% 60% at 16% 88%, var(--grid-soft), transparent 72%);
+  section,#top{scroll-margin-top:96px}
+
+  /* ---------- shell ---------- */
+  .shell{position:relative;z-index:2}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding-inline:var(--gutter)}
+
+  /* ---------- header ---------- */
+  header.bar{
+    position:sticky;top:env(safe-area-inset-top,0px);z-index:40;
+    background:linear-gradient(to bottom,rgba(7,8,10,.92),rgba(7,8,10,.55) 70%,transparent);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
   }
-  @media (max-width:640px){ .hero-gradient{opacity:.6;} }
-  .hero-shape{
-    position:absolute;
-    top:-60px; right:-80px;
-    width:460px; height:460px;
-    border-radius:50%;
-    border:1px solid var(--line);
-    background:radial-gradient(circle at 35% 30%, var(--blob-1), transparent 60%);
-    filter:blur(2px);
-    pointer-events:none;
-    will-change:transform;
+  .bar-in{display:flex;align-items:center;gap:clamp(12px,3vw,32px);height:66px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;
+    letter-spacing:.14em;font-size:13px;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+  .brand .dot{width:9px;height:9px;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%,#fff,var(--amber) 55%,#8a4f14);
+    box-shadow:0 0 12px var(--amber-line)}
+  nav.links{display:flex;gap:clamp(14px,2.2vw,30px);margin-left:auto}
+  nav.links a{
+    font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--mist);
+    text-decoration:none;padding:6px 0;position:relative;transition:color .25s
   }
-  @media (max-width:900px){ .hero-shape{width:300px; height:300px; top:-40px; right:-90px;} }
-  .hero-particles{
-    position:absolute; inset:0;
-    width:100%; height:100%;
-    pointer-events:none;
-    display:block;
+  nav.links a::after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:1px;background:var(--amber);transition:right .3s ease}
+  nav.links a:hover{color:var(--chrome)}
+  nav.links a:hover::after{right:0}
+  .bar-tools{display:flex;align-items:center;gap:10px;margin-left:auto}
+  nav.links + .bar-tools{margin-left:clamp(14px,2.2vw,30px)}
+  @media(max-width:820px){nav.links{display:none}}
+  @media(max-width:430px){.tg-mini{display:none}}
+  .lang{display:flex;border:1px solid var(--line-strong);border-radius:2px;overflow:hidden}
+  .lang button{
+    font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:6px 9px;background:transparent;
+    color:var(--mist);border:0;cursor:pointer;transition:background .2s,color .2s
   }
-  .hero-scrim{
-    position:absolute;
-    top:-10%; left:-6%;
-    width:min(880px, 82vw);
-    height:120%;
-    background:
-      radial-gradient(ellipse 58% 52% at 28% 46%, var(--bg) 0%, transparent 74%),
-      linear-gradient(90deg, var(--bg) 0%, rgba(0,0,0,0) 86%);
-    opacity:.9;
-    pointer-events:none;
+  .lang button[aria-pressed="true"]{background:var(--chrome);color:#0A0B0C}
+  .tg-mini{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-decoration:none;
+    border:1px solid var(--amber-line);color:var(--amber);padding:7px 12px;border-radius:2px;
+    transition:background .25s,color .25s;white-space:nowrap
   }
-  @media (max-width:900px){ .hero-scrim{display:none;} }
-  .hero-3d{
-    position:relative;
-    grid-column:2;
-    grid-row:1;
-    justify-self:end;
-    width:min(620px, 46vw);
-    margin-right:min(-96px, -5vw);
-    margin-left:-14%;
-    aspect-ratio:1/1;
-    z-index:2;
-    cursor:grab;
-    touch-action:none;
-  }
-  .hero-3d:active{cursor:grabbing;}
-  /* seats the object in space: warm bounce behind, soft occlusion below */
-  .hero-3d::before{
-    content:"";
-    position:absolute;
-    left:12%; right:12%;
-    top:18%; bottom:12%;
-    border-radius:50%;
-    background:radial-gradient(ellipse at 60% 40%, var(--blob-1), transparent 66%);
-    filter:blur(48px);
-    opacity:.85;
-    z-index:-1;
-    pointer-events:none;
-  }
-  .hero-3d canvas{display:block; width:100%; height:100%; position:relative; z-index:1;}
-  @keyframes heroObjIn{
-    from{opacity:0; transform:scale(.86);}
-    to{opacity:1; transform:none;}
-  }
-  .hero-3d.is-ready canvas{animation:heroObjIn 1.1s cubic-bezier(.16,1,.3,1) .18s both;}
-  @media (prefers-reduced-motion: reduce){
-    .hero-3d.is-ready canvas{animation:none;}
-  }
-  .hero-3d-fallback{
-    position:absolute; inset:0;
-    display:flex; align-items:center; justify-content:center;
-    opacity:.7;
-  }
-  .hero-3d-fallback svg{width:78%; height:78%;}
-  .hero-3d.is-ready .hero-3d-fallback{display:none;}
-  @media (max-width:900px){
-    .hero-3d{
-      grid-column:auto; grid-row:auto; justify-self:center;
-      width:min(360px, 74vw); margin:16px 0 0; opacity:.92;
-    }
-  }
-  @media (max-width:640px){
-    .hero-3d{display:none;}
-  }
-  @media (prefers-reduced-motion: reduce){
-    .hero-shape{will-change:auto;}
-  }
+  .tg-mini:hover{background:var(--amber);color:#0A0B0C}
+
+  /* ---------- hero ---------- */
+  .hero{padding-block:clamp(54px,9vw,104px) clamp(60px,11vw,132px);position:relative}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(28px,5vw,56px);align-items:center}
+  @media(min-width:900px){.hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}}
   .eyebrow{
-    font-size:.95rem;
-    color:var(--muted);
-    margin-bottom:18px;
+    display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--mist);margin-bottom:22px
   }
-  .hero h1{
-    font-size:clamp(2.3rem, 5.6vw, 4.2rem);
-    line-height:1.04;
-    letter-spacing:-0.022em;
+  .eyebrow .rule{flex:0 0 46px;height:1px;background:var(--line-strong)}
+  h1{
+    font-family:var(--display);font-weight:800;margin:0;
+    font-size:clamp(2.15rem,6.1vw,4.5rem);line-height:.98;letter-spacing:-.035em;text-wrap:balance
   }
-  .hero h1 em{
-    font-style:normal;
-    font-weight:700;
-    color:var(--accent);
-  }
-  .hero-tagline{
-    margin-top:26px;
-    max-width:46ch;
-    font-size:1.02rem;
-    color:var(--muted);
-  }
-  .hero-cta{
-    margin-top:38px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-  }
-  /* staged entrance: eyebrow → headline → tagline → CTA */
-  @keyframes heroIn{
-    from{opacity:0; transform:translateY(24px);}
-    to{opacity:1; transform:none;}
-  }
-  .hero-copy > *{animation:heroIn .9s cubic-bezier(.16,1,.3,1) both;}
-  .hero-copy > .eyebrow{animation-delay:.06s;}
-  .hero-copy > h1{animation-delay:.16s;}
-  .hero-copy > .hero-tagline{animation-delay:.3s;}
-  .hero-copy > .hero-cta{animation-delay:.42s;}
-  @media (prefers-reduced-motion: reduce){
-    .hero-copy > *{animation:none;}
-  }
+  h1 .sep{display:block;height:0}
+  h1 em{font-style:normal;color:var(--amber)}
+  .lead{max-width:34em;color:var(--mist);font-size:clamp(1rem,1.5vw,1.14rem);margin:26px 0 0}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
   .btn{
-    position:relative;
-    overflow:hidden;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:13px;
-    letter-spacing:.03em;
-    padding:13px 22px;
-    border-radius:3px;
-    border:1px solid var(--line);
-    text-decoration:none;
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    transition:transform .15s ease, border-color .15s ease;
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;
+    text-decoration:none;padding:15px 26px;border-radius:2px;display:inline-flex;align-items:center;gap:10px;
+    transition:transform .25s cubic-bezier(.2,.7,.3,1),background .25s,border-color .25s,color .25s;cursor:pointer;border:1px solid transparent
   }
-  .btn:hover{transform:translateY(-1px);}
-  .btn::before{
-    content:"";
-    position:absolute;
-    top:0; left:-60%;
-    width:40%; height:100%;
-    background:linear-gradient(115deg, transparent, rgba(255,255,255,.22), transparent);
-    transform:skewX(-18deg);
-    transition:left .55s ease;
-    pointer-events:none;
-  }
-  .btn:hover::before{left:130%;}
-  .btn-primary{
-    background:var(--accent);
-    color:var(--accent-ink);
-    border-color:var(--accent);
-    font-weight:500;
-    box-shadow:0 0 0 0 var(--glow);
-    transition:transform .15s ease, border-color .15s ease, box-shadow .25s ease;
-  }
-  .btn-primary:hover{box-shadow:0 6px 24px -4px var(--glow);}
-  @media (prefers-reduced-motion: reduce){
-    .btn-primary{transition:border-color .15s ease;}
-    .btn-primary:hover{box-shadow:0 0 0 0 var(--glow);}
-  }
-  .btn-ghost{
-    color:var(--ink);
-  }
-  .btn-ghost:hover{border-color:var(--accent-2);}
-  @media (prefers-reduced-motion: reduce){
-    .btn::before{display:none;}
+  .btn-primary{background:var(--chrome);color:#0A0B0C;font-weight:500}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--amber)}
+  .btn-ghost{border-color:var(--line-strong);color:var(--chrome);background:rgba(18,22,26,.5)}
+  .btn-ghost:hover{border-color:var(--amber-line);color:var(--amber);transform:translateY(-2px)}
+  .btn .arw{transition:transform .25s}
+  .btn:hover .arw{transform:translateX(4px)}
+  .hero-facts{display:grid;gap:1px;margin-top:clamp(40px,6vw,64px);background:var(--line);
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border:1px solid var(--line)}
+  .fact{background:rgba(12,14,17,.62);padding:20px 22px;backdrop-filter:blur(6px)}
+  .fact b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--amber);
+    text-transform:uppercase;font-weight:500;margin-bottom:7px}
+  .fact span{font-size:14.5px;color:var(--mist);line-height:1.5}
+  .hero-slot{min-height:clamp(240px,42vw,420px);position:relative}
+  .hero-slot .plaque{
+    position:absolute;right:0;bottom:0;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+    color:rgba(154,165,174,.6);text-align:right;line-height:1.9
   }
 
-  /* ---------- SECTION SCAFFOLDING ---------- */
-  section{padding-block:clamp(88px, 12vh, 152px);}
-  section + section{padding-top:0;}
-  .section-head{
-    margin-bottom:clamp(36px, 5vh, 64px);
-  }
-  .section-head h2{font-size:clamp(1.55rem, 3vw, 2.15rem); letter-spacing:-0.015em;}
-  /* document-like section markers instead of decorative headings */
-  .section-head[data-num]::before{
-    content:attr(data-num) " — " attr(data-label);
-    display:block;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11.5px;
-    letter-spacing:.09em;
-    text-transform:uppercase;
-    color:var(--muted);
-    margin-bottom:14px;
-  }
+  /* ---------- sections ---------- */
+  section{padding-block:clamp(64px,9vw,120px);position:relative}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:clamp(28px,4vw,52px);flex-wrap:wrap}
+  .sec-label{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber)}
+  h2{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3.3vw,2.6rem);letter-spacing:-.025em;
+    margin:0;line-height:1.08;text-wrap:balance}
+  .sec-head .hair{flex:1 1 120px;height:1px;background:var(--line);transform:translateY(-6px)}
+  .sec-note{color:var(--mist);max-width:46ch;font-size:15px;margin:14px 0 0}
 
-  /* ---------- DIRECTIONS (bento) ---------- */
-  .direction-list{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-    border-radius:14px;
-    overflow:hidden;
-  }
-  .direction{
-    grid-column:span 1;
-    display:flex;
-    flex-direction:column;
-    gap:16px;
-    padding:30px 28px;
-    background:var(--surface);
-  }
-  .direction:first-child{
-    grid-column:span 2;
-    background:var(--surface-2);
-  }
-  @media (max-width:768px){
-    .direction-list{grid-template-columns:1fr;}
-    .direction, .direction:first-child{grid-column:auto;}
-  }
-  .direction-icon{
-    width:36px; height:36px;
-    color:var(--accent-2);
-  }
-  .direction-icon svg{width:100%; height:100%; display:block;}
-  .direction-main h3{font-size:1.2rem; margin-bottom:8px;}
-  .direction-main p{color:var(--muted); font-size:.93rem; margin:0; max-width:62ch;}
+  /* services */
+  .svc{display:grid;gap:1px;background:var(--line);border-block:1px solid var(--line);
+    grid-template-columns:minmax(0,1fr)}
+  @media(min-width:660px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .svc-item.wide{grid-column:span 2}}
+  @media(min-width:1000px){.svc{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .svc-item.wide{grid-column:span 2}}
+  .svc-item{background:rgba(12,14,17,.72);padding:clamp(22px,3vw,32px);position:relative;
+    transition:background .35s;backdrop-filter:blur(6px);display:flex;flex-direction:column}
+  .svc-item p{flex:0 0 auto}
+  .svc-item:hover{background:rgba(23,28,33,.9)}
+  .svc-item::before{content:"";position:absolute;left:0;top:0;width:100%;height:1px;background:var(--amber);
+    transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.2,.7,.3,1)}
+  .svc-item:hover::before{transform:scaleX(1)}
+  .svc-item h3{font-family:var(--display);font-weight:600;font-size:1.05rem;margin:0 0 10px;letter-spacing:-.01em}
+  .svc-item p{margin:0;color:var(--mist);font-size:14.5px;line-height:1.62}
+  .svc-ico{width:26px;height:26px;margin-bottom:18px;display:block;color:var(--amber)}
+  .svc-list{list-style:none;margin:20px 0 0;padding:14px 0 0;border-top:1px solid var(--line);margin-top:auto;
+    display:flex;flex-direction:column;gap:8px}
+  .svc-list li{font-family:var(--mono);font-size:12px;line-height:1.5;letter-spacing:.01em;
+    color:var(--mist);padding-left:16px;position:relative;break-inside:avoid}
+  .svc-list li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:1px;background:var(--amber)}
+  .svc-item.wide .svc-list{display:block;columns:2;column-gap:30px}
+  .svc-item.wide .svc-list li{margin-bottom:8px}
+  @media(max-width:560px){.svc-item.wide .svc-list{columns:1}}
+  .svc-ref{margin:16px 0 0;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:rgba(154,165,174,.8)}
+  .svc-ref b{color:var(--amber);font-weight:400}
 
-  /* ---------- ABOUT ---------- */
-  .about-block{max-width:70ch;}
-  .about-block p{color:var(--muted); margin:0 0 16px; font-size:1rem;}
-  .about-block p:last-child{margin-bottom:0;}
-  /* ---------- SKILLS ---------- */
-  .tag-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:24px;}
-  .tag{
-    font-family:"IBM Plex Mono", monospace;
-    font-size:12px;
-    padding:6px 11px;
-    border:1px solid var(--line);
-    border-radius:20px;
-    color:var(--ink);
-  }
+  /* process */
+  .flow{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
+    grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+  .step{background:rgba(12,14,17,.72);padding:clamp(22px,3vw,30px);position:relative;backdrop-filter:blur(6px)}
+  .step .no{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:rgba(154,165,174,.55);display:block;margin-bottom:16px}
+  .step h3{font-family:var(--display);font-weight:600;font-size:1.02rem;margin:0 0 9px}
+  .step p{margin:0;color:var(--mist);font-size:14px;line-height:1.6}
+  .step::after{content:"";position:absolute;right:-1px;top:26px;width:1px;height:26px;background:var(--amber);opacity:.55}
+  .step:last-child::after{display:none}
 
-  /* ---------- PROCESS ---------- */
-  /* the four steps sit inside a closed loop that draws itself on scroll —
-     the cycle the copy describes, stated once in geometry */
-  .process-wrap{
-    position:relative;
-    padding:clamp(28px, 4vw, 52px) clamp(24px, 4vw, 56px);
+  /* projects */
+  .works{display:grid;gap:clamp(16px,2.2vw,24px);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+  .work{
+    position:relative;border:1px solid var(--line);background:
+      linear-gradient(160deg,rgba(23,28,33,.92),rgba(12,14,17,.92));
+    padding:clamp(22px,2.6vw,30px);display:flex;flex-direction:column;gap:18px;min-height:280px;
+    transition:transform .4s cubic-bezier(.2,.7,.3,1),border-color .4s;overflow:hidden
   }
-  .process-loop{
-    position:absolute;
-    inset:0;
-    width:100%; height:100%;
-    color:var(--accent);
-    opacity:.5;
-    pointer-events:none;
-    overflow:visible;
-  }
-  @media (max-width:760px){
-    .process-wrap{padding:0;}
-    .process-loop{display:none;}
-  }
-  .process{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:24px;
-    counter-reset:step;
-  }
-  @media (max-width:760px){ .process{grid-template-columns:repeat(2, 1fr);} }
-  @media (max-width:480px){ .process{grid-template-columns:1fr;} }
-  .step{position:relative; padding-top:8px;}
-  .step::before{
-    counter-increment:step;
-    content:"0" counter(step);
-    font-family:"IBM Plex Mono", monospace;
-    font-size:12px;
-    color:var(--accent);
-    display:block;
-    margin-bottom:10px;
-    letter-spacing:.05em;
-  }
-  .step h4{
-    font-size:1.05rem;
-    font-weight:600;
-    letter-spacing:-0.01em;
-    margin:0 0 8px;
-  }
-  .step p{color:var(--muted); font-size:.88rem; margin:0;}
+  .work::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(150deg,rgba(255,255,255,.07),transparent 42%);opacity:.9}
+  .work:hover{border-color:var(--amber-line);transform:translateY(-4px)}
+  .work-art{height:96px;margin:-6px 0 2px;color:var(--amber);opacity:.85}
+  .work-art svg{width:100%;height:100%;display:block}
+  .work h3{font-family:var(--display);font-weight:600;font-size:1.28rem;margin:0;letter-spacing:-.015em}
+  .work .kind{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mist);margin:-12px 0 0}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+  .tag{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--mist);
+    border:1px solid var(--line-strong);border-radius:999px;padding:5px 11px;white-space:nowrap}
 
-  /* ---------- PROJECTS ---------- */
-  .projects{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:24px;
-  }
-  @media (max-width:860px){ .projects{grid-template-columns:1fr;} }
-  .project-card{
-    position:relative;
-    border:1px solid var(--line);
-    border-radius:10px;
-    overflow:hidden;
-    background:var(--surface);
-    display:flex;
-    flex-direction:column;
-    text-decoration:none;
-    color:inherit;
-    transition:transform .32s cubic-bezier(.2,.7,.3,1), border-color .18s ease, box-shadow .32s ease;
-  }
-  .project-card:hover,
-  .project-card:focus-visible{
-    transform:translateY(-4px);
-    border-color:var(--accent);
-    box-shadow:0 26px 48px -28px rgba(0,0,0,.7);
-  }
-  .project-card:focus-visible{outline:2px solid var(--accent-2); outline-offset:3px;}
-  @media (prefers-reduced-motion: reduce){
-    .project-card{transition:border-color .18s ease;}
-    .project-card:hover{transform:none;}
-  }
-  .project-visual{
-    height:150px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-    overflow:hidden;
-    transition:transform .5s cubic-bezier(.2,.7,.3,1);
-  }
-  .project-card:hover .project-visual{transform:scale(1.06);}
-  .project-visual svg{
-    width:56px; height:56px; position:relative; z-index:1;
-    transition:transform .5s cubic-bezier(.2,.7,.3,1);
-  }
-  .project-card:hover .project-visual svg{transform:scale(1.08);}
-  /* single depth cue instead of a second shimmer: the visual sinks, the card lifts */
-  .project-visual::after{
-    content:"";
-    position:absolute; inset:0;
-    background:linear-gradient(180deg, transparent 45%, rgba(0,0,0,.42) 100%);
-    opacity:.55;
-    transition:opacity .4s ease;
-    pointer-events:none;
-    z-index:2;
-  }
-  .project-card:hover .project-visual::after{opacity:.2;}
-  @media (prefers-reduced-motion: reduce), (hover:none){
-    .project-visual, .project-visual svg{transition:none;}
-    .project-card:hover .project-visual, .project-card:hover .project-visual svg{transform:none;}
-  }
-  .project-visual::before{
-    content:"";
-    position:absolute; inset:0;
-    background-image:
-      linear-gradient(var(--grid) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-    background-size:24px 24px;
-  }
-  .visual-farm{background:linear-gradient(135deg, #4a5a3a, #6b7a4f); color:#f3efe0;}
-  .visual-pub{background:linear-gradient(135deg, #2e2420, #4a382c); color:#e8c98a;}
-  .visual-noodles{background:linear-gradient(135deg, #a13a2c, #d9622f); color:#fff2e0;}
-  .project-body{padding:20px; flex:1; display:flex; flex-direction:column;}
-  .project-title{font-size:1.1rem; font-weight:600; letter-spacing:-0.01em; margin-bottom:6px;}
-  .project-desc{color:var(--muted); font-size:.87rem; margin:0 0 12px;}
-  .project-foot{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11.5px;
-    margin-top:auto;
-    padding-top:12px;
-  }
-  .project-tag{color:var(--accent-2);}
-  .project-go{color:var(--accent);}
-  .project-checks{display:flex; flex-direction:column; gap:6px; margin:2px 0 12px;}
-  .project-checks div{display:flex; align-items:center; gap:7px; font-size:12px; color:var(--ink);}
-  .project-checks svg{flex:0 0 auto; color:var(--accent-2);}
+  /* stack */
+  .stack{display:flex;flex-direction:column;gap:1px;background:var(--line);
+    border-block:1px solid var(--line);margin-top:30px}
+  .stack-row{background:rgba(12,14,17,.7);padding:22px clamp(18px,2.4vw,28px);display:grid;gap:14px;
+    grid-template-columns:minmax(0,1fr);align-items:center;backdrop-filter:blur(6px)}
+  @media(min-width:720px){.stack-row{grid-template-columns:190px minmax(0,1fr);gap:24px}}
+  .stack-row > span{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--amber)}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;color:var(--chrome);
+    border:1px solid var(--line-strong);padding:9px 15px;border-radius:2px;background:rgba(12,14,17,.6);
+    transition:border-color .3s,color .3s,transform .3s}
+  .chip:hover{border-color:var(--amber-line);color:var(--amber);transform:translateY(-2px)}
 
-  /* ---------- CONTACT ---------- */
-  .contact-box{
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:6px;
-    padding:44px 36px;
-    text-align:left;
-    background-image:linear-gradient(135deg, var(--surface) 60%, var(--surface-2) 100%);
-  }
-  .contact-box h2{font-size:clamp(1.6rem,4vw,2.3rem); max-width:16ch;}
-  .contact-box p{color:var(--muted); max-width:44ch; margin:14px 0 28px;}
-  .contact-links{display:flex; flex-wrap:wrap; gap:14px;}
-  .contact-note{margin-top:26px; font-size:.87rem; color:var(--muted); max-width:48ch; line-height:1.6;}
+  /* contact */
+  .contact{border:1px solid var(--line);background:
+      radial-gradient(90% 140% at 100% 0%,rgba(227,151,74,.10),transparent 60%),
+      linear-gradient(160deg,rgba(23,28,33,.9),rgba(10,12,15,.94));
+    padding:clamp(28px,5vw,60px);display:grid;gap:clamp(26px,4vw,48px);
+    grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+  .contact h2{font-size:clamp(1.7rem,3.6vw,2.8rem);font-weight:800}
+  .handle{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:26px}
+  .clock-box{border-left:1px solid var(--line);padding-left:clamp(18px,3vw,34px)}
+  @media(max-width:700px){.clock-box{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:26px}}
+  .clock-label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist)}
+  .clock{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,6vw,3.4rem);letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums;margin:10px 0 4px;line-height:1}
+  .clock .sec{color:var(--amber);font-size:.5em;vertical-align:super;letter-spacing:0}
+  .clock-sub{font-family:var(--mono);font-size:11.5px;color:var(--mist);letter-spacing:.06em}
 
-  footer{
-    padding-block:28px;
-    background-image:linear-gradient(90deg, transparent, var(--line) 10%, var(--line) 90%, transparent);
-    background-repeat:no-repeat;
-    background-position:top;
-    background-size:100% 1px;
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:10px;
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11.5px;
-    color:var(--muted);
-  }
+  footer{border-top:1px solid var(--line);padding-block:30px;margin-top:clamp(40px,6vw,80px)}
+  .foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:rgba(154,165,174,.75)}
 
-  ::selection{background:var(--accent); color:var(--accent-ink);}
-
-  /* ---------- LANG TOGGLE ---------- */
-  .lang-toggle{
-    position:fixed;
-    top:calc(16px + env(safe-area-inset-top, 0px));
-    right:16px;
-    z-index:50;
-    display:flex;
-    align-items:center;
-    gap:2px;
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:20px;
-    padding:3px;
-    box-shadow:0 4px 14px rgba(0,0,0,.18);
+  /* reveal — starts visible, settles into place */
+  .js .rv{animation:rise .9s cubic-bezier(.2,.7,.3,1) both;animation-timeline:auto}
+  @keyframes rise{from{opacity:.001;transform:translateY(18px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){
+    .js .rv{animation:none}
+    .btn,.work,.chip,.svc-item::before{transition:none}
   }
-  .lang-toggle button{
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11.5px;
-    letter-spacing:.04em;
-    background:transparent;
-    color:var(--muted);
-    border:none;
-    border-radius:16px;
-    padding:6px 12px;
-    cursor:pointer;
-    transition:background .15s ease, color .15s ease;
-  }
-  .lang-toggle button:hover{color:var(--ink);}
-  .lang-toggle button:focus-visible{outline:2px solid var(--accent-2); outline-offset:2px;}
-  .lang-toggle button[aria-pressed="true"]{
-    background:var(--accent);
-    color:var(--accent-ink);
-    font-weight:500;
-  }
-
-  /* ---------- TOPBAR ---------- */
-  .topbar{
-    position:fixed;
-    top:calc(16px + env(safe-area-inset-top, 0px));
-    left:50%;
-    transform:translateX(-50%);
-    z-index:50;
-    display:flex;
-    align-items:center;
-    gap:12px;
-    background:var(--surface-glass);
-    /* backdrop-filter re-blurs whatever scrolls under the bar every frame;
-       10px reads the same at this size and costs noticeably less */
-    backdrop-filter:blur(10px) saturate(150%);
-    -webkit-backdrop-filter:blur(10px) saturate(150%);
-    border:1px solid var(--line);
-    border-radius:20px;
-    padding:6px 8px 6px 16px;
-    box-shadow:0 4px 14px rgba(0,0,0,.18);
-    max-width:calc(100vw - 32px);
-  }
-  @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-    .topbar{background:var(--surface);}
-  }
-  .topbar-brand{
-    font-family:"Unbounded", sans-serif;
-    font-weight:600;
-    font-size:14px;
-    letter-spacing:.01em;
-    white-space:nowrap;
-  }
-  .topbar-links{
-    display:flex;
-    align-items:center;
-    gap:1px;
-    padding-inline:2px;
-    border-inline:1px solid var(--line);
-  }
-  .topbar-links a{
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11px;
-    letter-spacing:.01em;
-    color:var(--muted);
-    text-decoration:none;
-    white-space:nowrap;
-    padding:6px 11px;
-    border-radius:14px;
-    transition:color .15s ease, background .15s ease;
-  }
-  .topbar-links a:hover{color:var(--ink); background:var(--surface-2);}
-  .topbar-links a:focus-visible{outline:2px solid var(--accent-2); outline-offset:2px;}
-  @media (max-width:900px){ .topbar-links{display:none;} }
-
-  /* ---------- SCROLL PROGRESS ---------- */
-  .scroll-progress-track{
-    position:fixed;
-    top:0; left:0;
-    height:2.5px;
-    width:100%;
-    background:var(--line);
-    z-index:59;
-  }
-  .scroll-progress{
-    position:fixed;
-    top:0; left:0;
-    height:2.5px;
-    width:100%;
-    background:linear-gradient(90deg, var(--accent) 0%, var(--accent) 80%, transparent 100%);
-    transform:scaleX(0);
-    transform-origin:left;
-    z-index:60;
-  }
-  .scroll-progress::after{
-    content:"";
-    position:absolute;
-    top:50%; right:0;
-    width:14px; height:14px;
-    background:var(--accent);
-    border-radius:50%;
-    filter:blur(7px);
-    transform:translate(50%, -50%);
-    opacity:.8;
-  }
-  @media (prefers-reduced-motion: reduce){ .scroll-progress{transition:none;} }
-
-  .topbar-cta{
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11.5px;
-    letter-spacing:.03em;
-    background:var(--accent);
-    color:var(--accent-ink);
-    text-decoration:none;
-    border-radius:16px;
-    padding:6px 13px;
-    font-weight:500;
-  }
-  @media (max-width:560px){ .topbar-brand{display:none;} }
-
-  /* ---------- SCROLL REVEAL ---------- */
-  .reveal{
-    opacity:0;
-    transform:translateY(18px);
-    transition:opacity .62s cubic-bezier(.16,1,.3,1), transform .62s cubic-bezier(.16,1,.3,1);
-    transition-delay:var(--reveal-delay, 0ms);
-  }
-  .reveal.in-view{opacity:1; transform:translateY(0);}
-  @media (prefers-reduced-motion: reduce){
-    .reveal{opacity:1; transform:none; transition:none;}
-  }
-
-  /* ---------- LIVE CLOCK ---------- */
-  .live-clock{
-    font-family:"IBM Plex Mono", monospace;
-    font-size:11.5px;
-    color:var(--muted);
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-    margin-top:22px;
-  }
-  .live-clock .dot{
-    width:6px; height:6px;
-    border-radius:50%;
-    background:#5fb87a;
-    box-shadow:0 0 0 0 rgba(95,184,122,.5);
-    animation:pulse 2s infinite;
-  }
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(95,184,122,.45);}
-    70%{box-shadow:0 0 0 6px rgba(95,184,122,0);}
-    100%{box-shadow:0 0 0 0 rgba(95,184,122,0);}
-  }
-  @media (prefers-reduced-motion: reduce){ .live-clock .dot{animation:none;} }
+</style>
+<style>
+  html{-webkit-text-size-adjust:100%}
+  img{max-width:100%}
+  [hidden]{display:none!important}
 </style>
 </head>
 <body>
+<div class="bg-glow" aria-hidden="true"></div>
+<canvas id="stage" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 
-<!-- fixed layer: parallax on it would repaint a full-screen blur every frame for
-     an offset nobody can see, so it stays put -->
-<div class="bg-ambient" aria-hidden="true"></div>
+<div class="shell">
+  <header class="bar">
+    <div class="wrap bar-in">
+      <a class="brand" href="#top"><span class="dot"></span>Loopcraft</a>
+      <nav class="links" aria-label="main">
+        <a href="#services" data-i18n="nav1">Услуги</a>
+        <a href="#process" data-i18n="nav2">Процесс</a>
+        <a href="#works" data-i18n="nav3">Проекты</a>
+        <a href="#stack" data-i18n="nav4">Стек</a>
+      </nav>
+      <div class="bar-tools">
+        <div class="lang" role="group" aria-label="Language">
+          <button id="lang-ru" aria-pressed="true">RU</button>
+          <button id="lang-en" aria-pressed="false">EN</button>
+        </div>
+        <a class="tg-mini" href="https://t.me/loopcraft1" target="_blank" rel="noopener" data-i18n="cta2">Связаться</a>
+      </div>
+    </div>
+  </header>
 
-<div class="scroll-progress-track" aria-hidden="true"></div>
-<div class="scroll-progress" id="scrollProgress"></div>
+  <main id="top">
+    <div class="wrap hero">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow"><span class="rule"></span><span data-i18n="geo">Минск · Беларусь · работаю удалённо</span></p>
+          <h1 data-i18n="h1">Loopcraft — пишем код,<span class="sep"></span> который <em>работает</em></h1>
+          <p class="lead" data-i18n="lead">Разработка полного цикла на фрилансе: сайты, приложения, автоматизация рутины и AI-интеграции. От брифа до сдачи — один исполнитель, который отвечает за результат.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#works"><span data-i18n="cta1">Смотреть проекты</span><span class="arw">→</span></a>
+            <a class="btn btn-ghost" href="#contact"><span data-i18n="cta2">Связаться</span></a>
+          </div>
+        </div>
+        <div class="hero-slot" aria-hidden="true">
+          <p class="plaque"><span data-i18n="plaque1">петля · сборка · сдача</span><br>53.90° N &nbsp; 27.57° E</p>
+        </div>
+      </div>
 
-<div class="topbar">
-  <span class="topbar-brand">Loopcraft</span>
-  <nav class="topbar-links" aria-label="Разделы сайта">
-    <a href="#work" data-i18n="nav-work">Проекты</a>
-    <a href="#directions" data-i18n="nav-directions">Чем занимаемся</a>
-    <a href="#process" data-i18n="nav-process">Путь до решения</a>
-  </nav>
-  <a class="topbar-cta" href="#contact" data-i18n="nav-contact">Обсудим проект</a>
+      <div class="hero-facts">
+        <div class="fact"><b data-i18n="f1t">Один исполнитель</b><span data-i18n="f1d">Бриф, код и сдача — без передачи задачи между людьми и без потери контекста.</span></div>
+        <div class="fact"><b data-i18n="f2t">Исходники ваши</b><span data-i18n="f2d">Репозиторий, доступы и короткая инструкция передаются вместе с проектом.</span></div>
+        <div class="fact"><b data-i18n="f3t">Объём фиксируем</b><span data-i18n="f3d">Что входит в работу, видно до старта — и не меняется задним числом.</span></div>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <span class="sec-label" data-i18n="nav1">Услуги</span>
+          <h2 data-i18n="svcH">Что я делаю руками</h2>
+          <span class="hair"></span>
+        </div>
+        <div class="svc">
+          <article class="svc-item wide rv">
+            <svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2.5" y="4" width="19" height="15" rx="1.5"/><path d="M2.5 8.5h19M6 6.2h.01M8.4 6.2h.01"/></svg>
+            <h3 data-i18n="s1t">Веб-разработка</h3>
+            <p data-i18n="s1d">Лендинги, корпоративные сайты, витрины и интернет-магазины. Адаптив, скорость загрузки, базовое SEO и аналитика.</p>
+            <ul class="svc-list" data-i18n="s1l"><li>Адаптив под телефон, планшет и десктоп</li><li>Скорость загрузки и базовое SEO</li><li>Тексты и меню правятся без разработчика</li><li>Формы заявок, бронирование, онлайн-оплата</li><li>Подключение аналитики и карт</li><li>Домен, хостинг и деплой — на мне</li></ul><p class="svc-ref" data-i18n="s1r">Так собраны <b>Animal Farm</b>, <b>Royal Oak</b> и <b>Noodles</b></p>
+          </article>
+          <article class="svc-item rv">
+            <svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="6.5" y="2.5" width="11" height="19" rx="2"/><path d="M10.5 18.5h3"/></svg>
+            <h3 data-i18n="s2t">Приложения</h3>
+            <p data-i18n="s2d">Мобильные и десктопные приложения на Kotlin, Java и Python — с продуманной логикой и понятным интерфейсом.</p>
+            <ul class="svc-list" data-i18n="s2l"><li>Android — Kotlin и Java</li><li>Десктоп и сервисы — Python</li><li>Связка с вашей базой и API</li></ul>
+          </article>
+          <article class="svc-item rv">
+            <svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8.5 7.5 4 12l4.5 4.5M15.5 7.5 20 12l-4.5 4.5M13.6 4.6l-3.2 14.8"/></svg>
+            <h3 data-i18n="s3t">Программирование</h3>
+            <p data-i18n="s3d">Скрипты, парсеры, обработка данных, интеграции по API, работа с SQL-базами и переносом данных.</p>
+            <ul class="svc-list" data-i18n="s3l"><li>Парсеры и обработка данных</li><li>Интеграции по API между сервисами</li><li>SQL-базы, миграции, выгрузки</li></ul>
+          </article>
+          <article class="svc-item rv">
+            <svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v3.4M12 17.8v3.4M21.2 12h-3.4M6.2 12H2.8M18.5 5.5l-2.4 2.4M7.9 16.1l-2.4 2.4M18.5 18.5l-2.4-2.4M7.9 7.9 5.5 5.5"/></svg>
+            <h3 data-i18n="s4t">Автоматизация</h3>
+            <p data-i18n="s4d">Ручная рутина уходит в код: выгрузки и отчёты, уведомления, телеграм-боты, синхронизация между сервисами.</p>
+            <ul class="svc-list" data-i18n="s4l"><li>Телеграм-боты для заявок и уведомлений</li><li>Отчёты и выгрузки по расписанию</li><li>Перенос ручных таблиц в скрипты</li></ul>
+          </article>
+          <article class="svc-item rv">
+            <svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3.2 4.6 7.4v9.2L12 20.8l7.4-4.2V7.4z"/><path d="M12 3.2v17.6M4.6 7.4 12 11.6l7.4-4.2"/></svg>
+            <h3 data-i18n="s5t">AI-интеграции</h3>
+            <p data-i18n="s5d">OpenAI API внутри продукта: ассистенты поддержки, обработка текста, поиск по документам, разбор заявок.</p>
+            <ul class="svc-list" data-i18n="s5l"><li>Ассистент поддержки на OpenAI API</li><li>Поиск по вашим документам</li><li>Разбор заявок, писем и отзывов</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <span class="sec-label" data-i18n="nav2">Процесс</span>
+          <h2 data-i18n="prH">Четыре шага от идеи до запуска</h2>
+          <span class="hair"></span>
+        </div>
+        <div class="flow">
+          <article class="step rv"><span class="no">01</span><h3 data-i18n="p1t">Бриф</h3><p data-i18n="p1d">Созвон или переписка: задача, сроки, бюджет. Фиксирую объём работ и то, что считается результатом.</p></article>
+          <article class="step rv"><span class="no">02</span><h3 data-i18n="p2t">Прототип</h3><p data-i18n="p2d">Структура, экраны и макет. Продукт можно посмотреть и поправить до первой строчки кода.</p></article>
+          <article class="step rv"><span class="no">03</span><h3 data-i18n="p3t">Разработка</h3><p data-i18n="p3d">Итерации с показом промежуточных версий. Правки по ходу, без сюрпризов в конце.</p></article>
+          <article class="step rv"><span class="no">04</span><h3 data-i18n="p4t">Сдача</h3><p data-i18n="p4d">Деплой, домен, аналитика. Передаю исходники, доступы и короткую инструкцию по обновлению.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="works">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <span class="sec-label" data-i18n="nav3">Проекты</span>
+          <h2 data-i18n="wkH">Сайты, которые работают на выручку</h2>
+          <span class="hair"></span>
+        </div>
+        <div class="works">
+          <article class="work rv">
+            <div class="work-art" aria-hidden="true">
+              <svg viewBox="0 0 200 96" fill="none" stroke="currentColor" stroke-width="1.1">
+                <path d="M10 78h180" stroke-opacity=".45"/>
+                <path d="M46 78V44c0-12 9-22 21-22s21 10 21 22v34"/>
+                <path d="M56 44c0-6 5-11 11-11s11 5 11 11"/>
+                <path d="M112 78V52h34v26M112 60h34"/>
+                <circle cx="129" cy="38" r="9"/><path d="M129 29v-7M120 34l-5-4M138 34l5-4"/>
+                <path d="M67 22V12M60 15l7 7M74 15l-7 7" stroke-opacity=".6"/>
+              </svg>
+            </div>
+            <h3>Animal Farm</h3>
+            <p class="kind" data-i18n="w1k">Кафе авторской кухни</p>
+            <div class="tags">
+              <span class="tag" data-i18n="w1a">меню</span>
+              <span class="tag" data-i18n="w1b">бронь столиков</span>
+              <span class="tag" data-i18n="w1c">банкеты</span>
+              <span class="tag" data-i18n="w1d">корпоративы</span>
+            </div>
+          </article>
+          <article class="work rv">
+            <div class="work-art" aria-hidden="true">
+              <svg viewBox="0 0 200 96" fill="none" stroke="currentColor" stroke-width="1.1">
+                <path d="M10 82h180" stroke-opacity=".45"/>
+                <path d="M62 82V36l26-18 26 18v46"/>
+                <path d="M74 82V58h12v24M96 58h14v12H96z"/>
+                <path d="M88 18V8"/>
+                <path d="M130 82V50h30v32M130 62h30M145 50V38" stroke-opacity=".7"/>
+                <circle cx="145" cy="32" r="6" stroke-opacity=".7"/>
+                <path d="M40 82V62h14v20M40 70h14" stroke-opacity=".5"/>
+              </svg>
+            </div>
+            <h3>Royal Oak</h3>
+            <p class="kind" data-i18n="w2k">Английский паб</p>
+            <div class="tags">
+              <span class="tag" data-i18n="w2a">меню</span>
+              <span class="tag" data-i18n="w2b">залы</span>
+              <span class="tag" data-i18n="w2c">доставка</span>
+              <span class="tag" data-i18n="w2d">бронирование</span>
+            </div>
+          </article>
+          <article class="work rv">
+            <div class="work-art" aria-hidden="true">
+              <svg viewBox="0 0 200 96" fill="none" stroke="currentColor" stroke-width="1.1">
+                <path d="M46 56a54 54 0 0 1 108 0" />
+                <path d="M40 56h120a60 60 0 0 1-120 0z" stroke-opacity=".5"/>
+                <path d="M66 50c6-10 14-16 22-18M90 46c5-9 12-14 20-16" stroke-opacity=".75"/>
+                <path d="M118 44c4-7 10-11 16-13" stroke-opacity=".75"/>
+                <path d="M150 28l26-8M150 36l26-8" />
+                <path d="M30 84h140" stroke-opacity=".45"/>
+              </svg>
+            </div>
+            <h3>Noodles</h3>
+            <p class="kind" data-i18n="w3k">Доставка азиатской лапши</p>
+            <div class="tags">
+              <span class="tag" data-i18n="w3a">меню</span>
+              <span class="tag" data-i18n="w3b">онлайн-оплата</span>
+              <span class="tag" data-i18n="w3c">зона доставки</span>
+              <span class="tag" data-i18n="w3d">самовывоз</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <span class="sec-label" data-i18n="nav4">Стек</span>
+          <h2 data-i18n="stH">Чем пишу</h2>
+          <span class="hair"></span>
+        </div>
+        <p class="sec-note rv" data-i18n="stN">Язык выбирается под задачу, а не наоборот. Ниже — то, с чем работаю в проде.</p>
+        <div class="stack rv">
+          <div class="stack-row">
+            <span data-i18n="g1">Веб</span>
+            <div class="chips">
+              <span class="chip">HTML / CSS</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">Node.js</span>
+            </div>
+          </div>
+          <div class="stack-row">
+            <span data-i18n="g2">Приложения и скрипты</span>
+            <div class="chips">
+              <span class="chip">Kotlin</span><span class="chip">Java</span><span class="chip">C++</span><span class="chip">Python</span>
+            </div>
+          </div>
+          <div class="stack-row">
+            <span data-i18n="g3">Данные и AI</span>
+            <div class="chips">
+              <span class="chip">SQL</span><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">OpenAI API</span>
+            </div>
+          </div>
+          <div class="stack-row">
+            <span data-i18n="g4">Инфраструктура</span>
+            <div class="chips">
+              <span class="chip">Git</span><span class="chip">Docker</span><span class="chip">Linux / VPS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact rv">
+          <div>
+            <span class="sec-label" data-i18n="cnL">Контакты</span>
+            <h2 style="margin-top:14px" data-i18n="cnH">Расскажите о задаче</h2>
+            <p class="sec-note" data-i18n="cnD">Напишите в Telegram пару предложений о проекте — отвечу, что реально сделать, за какой срок и какую цену. Если задача не моя, скажу честно и подскажу, к кому идти.</p>
+            <div class="handle">
+              <a class="btn btn-primary" href="https://t.me/loopcraft1" target="_blank" rel="noopener"><span data-i18n="cnB">Написать в Telegram</span><span class="arw">→</span></a>
+            </div>
+          </div>
+          <div class="clock-box">
+            <span class="clock-label" data-i18n="clL">Сейчас в Минске</span>
+            <p class="clock" id="clock">--:--<span class="sec" id="clocks">--</span></p>
+            <span class="clock-sub" id="clockday">—</span>
+            <p class="sec-note" style="margin-top:22px;font-size:14px" data-i18n="clD">Обычно на связи с 10:00 до 20:00 по Минску. Сообщение вне этого окна тоже дойдёт — отвечу утром.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>© 2026 Loopcraft</span>
+      <span data-i18n="ftM">Минск, Беларусь · удалённо</span>
+      <a href="https://t.me/loopcraft1" target="_blank" rel="noopener" style="text-decoration:none">Telegram →</a>
+    </div>
+  </footer>
 </div>
 
-<div class="lang-toggle" role="group" aria-label="Switch language">
-  <button id="langRu" type="button" aria-pressed="true">RU</button>
-  <button id="langEn" type="button" aria-pressed="false">EN</button>
-</div>
-
-<div class="hero">
-  <div class="hero-gradient" aria-hidden="true"></div>
-  <div class="hero-shape" aria-hidden="true" data-parallax-speed="0.22"></div>
-  <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
-  <div class="hero-scrim" aria-hidden="true"></div>
-  <div class="wrap hero-inner">
-    <div class="hero-copy">
-      <p class="eyebrow" data-i18n="eyebrow">Минск, Беларусь</p>
-      <h1 data-i18n-html="hero-h1">Loopcraft —<br>пишем <em>код</em>, который <em>работает</em>.</h1>
-      <p class="hero-tagline" data-i18n="hero-tagline">
-        Занимаюсь разработкой сайтов и приложений: от идеи и логики до готового интерфейса.
-        Разбираюсь, как всё устроено внутри, и довожу решение до рабочего состояния —
-        без лишних обещаний.
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#work" data-i18n="btn-projects">Смотреть проекты</a>
-        <a class="btn btn-ghost" href="#contact" data-i18n="btn-contact">Обсудим проект</a>
-      </div>
-    </div>
-    <div class="hero-3d" id="hero3d" aria-hidden="true">
-      <div class="hero-3d-fallback">
-        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="60" cy="60" rx="46" ry="24" stroke="var(--accent)" stroke-width="2.4"/>
-          <ellipse cx="60" cy="60" rx="46" ry="24" stroke="var(--accent-2)" stroke-width="2.4" transform="rotate(60 60 60)"/>
-          <ellipse cx="60" cy="60" rx="46" ry="24" stroke="var(--accent)" stroke-width="2.4" opacity=".55" transform="rotate(120 60 60)"/>
-        </svg>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="wrap">
-
-  <section id="work">
-    <div class="section-head" data-num="01" data-label="work">
-      <h2 data-i18n="sec5-h2">Что я делал</h2>
-    </div>
-    <div class="projects">
-      <a class="project-card reveal" href="https://animalfarm.by/" target="_blank" rel="noopener">
-        <div class="project-visual visual-farm">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
-            <path d="M24 8c-8 0-14 6-14 14 0 8 6 14 14 14s14-6 14-14c0-8-6-14-14-14z"/>
-            <path d="M17 20c0-2 1.5-4 3-4M31 20c0-2-1.5-4-3-4"/>
-            <circle cx="19" cy="24" r="1.4" fill="currentColor" stroke="none"/>
-            <circle cx="29" cy="24" r="1.4" fill="currentColor" stroke="none"/>
-            <path d="M20 30q4 3 8 0"/>
-          </svg>
-        </div>
-        <div class="project-body">
-          <div class="project-title">Animal Farm</div>
-          <p class="project-desc" data-i18n="proj1-desc">Сайт кафе с авторской кухней в Минске: меню, бронирование столиков, услуги для банкетов и корпоративов.</p>
-          <div class="project-checks">
-            <div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="proj1-check1">Адаптивная вёрстка под телефон</span></div>
-            <div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="proj1-check2">Бронирование столиков и форма записи</span></div>
-          </div>
-          <div class="project-foot">
-            <span class="project-tag" data-i18n="proj1-tag">Веб-разработка · сайт заведения</span>
-            <span class="project-go" data-i18n="proj-go">открыть ↗</span>
-          </div>
-        </div>
-      </a>
-      <a class="project-card reveal" href="https://royaloak.by/" target="_blank" rel="noopener">
-        <div class="project-visual visual-pub">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
-            <path d="M14 20h16v14a8 8 0 01-16 0V20z"/>
-            <path d="M30 22h4a4 4 0 010 8h-4"/>
-            <path d="M18 14v4M24 14v4M14 20h16"/>
-          </svg>
-        </div>
-        <div class="project-body">
-          <div class="project-title">Royal Oak</div>
-          <p class="project-desc" data-i18n="proj2-desc">Сайт английского паба в центре Минска: меню, залы и интерьер, доставка и контакты для бронирования.</p>
-          <div class="project-checks">
-            <div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="proj2-check1">Онлайн-меню и афиша событий</span></div>
-            <div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="proj2-check2">Форма брони столика</span></div>
-          </div>
-          <div class="project-foot">
-            <span class="project-tag" data-i18n="proj2-tag">Веб-разработка · сайт заведения</span>
-            <span class="project-go" data-i18n="proj-go">открыть ↗</span>
-          </div>
-        </div>
-      </a>
-      <a class="project-card reveal" href="https://www.noodles.by/" target="_blank" rel="noopener">
-        <div class="project-visual visual-noodles">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
-            <path d="M10 22a14 6 0 1028 0"/>
-            <path d="M10 22q0 12 14 14q14-2 14-14"/>
-            <path d="M17 22q1-6 7-6t7 6M17 22q1 4 7 5t7-5" stroke-width="1.3"/>
-          </svg>
-        </div>
-        <div class="project-body">
-          <div class="project-title">Noodles</div>
-          <p class="project-desc" data-i18n="proj3-desc">Сайт доставки азиатской лапши в Минске: меню, онлайн-оплата, зона доставки и условия самовывоза.</p>
-          <div class="project-checks">
-            <div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="proj3-check1">Онлайн-меню и корзина заказа</span></div>
-            <div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span data-i18n="proj3-check2">Адаптивная вёрстка под телефон</span></div>
-          </div>
-          <div class="project-foot">
-            <span class="project-tag" data-i18n="proj3-tag">Веб-разработка · доставка еды</span>
-            <span class="project-go" data-i18n="proj-go">открыть ↗</span>
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
-  <section id="directions">
-    <div class="section-head" data-num="02" data-label="services">
-      <h2 data-i18n="sec1-h2">Чем я занимаюсь</h2>
-    </div>
-    <div class="direction-list">
-
-      <div class="direction reveal">
-        <div class="direction-icon">
-          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6">
-            <rect x="4" y="8" width="36" height="28" rx="2"/>
-            <path d="M4 15h36"/>
-            <circle cx="9" cy="11.5" r="1"/>
-            <circle cx="13" cy="11.5" r="1"/>
-            <path d="M11 22h10M11 27h16"/>
-          </svg>
-        </div>
-        <div class="direction-main">
-          <h3 data-i18n="dir1-h3">Веб-разработка</h3>
-          <p data-i18n="dir1-p">Сайты, лендинги и веб-приложения от макета до деплоя. Стараюсь делать так, чтобы вёрстку и код потом не было страшно поддерживать.</p>
-        </div>
-      </div>
-
-      <div class="direction reveal">
-        <div class="direction-icon">
-          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6">
-            <rect x="10" y="4" width="24" height="36" rx="4"/>
-            <path d="M10 32h24"/>
-            <circle cx="22" cy="36" r="1.4" fill="currentColor" stroke="none"/>
-          </svg>
-        </div>
-        <div class="direction-main">
-          <h3 data-i18n="dir2-h3">Разработка приложений</h3>
-          <p data-i18n="dir2-p">Мобильные и десктопные приложения: от прототипа логики до рабочей версии, с упором на понятный интерфейс.</p>
-        </div>
-      </div>
-
-      <div class="direction reveal">
-        <div class="direction-icon">
-          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6">
-            <path d="M14 12L4 22l10 10"/>
-            <path d="M30 12l10 10-10 10"/>
-            <path d="M26 8l-8 28"/>
-          </svg>
-        </div>
-        <div class="direction-main">
-          <h3 data-i18n="dir3-h3">Программирование</h3>
-          <p data-i18n="dir3-p">Логика, алгоритмы, разные языки и инструменты — под задачу подбираю подходящий стек, а не подгоняю задачу под один язык.</p>
-        </div>
-      </div>
-
-      <div class="direction reveal">
-        <div class="direction-icon">
-          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6">
-            <circle cx="22" cy="22" r="7"/>
-            <path d="M22 4v6M22 34v6M4 22h6M34 22h6M9.5 9.5l4.2 4.2M30.3 30.3l4.2 4.2M9.5 34.5l4.2-4.2M30.3 13.7l4.2-4.2"/>
-          </svg>
-        </div>
-        <div class="direction-main">
-          <h3 data-i18n="dir4-h3">Автоматизация</h3>
-          <p data-i18n="dir4-p">Превращаю рутину в скрипт: сбор и обработка данных, регулярные отчёты, синхронизация между сервисами.</p>
-        </div>
-      </div>
-
-      <div class="direction reveal">
-        <div class="direction-icon">
-          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.6">
-            <rect x="12" y="12" width="20" height="20" rx="4"/>
-            <circle cx="18" cy="20" r="1.6" fill="currentColor" stroke="none"/>
-            <circle cx="26" cy="20" r="1.6" fill="currentColor" stroke="none"/>
-            <path d="M18 26h8"/>
-            <path d="M22 12V6M14 6h16M22 32v6"/>
-          </svg>
-        </div>
-        <div class="direction-main">
-          <h3 data-i18n="dir5-h3">AI-интеграции</h3>
-          <p data-i18n="dir5-p">Подключаю нейросети к реальным задачам: обработка текста и данных через API, чат-боты — там, где это правда ускоряет работу, а не для галочки.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <section id="process">
-    <div class="section-head" data-num="03" data-label="process">
-      <h2 data-i18n="sec4-h2">Путь от заявки до готового решения</h2>
-    </div>
-    <div class="process-wrap">
-      <svg class="process-loop" id="processLoop" aria-hidden="true" fill="none" preserveAspectRatio="none">
-        <path id="processPath" stroke="currentColor" stroke-width="1.4" vector-effect="non-scaling-stroke"/>
-      </svg>
-    <div class="process">
-      <div class="step reveal">
-        <h4 data-i18n="step1-h4">Бриф</h4>
-        <p data-i18n="step1-p">Обсуждаем задачу, ограничения и то, каким должен быть результат — без этого нет смысла двигаться дальше.</p>
-      </div>
-      <div class="step reveal">
-        <h4 data-i18n="step2-h4">Прототип</h4>
-        <p data-i18n="step2-p">Собираем черновую версию — макет, структуру или рабочий скрипт, — чтобы согласовать направление до основной работы.</p>
-      </div>
-      <div class="step reveal">
-        <h4 data-i18n="step3-h4">Разработка</h4>
-        <p data-i18n="step3-p">Пишем код итеративно, с промежуточными версиями — так проще ловить ошибки и вносить правки по ходу.</p>
-      </div>
-      <div class="step reveal">
-        <h4 data-i18n="step4-h4">Сдача</h4>
-        <p data-i18n="step4-p">Тестируем, передаём рабочую версию и код, при необходимости объясняем, как всё устроено и поддерживать дальше.</p>
-      </div>
-    </div>
-    </div>
-  </section>
-  <section id="about">
-    <div class="section-head" data-num="04" data-label="about">
-      <h2 data-i18n="sec2-h2">Пишу код и разбираюсь, как всё устроено</h2>
-    </div>
-    <div class="about-block">
-      <p data-i18n="about-p1">Занимаюсь разработкой сайтов и приложений — от логики и структуры данных до готового интерфейса, с которым удобно работать.</p>
-      <p data-i18n="about-p2">Постоянно пробую новые языки и инструменты, чтобы под каждую задачу подбирать подходящее решение, а не одно универсальное. Сейчас в поиске проектов, где можно применить это на практике.</p>
-      <div class="tag-row">
-        <span class="tag">HTML / CSS</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">TypeScript</span>
-        <span class="tag">Python</span>
-        <span class="tag">Java</span>
-        <span class="tag">Kotlin</span>
-        <span class="tag">C++</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Git</span>
-        <span class="tag">OpenAI API</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="contact-box">
-      <h2 data-i18n="contact-h2">Обсудим ваш проект?</h2>
-      <p data-i18n="contact-p">Берусь за сайты, приложения и автоматизацию. Написать проще всего в Telegram — отвечаю быстро.</p>
-      <div class="contact-links">
-        <a class="btn btn-primary" href="https://t.me/Egorchi9" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.05 3.76 17.9 19.34c-.24 1.06-.87 1.32-1.76.82l-4.86-3.58-2.34 2.25c-.26.26-.48.48-.97.48l.35-4.94 8.99-8.12c.39-.35-.09-.54-.6-.2L6.1 12.64l-4.9-1.53c-1.06-.33-1.08-1.06.22-1.57L19.7 2.53c.89-.33 1.66.2 1.35 1.23Z"></path></svg>
-          <span data-i18n="contact-btn1">Написать в Telegram</span>
-        </a>
-      </div>
-      <div class="live-clock"><span class="dot"></span><span id="minskClock">--:--</span> <span data-i18n="clock-label">по Минску — обычно отвечаю в течение дня</span></div>
-      <p class="contact-note" data-i18n="contact-note">Опишите задачу в двух словах — отвечу с примерными сроками и ценой.</p>
-    </div>
-  </section>
-
-</div>
-
-<footer class="wrap">
-  <span>© Loopcraft, <span data-i18n="footer-city">Минск</span></span>
-  <span data-i18n="footer-note">Сделано вручную</span>
-</footer>
-
-<!-- deferred: ~600 KB of Three.js used to block the inline script below, so i18n,
-     reveal, the clock and every scroll effect waited for the whole library to
-     download. The ribbon boots on `load`, by which time this has executed. -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
-  var translations = {
-    "eyebrow": { en: "Minsk, Belarus" },
-    "hero-h1": { ru: "Loopcraft —<br>пишем <em>код</em>, который <em>работает</em>.", en: "Loopcraft —<br>we write <em>code</em> that <em>works</em>." },
-    "hero-tagline": { en: "I build websites and applications: from the idea and logic to a finished interface. I figure out how things work under the hood and take every solution all the way to production — no empty promises." },
-    "btn-projects": { en: "View projects" },
-    "btn-contact": { en: "Discuss a project" },
-    "nav-work": { en: "Projects" },
-    "nav-directions": { en: "What I do" },
-    "nav-process": { en: "How I work" },
-    "nav-contact": { en: "Discuss a project" },
+  "use strict";
+  document.documentElement.classList.add('js');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    "sec1-h2": { en: "What I do" },
-
-    "dir1-h3": { en: "Web development" },
-    "dir1-p": { en: "Websites, landing pages and web apps from layout to deployment. I try to make markup and code that isn't scary to maintain later." },
-
-    "dir2-h3": { en: "App development" },
-    "dir2-p": { en: "Mobile and desktop apps: from a logic prototype to a working release, with a focus on a clear interface." },
-
-    "dir3-h3": { en: "Programming" },
-    "dir3-p": { en: "Logic, algorithms, different languages and tools — I pick the stack that fits the task instead of forcing the task to fit one language." },
-
-    "dir4-h3": { en: "Automation" },
-    "dir4-p": { en: "Turning routine into a script: collecting and processing data, recurring reports, syncing between services." },
-
-    "dir5-h3": { en: "AI integrations" },
-    "dir5-p": { en: "Connecting AI models to real tasks: processing text and data through an API, chatbots — where it genuinely speeds things up, not for show." },
-
-    "sec2-h2": { en: "I write code and figure out how things work" },
-    "about-p1": { en: "I build websites and applications — from logic and data structure to a finished interface that's actually pleasant to use." },
-    "about-p2": { en: "I keep trying new languages and tools so I can pick the right solution for each task instead of one universal answer. Right now I'm looking for projects where that pays off in practice." },
-
-    "sec4-h2": { en: "From request to finished result" },
-    "step1-h4": { en: "Brief" },
-    "step1-p": { en: "We discuss the task, the constraints and what the result should look like — there's no point moving forward without that." },
-    "step2-h4": { en: "Prototype" },
-    "step2-p": { en: "I put together a rough version — a layout, a structure or a working script — to agree on direction before the main work starts." },
-    "step3-h4": { en: "Development" },
-    "step3-p": { en: "I write code iteratively, with intermediate versions — it's easier to catch mistakes and make changes along the way." },
-    "step4-h4": { en: "Delivery" },
-    "step4-p": { en: "I test, hand over the working version and the code, and explain how it works and how to maintain it if needed." },
-
-    "sec5-h2": { en: "What I've built" },
-    "proj1-desc": { en: "A site for a café with author's cuisine in Minsk: menu, table reservations, banquet and corporate event services." },
-    "proj1-tag": { en: "Web development · venue website" },
-    "proj2-desc": { en: "A site for an English gastropub in central Minsk: menu, interior and seating areas, delivery and booking contacts." },
-    "proj2-tag": { en: "Web development · venue website" },
-    "proj3-desc": { en: "A delivery site for Asian noodle dishes in Minsk: menu, online payment, delivery zone and pickup terms." },
-    "proj3-tag": { en: "Web development · food delivery" },
-    "proj-go": { en: "visit ↗" },
-
-    "contact-h2": { en: "Let's talk about your project" },
-    "contact-p": { en: "I take on websites, apps and automation. The easiest way to reach me is Telegram — I reply quickly." },
-    "contact-btn1": { en: "Message on Telegram" },
-    "contact-note": { en: "Describe the task in a couple of sentences — I'll reply with a rough timeline and price." },
-
-    "footer-city": { en: "Minsk" },
-    "footer-note": { en: "Built by hand" },
-    "clock-label": { en: "Minsk time — I usually reply within the day" },
-
-    "proj1-check1": { en: "Mobile-responsive layout" },
-    "proj1-check2": { en: "Table booking and reservation form" },
-    "proj2-check1": { en: "Online menu and events listing" },
-    "proj2-check2": { en: "Table reservation form" },
-    "proj3-check1": { en: "Online menu and order cart" },
-    "proj3-check2": { en: "Mobile-responsive layout" }
+  /* ---------------- i18n ---------------- */
+  var I18N = {
+    ru:{
+      nav1:"Услуги",nav2:"Процесс",nav3:"Проекты",nav4:"Стек",
+      geo:"Минск · Беларусь · работаю удалённо",
+      h1:'Loopcraft — пишем код,<span class="sep"></span> который <em>работает</em>',
+      lead:"Разработка полного цикла на фрилансе: сайты, приложения, автоматизация рутины и AI-интеграции. От брифа до сдачи — один исполнитель, который отвечает за результат.",
+      cta1:"Смотреть проекты",cta2:"Связаться",
+      plaque1:"петля · сборка · сдача",
+      f1t:"Один исполнитель",f1d:"Бриф, код и сдача — без передачи задачи между людьми и без потери контекста.",
+      f2t:"Исходники ваши",f2d:"Репозиторий, доступы и короткая инструкция передаются вместе с проектом.",
+      f3t:"Объём фиксируем",f3d:"Что входит в работу, видно до старта — и не меняется задним числом.",
+      svcH:"Что я делаю руками",
+      s1t:"Веб-разработка",s1d:"Лендинги, корпоративные сайты, витрины и интернет-магазины. Адаптив, скорость загрузки, базовое SEO и аналитика.",
+      s2t:"Приложения",s2d:"Мобильные и десктопные приложения на Kotlin, Java и Python — с продуманной логикой и понятным интерфейсом.",
+      s3t:"Программирование",s3d:"Скрипты, парсеры, обработка данных, интеграции по API, работа с SQL-базами и переносом данных.",
+      s4t:"Автоматизация",s4d:"Ручная рутина уходит в код: выгрузки и отчёты, уведомления, телеграм-боты, синхронизация между сервисами.",
+      s5t:"AI-интеграции",s5d:"OpenAI API внутри продукта: ассистенты поддержки, обработка текста, поиск по документам, разбор заявок.",
+      s1l:"<li>Адаптив под телефон, планшет и десктоп</li><li>Скорость загрузки и базовое SEO</li><li>Тексты и меню правятся без разработчика</li><li>Формы заявок, бронирование, онлайн-оплата</li><li>Подключение аналитики и карт</li><li>Домен, хостинг и деплой — на мне</li>",
+      s1r:"Так собраны <b>Animal Farm</b>, <b>Royal Oak</b> и <b>Noodles</b>",
+      s2l:"<li>Android — Kotlin и Java</li><li>Десктоп и сервисы — Python</li><li>Связка с вашей базой и API</li>",
+      s3l:"<li>Парсеры и обработка данных</li><li>Интеграции по API между сервисами</li><li>SQL-базы, миграции, выгрузки</li>",
+      s4l:"<li>Телеграм-боты для заявок и уведомлений</li><li>Отчёты и выгрузки по расписанию</li><li>Перенос ручных таблиц в скрипты</li>",
+      s5l:"<li>Ассистент поддержки на OpenAI API</li><li>Поиск по вашим документам</li><li>Разбор заявок, писем и отзывов</li>",
+      prH:"Четыре шага от идеи до запуска",
+      p1t:"Бриф",p1d:"Созвон или переписка: задача, сроки, бюджет. Фиксирую объём работ и то, что считается результатом.",
+      p2t:"Прототип",p2d:"Структура, экраны и макет. Продукт можно посмотреть и поправить до первой строчки кода.",
+      p3t:"Разработка",p3d:"Итерации с показом промежуточных версий. Правки по ходу, без сюрпризов в конце.",
+      p4t:"Сдача",p4d:"Деплой, домен, аналитика. Передаю исходники, доступы и короткую инструкцию по обновлению.",
+      wkH:"Сайты, которые работают на выручку",
+      w1k:"Кафе авторской кухни",w1a:"меню",w1b:"бронь столиков",w1c:"банкеты",w1d:"корпоративы",
+      w2k:"Английский паб",w2a:"меню",w2b:"залы",w2c:"доставка",w2d:"бронирование",
+      w3k:"Доставка азиатской лапши",w3a:"меню",w3b:"онлайн-оплата",w3c:"зона доставки",w3d:"самовывоз",
+      stH:"Чем пишу",g1:"Веб",g2:"Приложения и скрипты",g3:"Данные и AI",g4:"Инфраструктура",stN:"Язык выбирается под задачу, а не наоборот. Ниже — то, с чем работаю в проде.",
+      cnL:"Контакты",cnH:"Расскажите о задаче",
+      cnD:"Напишите в Telegram пару предложений о проекте — отвечу, что реально сделать, за какой срок и какую цену. Если задача не моя, скажу честно и подскажу, к кому идти.",cnB:"Написать в Telegram",
+      clL:"Сейчас в Минске",clD:"Обычно на связи с 10:00 до 20:00 по Минску. Сообщение вне этого окна тоже дойдёт — отвечу утром.",
+      ftM:"Минск, Беларусь · удалённо",
+      copied:"Скопировано"
+    },
+    en:{
+      nav1:"Services",nav2:"Process",nav3:"Work",nav4:"Stack",
+      geo:"Minsk · Belarus · available remotely",
+      h1:'Loopcraft — code<span class="sep"></span> that <em>holds up</em>',
+      lead:"Full-cycle freelance development: websites, applications, automation of manual routine and AI integrations. From brief to handover — one person who owns the result.",
+      cta1:"See the work",cta2:"Get in touch",
+      plaque1:"loop · build · ship",
+      f1t:"One developer",f1d:"Brief, code and handover in one pair of hands — nothing gets lost between people.",
+      f2t:"Sources are yours",f2d:"Repository, credentials and a short maintenance note are handed over with the project.",
+      f3t:"Scope is fixed",f3d:"What the work includes is clear before we start — and does not change after the fact.",
+      svcH:"What I build",
+      s1t:"Web development",s1d:"Landing pages, company sites, catalogues and online stores. Responsive layouts, loading speed, SEO basics and analytics.",
+      s2t:"Applications",s2d:"Mobile and desktop apps in Kotlin, Java and Python — with thought-through logic and an interface people can use.",
+      s3t:"Programming",s3d:"Scripts, parsers, data processing, API integrations, SQL databases and data migration.",
+      s4t:"Automation",s4d:"Manual routine moves into code: exports and reports, notifications, Telegram bots, syncing between services.",
+      s5t:"AI integrations",s5d:"OpenAI API inside the product: support assistants, text processing, document search, request triage.",
+      s1l:"<li>Responsive on phone, tablet and desktop</li><li>Loading speed and SEO basics</li><li>Texts and menus edited without a developer</li><li>Request forms, booking, online payment</li><li>Analytics and maps connected</li><li>Domain, hosting and deploy on me</li>",
+      s1r:"This is how <b>Animal Farm</b>, <b>Royal Oak</b> and <b>Noodles</b> were built",
+      s2l:"<li>Android — Kotlin and Java</li><li>Desktop and services — Python</li><li>Wired into your database and APIs</li>",
+      s3l:"<li>Parsers and data processing</li><li>API integrations between services</li><li>SQL databases, migrations, exports</li>",
+      s4l:"<li>Telegram bots for requests and alerts</li><li>Scheduled reports and exports</li><li>Manual spreadsheets moved into scripts</li>",
+      s5l:"<li>Support assistant on the OpenAI API</li><li>Search across your documents</li><li>Triage of requests, emails and reviews</li>",
+      prH:"Four steps from idea to launch",
+      p1t:"Brief",p1d:"A call or a chat: the task, the deadline, the budget. I write down the scope and what counts as done.",
+      p2t:"Prototype",p2d:"Structure, screens and layout. You can review and adjust the product before the first line of code.",
+      p3t:"Development",p3d:"Iterations with working builds to look at. Changes happen along the way, not as a surprise at the end.",
+      p4t:"Handover",p4d:"Deploy, domain, analytics. You get the sources, the credentials and a short update guide.",
+      wkH:"Sites that pull their weight",
+      w1k:"Chef-driven café",w1a:"menu",w1b:"table booking",w1c:"banquets",w1d:"corporate events",
+      w2k:"English pub",w2a:"menu",w2b:"rooms",w2c:"delivery",w2d:"reservations",
+      w3k:"Asian noodle delivery",w3a:"menu",w3b:"online payment",w3c:"delivery zone",w3d:"pickup",
+      stH:"What I write in",g1:"Web",g2:"Apps and scripts",g3:"Data and AI",g4:"Infrastructure",stN:"The language follows the task, not the other way round. Below is what I ship with.",
+      cnL:"Contact",cnH:"Tell me about the project",
+      cnD:"Send a couple of sentences on Telegram — I'll tell you what is realistic to build, how long it takes and what it costs. If it isn't my kind of task, I'll say so and point you elsewhere.",cnB:"Message on Telegram",
+      clL:"Time in Minsk now",clD:"Usually online 10:00–20:00 Minsk time. Messages outside that window still arrive — I reply in the morning.",
+      ftM:"Minsk, Belarus · remote",
+      copied:"Copied"
+    }
   };
+  var lang = 'ru';
+  try{ var saved = localStorage.getItem('lc-lang'); if(saved && I18N[saved]) lang = saved; }catch(e){}
 
-  // capture Russian originals as the default language
-  document.querySelectorAll("[data-i18n]").forEach(function(el){
-    var key = el.getAttribute("data-i18n");
-    if (translations[key] && translations[key].ru === undefined) {
-      translations[key].ru = el.textContent;
-    }
-  });
-  document.querySelectorAll("[data-i18n-html]").forEach(function(el){
-    var key = el.getAttribute("data-i18n-html");
-    if (translations[key] && translations[key].ru === undefined) {
-      translations[key].ru = el.innerHTML;
-    }
-  });
-
-  var lang = "ru";
-  var btnRu = document.getElementById("langRu");
-  var btnEn = document.getElementById("langEn");
-
-  function applyLang(l){
+  function setLang(l){
+    if(!I18N[l]) return;
     lang = l;
-    document.querySelectorAll("[data-i18n]").forEach(function(el){
-      var key = el.getAttribute("data-i18n");
-      var t = translations[key];
-      if (t && t[lang] !== undefined) el.textContent = t[lang];
+    var d = I18N[l];
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var v = d[el.getAttribute('data-i18n')];
+      if(v != null) el.innerHTML = v;
     });
-    document.querySelectorAll("[data-i18n-html]").forEach(function(el){
-      var key = el.getAttribute("data-i18n-html");
-      var t = translations[key];
-      if (t && t[lang] !== undefined) el.innerHTML = t[lang];
-    });
-    if (btnRu) btnRu.setAttribute("aria-pressed", lang === "ru" ? "true" : "false");
-    if (btnEn) btnEn.setAttribute("aria-pressed", lang === "en" ? "true" : "false");
-    try { document.documentElement.lang = lang; } catch(e){}
+    document.documentElement.lang = l;
+    document.getElementById('lang-ru').setAttribute('aria-pressed', String(l==='ru'));
+    document.getElementById('lang-en').setAttribute('aria-pressed', String(l==='en'));
+    try{ localStorage.setItem('lc-lang', l); }catch(e){}
+    paintClock();
   }
+  document.getElementById('lang-ru').addEventListener('click', function(){ setLang('ru'); });
+  document.getElementById('lang-en').addEventListener('click', function(){ setLang('en'); });
 
-  if (btnRu) btnRu.addEventListener("click", function(){ applyLang("ru"); });
-  if (btnEn) btnEn.addEventListener("click", function(){ applyLang("en"); });
+  /* ---------------- clock (Minsk) ---------------- */
+  var elC = document.getElementById('clock'), elS = document.getElementById('clocks'), elD = document.getElementById('clockday');
+  function paintClock(){
+    var now = new Date();
+    try{
+      var t = new Intl.DateTimeFormat(lang==='ru'?'ru-RU':'en-GB',{timeZone:'Europe/Minsk',hour:'2-digit',minute:'2-digit',hour12:false}).format(now);
+      var full = new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Minsk',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(now);
+      var s = full.slice(-2);
+      var d = new Intl.DateTimeFormat(lang==='ru'?'ru-RU':'en-GB',{timeZone:'Europe/Minsk',weekday:'long',day:'numeric',month:'long'}).format(now);
+      elC.firstChild.nodeValue = t;
+      elS.textContent = s;
+      elD.textContent = d + ' · UTC+3';
+    }catch(e){}
+  }
+  paintClock();
+  setInterval(paintClock, 1000);
 
-  // ---------- scroll reveal ----------
-  var revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && revealEls.length) {
+  /* ---------------- slow, eased in-page scrolling ---------------- */
+  (function(){
+    var animating = false, raf = 0;
+    function stop(){ animating = false; if(raf) cancelAnimationFrame(raf); }
+    ['wheel','touchstart','keydown'].forEach(function(ev){
+      window.addEventListener(ev, function(){ if(animating) stop(); }, {passive:true});
+    });
+    function glideTo(target){
+      var headerH = 66 + 30;
+      var startY = window.scrollY;
+      var docMax = document.documentElement.scrollHeight - window.innerHeight;
+      var endY = Math.max(0, Math.min(docMax, target.getBoundingClientRect().top + startY - headerH));
+      var dist = Math.abs(endY - startY);
+      if(dist < 2) return;
+      if(reduced){ window.scrollTo(0, endY); return; }
+      var dur = Math.min(2200, Math.max(900, dist * 1.15));
+      var t0 = performance.now();
+      animating = true;
+      (function step(now){
+        if(!animating) return;
+        var k = Math.min(1, (now - t0) / dur);
+        /* slow start, long glide, soft landing */
+        var e = k < .5 ? 4*k*k*k : 1 - Math.pow(-2*k + 2, 3)/2;
+        window.scrollTo(0, startY + (endY - startY) * e);
+        if(k < 1){ raf = requestAnimationFrame(step); } else { animating = false; }
+      })(performance.now());
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var id = a.getAttribute('href').slice(1);
+        var el = id ? document.getElementById(id) : null;
+        if(!el) return;
+        e.preventDefault();
+        glideTo(el);
+      });
+    });
+  })();
+
+  /* ---------------- reveal on scroll ---------------- */
+  (function(){
+    var nodes = Array.prototype.slice.call(document.querySelectorAll('.rv'));
+    nodes.forEach(function(n){ n.style.animationPlayState = 'paused'; });
+    if(reduced || !('IntersectionObserver' in window)){
+      nodes.forEach(function(n){ n.style.animation='none'; });
+      return;
+    }
     var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in-view");
-          io.unobserve(entry.target);
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.style.animationDelay = (Math.min(indexIn(en.target),5) * 70) + 'ms';
+          en.target.style.animationPlayState = 'running';
+          io.unobserve(en.target);
         }
       });
-    }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
-    // stagger within each group, not across the whole page — a global i % 5
-    // makes the third card of a row fire before the first
-    revealEls.forEach(function(el){
-      var siblings = el.parentNode ? el.parentNode.children : [el];
-      var idx = Array.prototype.indexOf.call(siblings, el);
-      el.style.setProperty("--reveal-delay", Math.min(idx, 5) * 70 + "ms");
-      io.observe(el);
-    });
-  } else {
-    revealEls.forEach(function(el){ el.classList.add("in-view"); });
-  }
-
-  // ---------- live Minsk clock ----------
-  var clockEl = document.getElementById("minskClock");
-  if (clockEl) {
-    var fmt;
-    try {
-      fmt = new Intl.DateTimeFormat("ru-RU", { timeZone: "Europe/Minsk", hour: "2-digit", minute: "2-digit" });
-    } catch(e) { fmt = null; }
-    function tickClock(){
-      try {
-        clockEl.textContent = fmt ? fmt.format(new Date()) : new Date().toLocaleTimeString();
-      } catch(e){}
+    },{rootMargin:'0px 0px -8% 0px',threshold:.05});
+    function indexIn(el){
+      var p = el.parentElement; if(!p) return 0;
+      return Array.prototype.indexOf.call(p.children, el);
     }
-    tickClock();
-    setInterval(tickClock, 30000);
-  }
-
-  // ---------- subtle hero cursor glow ----------
-  var heroEl = document.querySelector(".hero");
-  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (heroEl && !reduceMotion && window.matchMedia && window.matchMedia("(hover: hover)").matches) {
-    heroEl.addEventListener("mousemove", function(e){
-      var rect = heroEl.getBoundingClientRect();
-      var x = ((e.clientX - rect.left) / rect.width * 100).toFixed(1);
-      var y = ((e.clientY - rect.top) / rect.height * 100).toFixed(1);
-      heroEl.style.setProperty("--mx", x + "%");
-      heroEl.style.setProperty("--my", y + "%");
-    });
-  }
-
-  // ---------- one scroll tick for every scroll-driven effect ----------
-  // Previously each effect installed its own scroll listener with its own rAF
-  // flag, and one of them read layout (offsetHeight) on every event. Now there
-  // is a single listener, a single frame, and the layout values are cached.
-  var scrollSubs = [];
-  var scrollTicking = false;
-  var metrics = { max: 0, heroH: 0 };
-
-  function measure(){
-    var doc = document.documentElement;
-    metrics.max = (doc.scrollHeight || document.body.scrollHeight) - doc.clientHeight;
-    metrics.heroH = heroEl ? heroEl.offsetHeight : (window.innerHeight || 1);
-  }
-  function scrollY(){ return window.scrollY || document.documentElement.scrollTop || 0; }
-  function runScrollSubs(){
-    scrollTicking = false;
-    var y = scrollY();
-    for (var i = 0; i < scrollSubs.length; i++) scrollSubs[i](y);
-  }
-  function onScroll(fn){
-    scrollSubs.push(fn);
-    fn(scrollY());
-    return function(){
-      var i = scrollSubs.indexOf(fn);
-      if (i > -1) scrollSubs.splice(i, 1);
-    };
-  }
-
-  measure();
-  window.addEventListener("scroll", function(){
-    if (scrollTicking) return;
-    scrollTicking = true;
-    requestAnimationFrame(runScrollSubs);
-  }, { passive: true });
-  window.addEventListener("resize", function(){
-    measure();
-    runScrollSubs();
-  }, { passive: true });
-
-  // ---------- scroll progress bar ----------
-  var progressEl = document.getElementById("scrollProgress");
-  if (progressEl) {
-    onScroll(function(y){
-      var ratio = metrics.max > 0 ? Math.min(1, Math.max(0, y / metrics.max)) : 0;
-      progressEl.style.transform = "scaleX(" + ratio + ")";
-    });
-  }
-
-  // ---------- project card 3D tilt (CSS-variable driven, + glare) ----------
-  if (!reduceMotion && window.matchMedia && window.matchMedia("(hover: hover)").matches) {
-    document.querySelectorAll(".project-card").forEach(function(card){
-      card.addEventListener("mousemove", function(e){
-        var rect = card.getBoundingClientRect();
-        var px = (e.clientX - rect.left) / rect.width;
-        var py = (e.clientY - rect.top) / rect.height;
-        var rotY = ((px - 0.5) * 10).toFixed(2);
-        var rotX = ((0.5 - py) * 10).toFixed(2);
-        card.style.setProperty("--rx", rotX + "deg");
-        card.style.setProperty("--ry", rotY + "deg");
-        card.style.setProperty("--mx", (px * 100).toFixed(1) + "%");
-        card.style.setProperty("--my", (py * 100).toFixed(1) + "%");
-      });
-      card.addEventListener("mouseleave", function(){
-        card.style.setProperty("--rx", "0deg");
-        card.style.setProperty("--ry", "0deg");
-      });
-    });
-  }
-
-  // ---------- scroll parallax layers ----------
-  var parallaxEls = Array.prototype.slice.call(document.querySelectorAll("[data-parallax-speed]"));
-  var isNarrow = window.matchMedia && window.matchMedia("(max-width: 640px)").matches;
-  if (parallaxEls.length && !reduceMotion) {
-    // speeds parsed once, not re-read from the DOM on every frame
-    var layers = parallaxEls.map(function(el){
-      return { el: el, speed: parseFloat(el.getAttribute("data-parallax-speed")) || 0 };
-    });
-    onScroll(function(y){
-      for (var i = 0; i < layers.length; i++){
-        var speed = isNarrow ? layers[i].speed * 0.4 : layers[i].speed;
-        layers[i].el.style.transform = "translate3d(0," + (-(y * speed)).toFixed(1) + "px,0)";
-      }
-    });
-    window.addEventListener("resize", function(){
-      isNarrow = window.matchMedia && window.matchMedia("(max-width: 640px)").matches;
-    }, { passive: true });
-  }
-
-  // ---------- process loop: a closed path drawn by scroll ----------
-  (function processLoop(){
-    var svg = document.getElementById("processLoop");
-    var path = document.getElementById("processPath");
-    var wrap = svg ? svg.parentNode : null;
-    if (!svg || !path || !wrap) return;
-
-    var length = 0;
-
-    function geometry(){
-      var w = Math.round(wrap.clientWidth), h = Math.round(wrap.clientHeight);
-      if (!w || !h) { length = 0; return false; }
-      var r = Math.max(0, Math.min(64, h / 2 - 1, w / 2 - 1));
-      var d = "M " + r + " 0" +
-              " H " + (w - r) +
-              " A " + r + " " + r + " 0 0 1 " + w + " " + r +
-              " V " + (h - r) +
-              " A " + r + " " + r + " 0 0 1 " + (w - r) + " " + h +
-              " H " + r +
-              " A " + r + " " + r + " 0 0 1 0 " + (h - r) +
-              " V " + r +
-              " A " + r + " " + r + " 0 0 1 " + r + " 0 Z";
-      svg.setAttribute("viewBox", "0 0 " + w + " " + h);
-      path.setAttribute("d", d);
-      length = path.getTotalLength();
-      path.style.strokeDasharray = length;
-      path.style.strokeDashoffset = reduceMotion ? 0 : length;
-      return true;
-    }
-
-    function draw(){
-      if (!length || reduceMotion) return;
-      var rect = wrap.getBoundingClientRect();
-      var vh = window.innerHeight || 1;
-      // 0 when the block's top meets the bottom of the viewport,
-      // 1 once it has travelled roughly one viewport further up
-      var p = (vh - rect.top) / (vh * 0.75 + rect.height * 0.5);
-      path.style.strokeDashoffset = length * (1 - Math.min(1, Math.max(0, p)));
-    }
-
-    function refresh(){ if (geometry()) draw(); }
-
-    if (document.readyState === "complete") refresh();
-    else window.addEventListener("load", refresh, { once: true });
-
-    if (reduceMotion) return; // full loop, no scroll binding
-
-    onScroll(draw);
-
-    if ("ResizeObserver" in window) new ResizeObserver(refresh).observe(wrap);
-    else window.addEventListener("resize", refresh, { passive: true });
+    nodes.forEach(function(n){ io.observe(n); });
   })();
 
-  // ---------- hero particle field (canvas 2D, no libraries) ----------
-  (function initParticles(){
-    var canvas = document.getElementById("heroParticles");
-    var heroSection = document.querySelector(".hero");
-    if (!canvas || !heroSection || reduceMotion) return;
-    var ctx = canvas.getContext("2d");
-    if (!ctx) return;
+  /* ---------------- 3D hero ---------------- */
+  var canvas = document.getElementById('stage');
+  if(!window.THREE){ return; }
 
-    // 1.5 is indistinguishable from 2 for 2px dots and costs ~44% fewer pixels
-    var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-    var w = 0, h = 0, particles = [], running = false, raf = null;
-    var pointer = { x: null, y: null };
-    var narrow = window.matchMedia && window.matchMedia("(max-width: 640px)").matches;
+  var renderer;
+  try{
+    renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true, alpha:true, powerPreference:'high-performance'});
+  }catch(e){ return; }
 
-    function styleColor(name, fallback){
-      try {
-        var v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-        return v || fallback;
-      } catch(e){ return fallback; }
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setSize(window.innerWidth, window.innerHeight, false);
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.05;
+
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(38, window.innerWidth/window.innerHeight, 0.1, 100);
+  camera.position.set(0, 0, 5.4);
+
+  /* procedural studio environment (equirectangular) */
+  function envCanvas(){
+    var c = document.createElement('canvas'); c.width = 1024; c.height = 512;
+    var x = c.getContext('2d');
+    var g = x.createLinearGradient(0,0,0,512);
+    g.addColorStop(0,'#1a2026'); g.addColorStop(.42,'#0d1114');
+    g.addColorStop(.72,'#080a0c'); g.addColorStop(1,'#050607');
+    x.fillStyle = g; x.fillRect(0,0,1024,512);
+    if('filter' in x) x.filter = 'blur(6px)';
+    function blob(cx,cy,rx,ry,col,a){
+      x.save(); x.translate(cx,cy); x.scale(1, ry/rx);
+      var rg = x.createRadialGradient(0,0,0,0,0,rx);
+      rg.addColorStop(0,col); rg.addColorStop(.45,col.replace(/[\d.]+\)$/,'.35)'));
+      rg.addColorStop(1,'rgba(0,0,0,0)');
+      x.globalAlpha = a; x.fillStyle = rg; x.fillRect(-rx,-rx,rx*2,rx*2);
+      x.globalAlpha = 1; x.restore();
     }
-
-    function resize(){
-      var rect = heroSection.getBoundingClientRect();
-      w = rect.width; h = rect.height;
-      canvas.width = Math.round(w * dpr);
-      canvas.height = Math.round(h * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      narrow = window.matchMedia && window.matchMedia("(max-width: 640px)").matches;
-      seed();
-    }
-
-    function seed(){
-      // linking is O(n²), so the cap matters more than the density:
-      // 44 particles is 946 pair tests per frame, 70 would be 2415
-      var count = Math.round((w * h) / (narrow ? 34000 : 24000));
-      count = Math.max(14, Math.min(count, 44));
-      particles = [];
-      for (var i = 0; i < count; i++){
-        particles.push({
-          x: Math.random() * w,
-          y: Math.random() * h,
-          vx: (Math.random() - 0.5) * 0.18,
-          vy: (Math.random() - 0.5) * 0.18,
-          r: Math.random() * 1.6 + 0.6
-        });
+    /* key light — wide and soft, no crisp core */
+    blob(250,120,360,230,'rgba(255,255,255,.95)',.85);
+    blob(250,110,150,110,'rgba(255,255,255,.95)',.55);
+    /* cool fill */
+    blob(770,180,380,260,'rgba(150,186,214,.85)',.5);
+    /* forge glow low right */
+    blob(880,370,330,240,'rgba(227,151,74,.95)',.6);
+    blob(150,430,300,200,'rgba(227,151,74,.6)',.22);
+    /* soft horizon: a very flat ellipse instead of a hard strip */
+    blob(512,262,620,70,'rgba(198,216,232,.55)',.45);
+    if('filter' in x) x.filter = 'none';
+    return c;
+  }
+  function brushedCanvas(){
+    var W = 512, c = document.createElement('canvas'); c.width = W; c.height = W;
+    var x = c.getContext('2d');
+    x.fillStyle = '#8e8e8e'; x.fillRect(0,0,W,W);
+    for(var i=0;i<2200;i++){
+      var y = Math.random()*W, x0 = Math.random()*W, len = 50 + Math.random()*260;
+      var v = Math.random() > .5 ? 255 : 0;
+      x.strokeStyle = 'rgba(' + v + ',' + v + ',' + v + ',' + (0.012 + Math.random()*0.035) + ')';
+      x.lineWidth = .5 + Math.random()*1.0;
+      /* draw each streak three times so the tile wraps without a seam */
+      for(var o=-1;o<=1;o++){
+        x.beginPath(); x.moveTo(x0 + o*W, y); x.lineTo(x0 + o*W + len, y); x.stroke();
       }
     }
+    return c;
+  }
 
-    var accentRGB = "47,181,131";
-    try {
-      var hex = styleColor("--accent", "#2fb583").replace("#", "");
-      if (hex.length === 6) {
-        accentRGB = [parseInt(hex.slice(0,2),16), parseInt(hex.slice(2,4),16), parseInt(hex.slice(4,6),16)].join(",");
-      }
-    } catch(e){}
+  var envTex = new THREE.CanvasTexture(envCanvas());
+  envTex.mapping = THREE.EquirectangularReflectionMapping;
+  envTex.encoding = THREE.sRGBEncoding;
+  var pmrem = new THREE.PMREMGenerator(renderer);
+  pmrem.compileEquirectangularShader();
+  var envMap = pmrem.fromEquirectangular(envTex).texture;
+  envTex.dispose(); pmrem.dispose();
+  scene.environment = envMap;
 
-    var linkDist = 120;
-    var linkDist2 = linkDist * linkDist;
-    var dotColor = "rgba(" + accentRGB + ",.45)";
+  var rough = new THREE.CanvasTexture(brushedCanvas());
+  rough.wrapS = rough.wrapT = THREE.RepeatWrapping;
+  rough.repeat.set(3, 1);
+  rough.anisotropy = renderer.capabilities.getMaxAnisotropy();
 
-    function step(){
-      if (!running) return;
-      ctx.clearRect(0, 0, w, h);
-      ctx.fillStyle = dotColor; // set once, not per particle
-      for (var i = 0; i < particles.length; i++){
-        var p = particles[i];
-        p.x += p.vx; p.y += p.vy;
-        if (pointer.x !== null) {
-          var dx = p.x - pointer.x, dy = p.y - pointer.y;
-          var d2 = dx*dx + dy*dy;
-          if (d2 < 14000) {
-            var d = Math.sqrt(d2) || 1;
-            p.x += (dx / d) * 0.5;
-            p.y += (dy / d) * 0.5;
-          }
-        }
-        if (p.x < -10) p.x = w + 10; if (p.x > w + 10) p.x = -10;
-        if (p.y < -10) p.y = h + 10; if (p.y > h + 10) p.y = -10;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fill();
-      }
-      // links: square-distance rejection first, so Math.sqrt only runs for the
-      // handful of pairs actually close enough to draw
-      if (!narrow) {
-        ctx.lineWidth = 1;
-        for (var a = 0; a < particles.length; a++){
-          var pa = particles[a];
-          for (var b = a + 1; b < particles.length; b++){
-            var pb = particles[b];
-            var ddx = pa.x - pb.x, ddy = pa.y - pb.y;
-            var d2 = ddx*ddx + ddy*ddy;
-            if (d2 >= linkDist2) continue;
-            var dist = Math.sqrt(d2);
-            ctx.beginPath();
-            ctx.moveTo(pa.x, pa.y);
-            ctx.lineTo(pb.x, pb.y);
-            ctx.strokeStyle = "rgba(" + accentRGB + "," + (0.14 * (1 - dist / linkDist)).toFixed(3) + ")";
-            ctx.stroke();
-          }
-        }
-      }
-      raf = requestAnimationFrame(step);
-    }
+  var group = new THREE.Group();
+  scene.add(group);
 
-    function start(){ if (!running) { running = true; raf = requestAnimationFrame(step); } }
-    function stop(){ running = false; if (raf) cancelAnimationFrame(raf); }
+  var knotGeo = new THREE.TorusKnotGeometry(1.08, 0.335, 420, 56, 2, 3);
+  var knotMat = new THREE.MeshStandardMaterial({
+    color: 0x9aa2aa, metalness: 1.0, roughness: 0.4,
+    roughnessMap: rough, envMap: envMap, envMapIntensity: 1.15
+  });
+  var knot = new THREE.Mesh(knotGeo, knotMat);
+  group.add(knot);
 
-    heroSection.addEventListener("mousemove", function(e){
-      var rect = heroSection.getBoundingClientRect();
-      pointer.x = e.clientX - rect.left;
-      pointer.y = e.clientY - rect.top;
-    }, { passive: true });
-    heroSection.addEventListener("mouseleave", function(){ pointer.x = null; pointer.y = null; });
+  /* the forge inside the loop: light only, no visible geometry */
+  var glow = new THREE.PointLight(0xE3974A, 3.4, 9, 2);
+  group.add(glow);
+  var glow2 = new THREE.PointLight(0xffd9a8, 1.1, 5.5, 2);
+  glow2.position.set(0, 0, .2);
+  group.add(glow2);
 
-    var resizeTimer;
-    window.addEventListener("resize", function(){
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(resize, 150);
-    }, { passive: true });
+  var key = new THREE.DirectionalLight(0xdfe9f2, 1.5); key.position.set(-3.2, 3.4, 4.2); scene.add(key);
+  var rim = new THREE.DirectionalLight(0xE3974A, 1.1); rim.position.set(3.6, -1.8, -2.4); scene.add(rim);
+  scene.add(new THREE.AmbientLight(0x30383f, .7));
 
-    if ("IntersectionObserver" in window) {
-      var pio = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-          if (entry.isIntersecting) start(); else stop();
-        });
-      }, { threshold: 0.05 });
-      pio.observe(heroSection);
+  /* embers: round, warm, drifting — replaces the old square dust */
+  function sparkTexture(){
+    var c = document.createElement('canvas'); c.width = c.height = 64;
+    var x = c.getContext('2d');
+    var g = x.createRadialGradient(32,32,0,32,32,32);
+    g.addColorStop(0,'rgba(255,255,255,1)');
+    g.addColorStop(.28,'rgba(255,255,255,.55)');
+    g.addColorStop(.62,'rgba(255,255,255,.12)');
+    g.addColorStop(1,'rgba(255,255,255,0)');
+    x.fillStyle = g; x.fillRect(0,0,64,64);
+    return new THREE.CanvasTexture(c);
+  }
+  var N = 260;
+  var dustGeo = new THREE.BufferGeometry();
+  var pos = new Float32Array(N*3), col = new Float32Array(N*3), drift = new Float32Array(N*2);
+  var cWarm = new THREE.Color(0xE8A867), cCool = new THREE.Color(0xAEBECB);
+  for(var i=0;i<N;i++){
+    pos[i*3]   = (Math.random()-.5)*15;
+    pos[i*3+1] = (Math.random()-.5)*10;
+    pos[i*3+2] = (Math.random()-.5)*6 - 1.2;
+    var warm = Math.random() < .34;
+    var c = (warm ? cWarm : cCool).clone().multiplyScalar(.55 + Math.random()*.45);
+    col[i*3] = c.r; col[i*3+1] = c.g; col[i*3+2] = c.b;
+    drift[i*2]   = .06 + Math.random()*.10;           /* rise speed */
+    drift[i*2+1] = Math.random()*Math.PI*2;            /* sway phase */
+  }
+  dustGeo.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  dustGeo.setAttribute('color', new THREE.BufferAttribute(col,3));
+  var dust = new THREE.Points(dustGeo, new THREE.PointsMaterial({
+    size:.055, map:sparkTexture(), vertexColors:true, transparent:true, opacity:.85,
+    sizeAttenuation:true, depthWrite:false, blending:THREE.AdditiveBlending
+  }));
+  scene.add(dust);
+
+  /* a thin steel hoop behind the knot — depth without noise */
+  var back = new THREE.Group();
+  scene.add(back);
+  var ring = new THREE.Mesh(
+    new THREE.TorusGeometry(2.6, 0.013, 8, 260),
+    new THREE.MeshStandardMaterial({color:0xa8b2ba, metalness:1, roughness:.3, envMap:envMap, envMapIntensity:1.0})
+  );
+  ring.rotation.x = Math.PI * .43; ring.rotation.z = .22;
+  back.add(ring);
+  var ring2 = new THREE.Mesh(
+    new THREE.TorusGeometry(3.45, 0.008, 8, 260),
+    new THREE.MeshStandardMaterial({color:0x8d979f, metalness:1, roughness:.42, envMap:envMap, envMapIntensity:.8})
+  );
+  ring2.rotation.x = Math.PI * .56; ring2.rotation.y = .35;
+  back.add(ring2);
+
+  function layout(){
+    var w = window.innerWidth, h = window.innerHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w/h; camera.updateProjectionMatrix();
+    var wide = w >= 900;
+    var s = wide ? Math.min(1.16, w/1500 + .62) : Math.min(.86, w/620);
+    group.scale.setScalar(s);
+    group.position.x = wide ? 1.62 : 0;
+    group.position.y = wide ? .12 : .35;
+    back.scale.setScalar(s);
+    back.position.copy(group.position);
+  }
+  layout();
+  window.addEventListener('resize', function(){ layout(); if(reduced) renderer.render(scene, camera); });
+
+  var mx = 0, my = 0, tmx = 0, tmy = 0;
+  if(!reduced){
+    window.addEventListener('pointermove', function(e){
+      tmx = (e.clientX / window.innerWidth - .5);
+      tmy = (e.clientY / window.innerHeight - .5);
+    }, {passive:true});
+  }
+
+  var scrollN = 0;
+  function onScroll(){
+    var max = Math.max(1, window.innerHeight);
+    scrollN = Math.min(2.4, window.scrollY / max);
+    var op = Math.max(.22, 1 - scrollN * .72);
+    canvas.style.setProperty('--stage-op', op.toFixed(3));
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  var running = true, t = 0, last = performance.now();
+  document.addEventListener('visibilitychange', function(){
+    running = !document.hidden;
+    if(running){ last = performance.now(); loop(); }
+  });
+
+  var first = true;
+  function loop(){
+    if(!running) return;
+    var now = performance.now();
+    t += Math.min(.05, (now - last) / 1000);   /* clamped delta: no leap after a pause */
+    last = now;
+
+    mx += (tmx - mx) * .045;
+    my += (tmy - my) * .045;
+
+    if(reduced){
+      group.rotation.set(.45, .8, 0);
+      back.rotation.set(0, .4, 0);
     } else {
-      start();
+      group.rotation.y = t * .22 + scrollN * 1.15 + mx * .45;
+      group.rotation.x = Math.sin(t * .18) * .18 + scrollN * .3 + my * .28;
+      group.rotation.z = Math.sin(t * .11) * .06;
+      back.rotation.y = -t * .055 + mx * .2;
+      back.rotation.x = my * .12;
+      var pa = dustGeo.attributes.position, arr = pa.array;
+      for(var k=0;k<N;k++){
+        arr[k*3+1] += drift[k*2] * 0.006;
+        arr[k*3]   += Math.sin(t * .5 + drift[k*2+1]) * 0.0016;
+        if(arr[k*3+1] > 5.2){ arr[k*3+1] = -5.2; arr[k*3] = (Math.random()-.5)*15; }
+      }
+      pa.needsUpdate = true;
+      var pulse = Math.sin(t * 1.35) * .5 + Math.sin(t * 2.7) * .2;
+      glow.intensity = 3.1 + pulse * .55;
+      glow2.intensity = 1.0 + pulse * .22;
     }
+    camera.position.x = mx * .55;
+    camera.position.y = -my * .38 - scrollN * .22;
+    camera.lookAt(group.position.x * .35, group.position.y * .4, 0);
 
-    // a hidden tab still runs rAF in some browsers; stop outright
-    document.addEventListener("visibilitychange", function(){
-      if (document.hidden) stop();
-      else if (heroSection.getBoundingClientRect().bottom > 0) start();
-    });
+    renderer.render(scene, camera);
 
-    resize();
-  })();
+    if(first){ first = false; canvas.classList.add('ready'); }
+    if(!reduced || first) requestAnimationFrame(loop);
+    else requestAnimationFrame(function(){ /* single settle frame */ });
+  }
+  requestAnimationFrame(loop);
 
-  // ---------- hero 3D: Möbius ribbon ----------
-  // One surface, no beginning and no end — the brand mark, not a stock primitive.
-  (function heroRibbon(){
-    var mount = document.getElementById("hero3d");
-    if (!mount) return;
-    // THREE is checked in build(), not here: the library is deferred, so it does
-    // not exist yet at parse time. If the CDN is blocked it never will, and the
-    // static SVG fallback simply stays visible.
-
-    var narrowMQ = window.matchMedia ? window.matchMedia("(max-width: 640px)") : null;
-    var themeMQ = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
-    var heroSection = document.querySelector(".hero");
-    var live = null; // active scene, or null while torn down
-
-    function readColor(name, fallback){
-      try {
-        var v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-        if (/^#([0-9a-f]{6})$/i.test(v)) return parseInt(v.slice(1), 16);
-      } catch(e){}
-      return fallback;
-    }
-    function hex(n){ var s = n.toString(16); while (s.length < 6) s = "0" + s; return "#" + s; }
-
-    // Equirectangular studio gradient pushed through PMREM. This is what makes the
-    // metal read as metal — a MeshStandardMaterial with no environment is plastic.
-    function environmentTexture(renderer, accent, spec){
-      // the surroundings come from the theme, so the metal reflects the actual page
-      var sky = readColor("--bg", 0x0b0f0d);
-      var ground = readColor("--surface-2", 0x181d1a);
-      var c = document.createElement("canvas");
-      c.width = 16; c.height = 256;
-      var g2 = c.getContext("2d");
-      var grad = g2.createLinearGradient(0, 0, 0, 256);
-      grad.addColorStop(0.00, hex(sky));
-      grad.addColorStop(0.30, hex(spec));
-      grad.addColorStop(0.48, hex(accent));
-      grad.addColorStop(0.72, hex(ground));
-      grad.addColorStop(1.00, hex(sky));
-      g2.fillStyle = grad;
-      g2.fillRect(0, 0, 16, 256);
-
-      var tex = new THREE.CanvasTexture(c);
-      tex.mapping = THREE.EquirectangularReflectionMapping;
-      var pmrem = new THREE.PMREMGenerator(renderer);
-      var rt = pmrem.fromEquirectangular(tex);
-      tex.dispose();
-      pmrem.dispose();
-      return rt;
-    }
-
-    // Parametric Möbius band: u runs around the loop, v across the ribbon,
-    // and the half-turn of `twists` is what closes the surface onto itself.
-    function ribbonGeometry(uSeg, vSeg, radius, halfWidth, twists){
-      var pos = [], uv = [], idx = [], i, j;
-      for (i = 0; i <= uSeg; i++){
-        var u = i / uSeg * Math.PI * 2;
-        var half = u * twists / 2;
-        var cosH = Math.cos(half), sinH = Math.sin(half);
-        for (j = 0; j <= vSeg; j++){
-          var v = (j / vSeg - 0.5) * 2 * halfWidth;
-          var r = radius + v * cosH;
-          pos.push(r * Math.cos(u), v * sinH, r * Math.sin(u));
-          uv.push(i / uSeg, j / vSeg);
-        }
-      }
-      for (i = 0; i < uSeg; i++){
-        for (j = 0; j < vSeg; j++){
-          var a = i * (vSeg + 1) + j;
-          var b = a + vSeg + 1;
-          idx.push(a, b, a + 1, b, b + 1, a + 1);
-        }
-      }
-      var geo = new THREE.BufferGeometry();
-      geo.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
-      geo.setAttribute("uv", new THREE.Float32BufferAttribute(uv, 2));
-      geo.setIndex(idx);
-      geo.computeVertexNormals();
-      return geo;
-    }
-
-    function build(){
-      if (typeof THREE === "undefined") return null;
-      var w = Math.max(1, mount.clientWidth), h = Math.max(1, mount.clientHeight);
-      var renderer;
-      try {
-        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
-      } catch(e) { return null; } // no WebGL — static fallback stays visible
-
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
-      renderer.setSize(w, h, false);
-      renderer.outputEncoding = THREE.sRGBEncoding;
-      renderer.toneMapping = THREE.ACESFilmicToneMapping;
-      renderer.toneMappingExposure = 1.05;
-      mount.appendChild(renderer.domElement);
-      mount.classList.add("is-ready");
-
-      var scene = new THREE.Scene();
-      var camera = new THREE.PerspectiveCamera(34, w / h, 0.1, 100);
-      camera.position.set(0, 0.15, 5.6);
-
-      var accent = readColor("--accent", 0x2fb583);
-      var spec = readColor("--spec", 0xd8cfc0);
-
-      var envRT = environmentTexture(renderer, accent, spec);
-      scene.environment = envRT.texture;
-
-      var geometry = ribbonGeometry(280, 18, 1.5, 0.42, 1);
-      // anodised, not plastic: dark body, accent lives in the specular response.
-      // On a light page the white environment would wash the ribbon out, so the
-      // metal is dialled back and the body carries more of the colour.
-      var bgColor = new THREE.Color(readColor("--bg", 0x0b0f0d));
-      var isLight = (bgColor.r + bgColor.g + bgColor.b) / 3 > 0.5;
-      var material = new THREE.MeshStandardMaterial({
-        color: new THREE.Color(accent).multiplyScalar(isLight ? 0.8 : 0.42),
-        metalness: isLight ? 0.82 : 0.96,
-        roughness: isLight ? 0.26 : 0.19,
-        side: THREE.DoubleSide,
-        envMapIntensity: isLight ? 0.85 : 1.6
-      });
-      var ribbon = new THREE.Mesh(geometry, material);
-      var group = new THREE.Group();
-      group.add(ribbon);
-      group.rotation.set(0.5, 0.2, 0.12);
-      scene.add(group);
-
-      // one hard key, one cold rim, almost no fill — contrast over evenness
-      var keyLight = new THREE.DirectionalLight(0xffffff, 1.15);
-      keyLight.position.set(3.2, 4.4, 3.0);
-      scene.add(keyLight);
-      var rimLight = new THREE.DirectionalLight(spec, 0.85);
-      rimLight.position.set(-4, 1.5, -3);
-      scene.add(rimLight);
-      scene.add(new THREE.AmbientLight(0xffffff, 0.18));
-
-      var pointerX = 0, pointerY = 0;          // cursor parallax target
-      var dragX = 0, dragY = 0;                // accumulated drag
-      var velX = 0, velY = 0;                  // drag inertia
-      var spin = 0, scrollT = 0;
-      var dragging = false, lastX = 0, lastY = 0;
-      var visible = true, raf = 0, lastFrame = 0;
-      var frameInterval = 1000 / 60;
-      var prevTs = 0, sampled = 0, slow = 0, degraded = false;
-      var cleanup = [];
-
-      function on(target, type, fn, opts){
-        target.addEventListener(type, fn, opts);
-        cleanup.push(function(){ target.removeEventListener(type, fn, opts); });
-      }
-
-      function render(){ renderer.render(scene, camera); }
-
-      function frame(ts){
-        raf = requestAnimationFrame(frame);
-        if (!visible || document.hidden) return;
-        if (ts - lastFrame < frameInterval) return;
-        lastFrame = ts;
-
-        // adaptive quality: if the machine cannot hold the frame budget,
-        // drop to 1x pixels and 30fps once instead of stuttering forever
-        if (!degraded && prevTs){
-          sampled++;
-          if (ts - prevTs > 26) slow++;
-          if (sampled >= 90){
-            if (slow / sampled > 0.4){
-              degraded = true;
-              frameInterval = 1000 / 30;
-              renderer.setPixelRatio(1);
-              renderer.setSize(Math.max(1, mount.clientWidth), Math.max(1, mount.clientHeight), false);
-            }
-            sampled = 0; slow = 0;
-          }
-        }
-        prevTs = ts;
-
-        spin += 0.0016;
-        dragX += velX; dragY += velY;
-        velX *= 0.94; velY *= 0.94;
-
-        var wantY = pointerY + dragY + spin + scrollT * 0.6;
-        var wantX = pointerX + dragX + 0.5;
-        group.rotation.y += (wantY - group.rotation.y) * 0.055;
-        group.rotation.x += (wantX - group.rotation.x) * 0.055;
-        // the ribbon sinks into the next section rather than merely scrolling away
-        group.position.z = -scrollT * 1.8;
-        group.position.y = scrollT * 0.35;
-        render();
-      }
-
-      // cursor parallax stays scoped to the hero — no document-wide mousemove
-      if (heroSection && window.matchMedia && window.matchMedia("(hover: hover)").matches && !reduceMotion){
-        on(heroSection, "mousemove", function(e){
-          if (dragging) return;
-          var rect = mount.getBoundingClientRect();
-          var dx = (e.clientX - (rect.left + rect.width / 2)) / (window.innerWidth / 2);
-          var dy = (e.clientY - (rect.top + rect.height / 2)) / (window.innerHeight / 2);
-          pointerY = dx * 0.22;
-          pointerX = dy * 0.14;
-        }, { passive: true });
-      }
-
-      function moveHandler(e){
-        if (!dragging) return;
-        velY = (e.clientX - lastX) * 0.004;
-        velX = (e.clientY - lastY) * 0.004;
-        lastX = e.clientX; lastY = e.clientY;
-      }
-      function upHandler(e){
-        if (!dragging) return;
-        dragging = false;
-        mount.style.cursor = "grab";
-        try { mount.releasePointerCapture(e.pointerId); } catch(err){}
-      }
-      if (window.PointerEvent){
-        on(mount, "pointerdown", function(e){
-          dragging = true;
-          lastX = e.clientX; lastY = e.clientY;
-          velX = velY = 0;
-          mount.style.cursor = "grabbing";
-          try { mount.setPointerCapture(e.pointerId); } catch(err){}
-        });
-        on(mount, "pointermove", moveHandler);
-        on(mount, "pointerup", upHandler);
-        on(mount, "pointercancel", upHandler);
-      }
-
-      if (!reduceMotion){
-        // hero height comes from the cached metrics — no layout read per scroll
-        cleanup.push(onScroll(function(y){
-          scrollT = Math.min(1, Math.max(0, y / Math.max(1, metrics.heroH)));
-        }));
-      }
-
-      var io3d = null;
-      if ("IntersectionObserver" in window){
-        io3d = new IntersectionObserver(function(entries){
-          entries.forEach(function(entry){ visible = entry.isIntersecting; });
-        }, { threshold: 0.02 });
-        io3d.observe(mount);
-        cleanup.push(function(){ io3d.disconnect(); });
-      }
-
-      function resize(){
-        var nw = Math.max(1, mount.clientWidth), nh = Math.max(1, mount.clientHeight);
-        renderer.setPixelRatio(degraded ? 1 : Math.min(window.devicePixelRatio || 1, 1.5));
-        renderer.setSize(nw, nh, false);
-        camera.aspect = nw / nh;
-        camera.updateProjectionMatrix();
-        render();
-      }
-
-      function destroy(){
-        if (raf) cancelAnimationFrame(raf);
-        cleanup.forEach(function(fn){ fn(); });
-        cleanup.length = 0;
-        geometry.dispose();
-        material.dispose();
-        envRT.dispose();
-        renderer.dispose();
-        if (renderer.domElement.parentNode) renderer.domElement.parentNode.removeChild(renderer.domElement);
-        mount.classList.remove("is-ready");
-      }
-
-      if (reduceMotion) render();                    // one still frame, no loop
-      else raf = requestAnimationFrame(frame);
-
-      return { resize: resize, destroy: destroy };
-    }
-
-    // --- lifecycle: the scene must survive crossing the breakpoint in both directions
-    function shouldRun(){ return !(narrowMQ && narrowMQ.matches); }
-
-    function sync(){
-      if (shouldRun() && !live) live = build();
-      else if (!shouldRun() && live) { live.destroy(); live = null; }
-    }
-    function rebuild(){
-      if (live) { live.destroy(); live = null; }
-      sync();
-    }
-
-    // Boot on `load`, not on rAF: a page opened in a background tab never paints,
-    // so an rAF-based bootstrap would leave the scene uninitialised until focus.
-    // If the mount still measures zero here, the ResizeObserver below picks it up.
-    if (document.readyState === "complete") sync();
-    else window.addEventListener("load", sync, { once: true });
-
-    if (narrowMQ){
-      if (narrowMQ.addEventListener) narrowMQ.addEventListener("change", sync);
-      else if (narrowMQ.addListener) narrowMQ.addListener(sync);
-    }
-    if (themeMQ){ // palette changes -> environment and material must be rebuilt
-      if (themeMQ.addEventListener) themeMQ.addEventListener("change", rebuild);
-      else if (themeMQ.addListener) themeMQ.addListener(rebuild);
-    }
-    if ("ResizeObserver" in window){
-      new ResizeObserver(function(){ if (live) live.resize(); else sync(); }).observe(mount);
-    } else {
-      window.addEventListener("resize", function(){ if (live) live.resize(); else sync(); }, { passive: true });
-    }
-  })();
+  /* apply saved language last so markup is the fallback */
+  if(lang !== 'ru') setLang(lang);
 })();
 </script>
-
 </body>
 </html>
