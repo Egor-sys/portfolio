@@ -5,78 +5,110 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Loopcraft — веб-разработка, приложения, автоматизация и AI-интеграции. Минск.">
 <title>Loopcraft</title>
+<!-- TODO: заменить на реальный домен перед деплоем (canonical, og:url, sitemap.xml) -->
+<link rel="canonical" href="https://loopcraft.by/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Loopcraft">
+<meta property="og:title" content="Loopcraft — пишем код, который работает">
+<meta property="og:description" content="Сайты, приложения, автоматизация и AI-интеграции. Минск.">
+<meta property="og:url" content="https://loopcraft.by/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0f0d'/%3E%3Cpath d='M9 16c0-4 2.6-6 5.2-6 4.6 0 4.6 12 9.2 12 2.6 0 5.2-2 5.2-6' stroke='%232fb583' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Loopcraft",
+  "description": "Веб-разработка, приложения, автоматизация и AI-интеграции.",
+  "url": "https://loopcraft.by/",
+  "areaServed": "BY",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Минск",
+    "addressCountry": "BY"
+  },
+  "sameAs": ["https://t.me/Egorchi9"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "url": "https://t.me/Egorchi9",
+    "availableLanguage": ["ru", "en"]
+  }
+}
+</script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
   :root{
-    --bg: #1c1712;
-    --surface: #241d17;
-    --surface-2: #2e2419;
-    --ink: #f5ede1;
-    --muted: #a89686;
-    --accent: #e08a5b;
-    --accent-ink: #201007;
-    --accent-2: #c9a877;
-    --line: rgba(245,237,225,0.12);
-    --grid: rgba(224,138,91,0.14);
-    --grid-soft: rgba(224,138,91,0.05);
-    --blob-1: rgba(224,138,91,0.16);
-    --blob-2: rgba(201,168,119,0.14);
-    --surface-glass: rgba(36,29,23,0.62);
-    --glow: rgba(224,138,91,0.35);
+    --bg: #0b0f0d;
+    --surface: #121614;
+    --surface-2: #181d1a;
+    --ink: #f1f4f2;
+    --muted: #8b968f;
+    --accent: #2fb583;
+    --accent-ink: #04130c;
+    --accent-2: #5bd3a4;
+    --line: rgba(241,244,242,0.12);
+    --grid: rgba(47,181,131,0.14);
+    --grid-soft: rgba(47,181,131,0.05);
+    --blob-1: rgba(47,181,131,0.16);
+    --blob-2: rgba(91,211,164,0.12);
+    --surface-glass: rgba(18,22,20,0.62);
+    --glow: rgba(47,181,131,0.35); --spec: #d8cfc0;
   }
   @media (prefers-color-scheme: light){
     :root:not([data-theme="light"]){
-      --bg: #faf5ec;
-      --surface: #fffdf9;
-      --surface-2: #f1e6d6;
-      --ink: #2b241d;
-      --muted: #8a7a68;
-      --accent: #c1633c;
-      --accent-ink: #fff8f2;
-      --accent-2: #9c7b53;
-      --line: rgba(43,36,29,0.12);
-      --grid: rgba(156,123,83,0.14);
-      --grid-soft: rgba(156,123,83,0.06);
-      --blob-1: rgba(193,99,60,0.12);
-      --blob-2: rgba(156,123,83,0.12);
-      --surface-glass: rgba(255,253,249,0.62);
-      --glow: rgba(193,99,60,0.28);
+      --bg: #f4f6f5;
+      --surface: #ffffff;
+      --surface-2: #eaf0ed;
+      --ink: #101512;
+      --muted: #5b665f;
+      --accent: #047857;
+      --accent-ink: #f4fdf9;
+      --accent-2: #059669;
+      --line: rgba(16,21,18,0.10);
+      --grid: rgba(4,120,87,0.13);
+      --grid-soft: rgba(4,120,87,0.06);
+      --blob-1: rgba(4,120,87,0.10);
+      --blob-2: rgba(5,150,105,0.09);
+      --surface-glass: rgba(255,255,255,0.62);
+      --glow: rgba(4,120,87,0.25); --spec: #8d8371;
     }
   }
   :root[data-theme="light"]{
-    --bg: #faf5ec;
-    --surface: #fffdf9;
-    --surface-2: #f1e6d6;
-    --ink: #2b241d;
-    --muted: #8a7a68;
-    --accent: #c1633c;
-    --accent-ink: #fff8f2;
-    --accent-2: #9c7b53;
-    --line: rgba(43,36,29,0.12);
-    --grid: rgba(156,123,83,0.14);
-    --grid-soft: rgba(156,123,83,0.06);
-    --blob-1: rgba(193,99,60,0.12);
-    --blob-2: rgba(156,123,83,0.12);
-    --surface-glass: rgba(255,253,249,0.62);
-    --glow: rgba(193,99,60,0.28);
+    --bg: #f4f6f5;
+    --surface: #ffffff;
+    --surface-2: #eaf0ed;
+    --ink: #101512;
+    --muted: #5b665f;
+    --accent: #047857;
+    --accent-ink: #f4fdf9;
+    --accent-2: #059669;
+    --line: rgba(16,21,18,0.10);
+    --grid: rgba(4,120,87,0.13);
+    --grid-soft: rgba(4,120,87,0.06);
+    --blob-1: rgba(4,120,87,0.10);
+    --blob-2: rgba(5,150,105,0.09);
+    --surface-glass: rgba(255,255,255,0.62);
+    --glow: rgba(4,120,87,0.25); --spec: #8d8371;
   }
   :root[data-theme="dark"]{
-    --bg: #1c1712;
-    --surface: #241d17;
-    --surface-2: #2e2419;
-    --ink: #f5ede1;
-    --muted: #a89686;
-    --accent: #e08a5b;
-    --accent-ink: #201007;
-    --accent-2: #c9a877;
-    --line: rgba(245,237,225,0.12);
-    --grid: rgba(224,138,91,0.14);
-    --grid-soft: rgba(224,138,91,0.05);
-    --blob-1: rgba(224,138,91,0.16);
-    --blob-2: rgba(201,168,119,0.14);
-    --surface-glass: rgba(36,29,23,0.62);
-    --glow: rgba(224,138,91,0.35);
+    --bg: #0b0f0d;
+    --surface: #121614;
+    --surface-2: #181d1a;
+    --ink: #f1f4f2;
+    --muted: #8b968f;
+    --accent: #2fb583;
+    --accent-ink: #04130c;
+    --accent-2: #5bd3a4;
+    --line: rgba(241,244,242,0.12);
+    --grid: rgba(47,181,131,0.14);
+    --grid-soft: rgba(47,181,131,0.05);
+    --blob-1: rgba(47,181,131,0.16);
+    --blob-2: rgba(91,211,164,0.12);
+    --surface-glass: rgba(18,22,20,0.62);
+    --glow: rgba(47,181,131,0.35); --spec: #d8cfc0;
   }
 
   *{box-sizing:border-box;}
@@ -132,16 +164,19 @@
   }
 
   .wrap{
-    max-width:1320px;
+    max-width:1180px;
     margin-inline:auto;
-    padding-inline:clamp(24px, 4vw, 64px);
+    padding-inline:clamp(24px, 4vw, 56px);
   }
+  /* Unbounded is reserved for the wordmark and H1; everything else speaks
+     in Plex Sans, so the page has one display voice instead of three */
   h1,h2,h3{
-    font-family:"Fraunces", Georgia, serif;
     text-wrap:balance;
     margin:0;
     font-weight:600;
   }
+  h1{font-family:"Unbounded", ui-sans-serif, system-ui, sans-serif;}
+  h2,h3{letter-spacing:-0.012em;}
   .mono{
     font-family:"IBM Plex Mono", ui-monospace, monospace;
     font-variant-numeric:tabular-nums;
@@ -153,14 +188,17 @@
     --mx:50%;
     --my:20%;
     position:relative;
-    padding-block:96px 72px;
+    min-height:100svh;
+    display:flex;
+    align-items:center;
+    padding-block:120px 88px;
     background-image:radial-gradient(ellipse 900px 420px at 50% 0%, var(--grid-soft), transparent 70%);
     overflow:hidden;
   }
   .hero::before{
     content:"";
     position:absolute; inset:0;
-    background:radial-gradient(480px circle at var(--mx) var(--my), rgba(224,138,91,.10), transparent 60%);
+    background:radial-gradient(480px circle at var(--mx) var(--my), rgba(47,181,131,.10), transparent 60%);
     pointer-events:none;
     transition:background .25s ease;
   }
@@ -170,9 +208,34 @@
     background:radial-gradient(ellipse 60% 50% at 50% 0%, transparent 0%, var(--bg) 78%);
     pointer-events:none;
   }
-  .hero-inner{position:relative; z-index:1;}
+  .hero > .wrap{width:100%;}
+  .hero-inner{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr);
+    align-items:center;
+    gap:0;
+  }
+  .hero-copy{grid-column:1; position:relative; z-index:3;}
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-copy{grid-column:auto;}
+  }
 
-  /* ---------- HERO DECORATIVE LAYERS (parallax + particles + 3D) ---------- */
+  /* ---------- HERO DECORATIVE LAYERS (parallax + particles + gradient wave + 3D) ---------- */
+  .hero-gradient{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    overflow:hidden;
+    opacity:.4;
+    mix-blend-mode:screen;
+    pointer-events:none;
+  }
+  .hero-gradient canvas{display:block; width:100%; height:100%;}
+  @media (max-width:640px){ .hero-gradient{opacity:.28;} }
+  @media (prefers-reduced-motion: reduce){ .hero-gradient{display:none;} }
   .hero-shape{
     position:absolute;
     top:-60px; right:-80px;
@@ -194,24 +257,51 @@
   .hero-scrim{
     position:absolute;
     top:-10%; left:-6%;
-    width:min(680px, 78vw);
+    width:min(880px, 82vw);
     height:120%;
-    background:radial-gradient(ellipse 60% 55% at 30% 40%, var(--bg) 0%, transparent 72%);
-    opacity:.78;
+    background:
+      radial-gradient(ellipse 58% 52% at 28% 46%, var(--bg) 0%, transparent 74%),
+      linear-gradient(90deg, var(--bg) 0%, rgba(0,0,0,0) 86%);
+    opacity:.9;
     pointer-events:none;
   }
+  @media (max-width:900px){ .hero-scrim{display:none;} }
   .hero-3d{
-    position:absolute;
-    top:64px;
-    right:clamp(16px, 6vw, 72px);
-    width:min(300px, 30vw);
-    height:min(300px, 30vw);
+    position:relative;
+    grid-column:2;
+    grid-row:1;
+    justify-self:end;
+    width:min(620px, 46vw);
+    margin-right:min(-96px, -5vw);
+    margin-left:-14%;
+    aspect-ratio:1/1;
     z-index:2;
     cursor:grab;
     touch-action:none;
   }
   .hero-3d:active{cursor:grabbing;}
-  .hero-3d canvas{display:block; width:100%; height:100%;}
+  /* seats the object in space: warm bounce behind, soft occlusion below */
+  .hero-3d::before{
+    content:"";
+    position:absolute;
+    left:12%; right:12%;
+    top:18%; bottom:12%;
+    border-radius:50%;
+    background:radial-gradient(ellipse at 60% 40%, var(--blob-1), transparent 66%);
+    filter:blur(48px);
+    opacity:.85;
+    z-index:-1;
+    pointer-events:none;
+  }
+  .hero-3d canvas{display:block; width:100%; height:100%; position:relative; z-index:1;}
+  @keyframes heroObjIn{
+    from{opacity:0; transform:scale(.86);}
+    to{opacity:1; transform:none;}
+  }
+  .hero-3d.is-ready canvas{animation:heroObjIn 1.1s cubic-bezier(.16,1,.3,1) .18s both;}
+  @media (prefers-reduced-motion: reduce){
+    .hero-3d.is-ready canvas{animation:none;}
+  }
   .hero-3d-fallback{
     position:absolute; inset:0;
     display:flex; align-items:center; justify-content:center;
@@ -220,7 +310,10 @@
   .hero-3d-fallback svg{width:78%; height:78%;}
   .hero-3d.is-ready .hero-3d-fallback{display:none;}
   @media (max-width:900px){
-    .hero-3d{width:150px; height:150px; top:20px; right:16px; opacity:.85;}
+    .hero-3d{
+      grid-column:auto; grid-row:auto; justify-self:center;
+      width:min(360px, 74vw); margin:16px 0 0; opacity:.92;
+    }
   }
   @media (max-width:640px){
     .hero-3d{display:none;}
@@ -234,38 +327,39 @@
     margin-bottom:18px;
   }
   .hero h1{
-    font-size:clamp(2.4rem, 6vw, 4.2rem);
-    line-height:1.02;
-    letter-spacing:-0.01em;
+    font-size:clamp(2.3rem, 5.6vw, 4.2rem);
+    line-height:1.04;
+    letter-spacing:-0.022em;
   }
   .hero h1 em{
-    font-style:italic;
-    background-image:linear-gradient(100deg, var(--accent) 0%, var(--accent-2) 50%, var(--accent) 100%);
-    background-size:220% auto;
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    animation:heroGradient 7s ease-in-out infinite;
-  }
-  @keyframes heroGradient{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-  }
-  @media (prefers-reduced-motion: reduce){
-    .hero h1 em{animation:none; background-position:0% 50%;}
+    font-style:normal;
+    font-weight:700;
+    color:var(--accent);
   }
   .hero-tagline{
-    margin-top:22px;
-    max-width:52ch;
-    font-size:1.05rem;
+    margin-top:26px;
+    max-width:46ch;
+    font-size:1.02rem;
     color:var(--muted);
   }
   .hero-cta{
-    margin-top:36px;
+    margin-top:38px;
     display:flex;
     flex-wrap:wrap;
     gap:14px;
+  }
+  /* staged entrance: eyebrow → headline → tagline → CTA */
+  @keyframes heroIn{
+    from{opacity:0; transform:translateY(24px);}
+    to{opacity:1; transform:none;}
+  }
+  .hero-copy > *{animation:heroIn .9s cubic-bezier(.16,1,.3,1) both;}
+  .hero-copy > .eyebrow{animation-delay:.06s;}
+  .hero-copy > h1{animation-delay:.16s;}
+  .hero-copy > .hero-tagline{animation-delay:.3s;}
+  .hero-copy > .hero-cta{animation-delay:.42s;}
+  @media (prefers-reduced-motion: reduce){
+    .hero-copy > *{animation:none;}
   }
   .btn{
     position:relative;
@@ -316,32 +410,52 @@
   }
 
   /* ---------- SECTION SCAFFOLDING ---------- */
-  section{padding-block:64px;}
+  section{padding-block:clamp(88px, 12vh, 152px);}
+  section + section{padding-top:0;}
   .section-head{
-    margin-bottom:40px;
+    margin-bottom:clamp(36px, 5vh, 64px);
   }
-  .section-head h2{font-size:clamp(1.5rem, 3vw, 2.1rem);}
+  .section-head h2{font-size:clamp(1.55rem, 3vw, 2.15rem); letter-spacing:-0.015em;}
+  /* document-like section markers instead of decorative headings */
+  .section-head[data-num]::before{
+    content:attr(data-num) " — " attr(data-label);
+    display:block;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11.5px;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:14px;
+  }
 
-  /* ---------- DIRECTIONS ---------- */
+  /* ---------- DIRECTIONS (bento) ---------- */
   .direction-list{
-    display:flex;
-    flex-direction:column;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
   }
   .direction{
-    display:grid;
-    grid-template-columns:48px 1fr;
-    gap:22px;
-    padding-block:32px;
-    background-image:linear-gradient(90deg, transparent, var(--line) 18%, var(--line) 82%, transparent);
-    background-repeat:no-repeat;
-    background-position:top;
-    background-size:100% 1px;
+    grid-column:span 1;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    padding:30px 28px;
+    background:var(--surface);
   }
-  @media (max-width:640px){
-    .direction{grid-template-columns:1fr; gap:12px;}
+  .direction:first-child{
+    grid-column:span 2;
+    background:var(--surface-2);
+  }
+  @media (max-width:768px){
+    .direction-list{grid-template-columns:1fr;}
+    .direction, .direction:first-child{grid-column:auto;}
   }
   .direction-icon{
-    width:40px; height:40px;
+    width:36px; height:36px;
     color:var(--accent-2);
   }
   .direction-icon svg{width:100%; height:100%; display:block;}
@@ -364,6 +478,25 @@
   }
 
   /* ---------- PROCESS ---------- */
+  /* the four steps sit inside a closed loop that draws itself on scroll —
+     the cycle the copy describes, stated once in geometry */
+  .process-wrap{
+    position:relative;
+    padding:clamp(28px, 4vw, 52px) clamp(24px, 4vw, 56px);
+  }
+  .process-loop{
+    position:absolute;
+    inset:0;
+    width:100%; height:100%;
+    color:var(--accent);
+    opacity:.5;
+    pointer-events:none;
+    overflow:visible;
+  }
+  @media (max-width:760px){
+    .process-wrap{padding:0;}
+    .process-loop{display:none;}
+  }
   .process{
     display:grid;
     grid-template-columns:repeat(4, 1fr);
@@ -384,9 +517,9 @@
     letter-spacing:.05em;
   }
   .step h4{
-    font-family:"Fraunces", serif;
     font-size:1.05rem;
     font-weight:600;
+    letter-spacing:-0.01em;
     margin:0 0 8px;
   }
   .step p{color:var(--muted); font-size:.88rem; margin:0;}
@@ -399,37 +532,27 @@
   }
   @media (max-width:860px){ .projects{grid-template-columns:1fr;} }
   .project-card{
-    --rx:0deg; --ry:0deg; --mx:50%; --my:50%;
     position:relative;
     border:1px solid var(--line);
-    border-radius:8px;
+    border-radius:10px;
     overflow:hidden;
     background:var(--surface);
     display:flex;
     flex-direction:column;
     text-decoration:none;
     color:inherit;
-    transform:perspective(900px) rotateX(var(--rx)) rotateY(var(--ry));
-    transition:transform .2s ease, border-color .15s ease, box-shadow .15s ease;
+    transition:transform .32s cubic-bezier(.2,.7,.3,1), border-color .18s ease, box-shadow .32s ease;
   }
-  .project-card:hover{border-color:var(--accent-2); box-shadow:0 18px 34px -18px rgba(0,0,0,.45);}
-  .project-card::before{
-    content:"";
-    position:absolute; inset:0;
-    z-index:3;
-    background:radial-gradient(360px circle at var(--mx) var(--my), rgba(255,255,255,.16), transparent 60%);
-    opacity:0;
-    transition:opacity .25s ease;
-    pointer-events:none;
+  .project-card:hover,
+  .project-card:focus-visible{
+    transform:translateY(-4px);
+    border-color:var(--accent);
+    box-shadow:0 26px 48px -28px rgba(0,0,0,.7);
   }
-  .project-card:hover::before{opacity:1;}
+  .project-card:focus-visible{outline:2px solid var(--accent-2); outline-offset:3px;}
   @media (prefers-reduced-motion: reduce){
-    .project-card{transform:none !important; transition:border-color .15s ease;}
-    .project-card::before{display:none;}
-  }
-  @media (hover:none){
-    .project-card{transform:none !important;}
-    .project-card::before{display:none;}
+    .project-card{transition:border-color .18s ease;}
+    .project-card:hover{transform:none;}
   }
   .project-visual{
     height:150px;
@@ -440,28 +563,26 @@
     overflow:hidden;
     transition:transform .5s cubic-bezier(.2,.7,.3,1);
   }
-  .project-card:hover .project-visual{transform:scale(1.12);}
+  .project-card:hover .project-visual{transform:scale(1.06);}
   .project-visual svg{
     width:56px; height:56px; position:relative; z-index:1;
     transition:transform .5s cubic-bezier(.2,.7,.3,1);
   }
   .project-card:hover .project-visual svg{transform:scale(1.08);}
+  /* single depth cue instead of a second shimmer: the visual sinks, the card lifts */
   .project-visual::after{
     content:"";
-    position:absolute;
-    top:0; left:-70%;
-    width:45%; height:100%;
-    background:linear-gradient(115deg, transparent, rgba(255,255,255,.28), transparent);
-    transform:skewX(-18deg);
-    transition:left .65s ease;
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, transparent 45%, rgba(0,0,0,.42) 100%);
+    opacity:.55;
+    transition:opacity .4s ease;
     pointer-events:none;
     z-index:2;
   }
-  .project-card:hover .project-visual::after{left:130%;}
+  .project-card:hover .project-visual::after{opacity:.2;}
   @media (prefers-reduced-motion: reduce), (hover:none){
     .project-visual, .project-visual svg{transition:none;}
     .project-card:hover .project-visual, .project-card:hover .project-visual svg{transform:none;}
-    .project-visual::after{display:none;}
   }
   .project-visual::before{
     content:"";
@@ -474,8 +595,8 @@
   .visual-farm{background:linear-gradient(135deg, #4a5a3a, #6b7a4f); color:#f3efe0;}
   .visual-pub{background:linear-gradient(135deg, #2e2420, #4a382c); color:#e8c98a;}
   .visual-noodles{background:linear-gradient(135deg, #a13a2c, #d9622f); color:#fff2e0;}
-  .project-body{padding:20px;}
-  .project-title{font-family:"Fraunces", serif; font-size:1.1rem; font-weight:600; margin-bottom:6px;}
+  .project-body{padding:20px; flex:1; display:flex; flex-direction:column;}
+  .project-title{font-size:1.1rem; font-weight:600; letter-spacing:-0.01em; margin-bottom:6px;}
   .project-desc{color:var(--muted); font-size:.87rem; margin:0 0 12px;}
   .project-foot{
     display:flex;
@@ -483,6 +604,8 @@
     align-items:center;
     font-family:"IBM Plex Mono", monospace;
     font-size:11.5px;
+    margin-top:auto;
+    padding-top:12px;
   }
   .project-tag{color:var(--accent-2);}
   .project-go{color:var(--accent);}
@@ -579,7 +702,7 @@
     .topbar{background:var(--surface);}
   }
   .topbar-brand{
-    font-family:"Fraunces", serif;
+    font-family:"Unbounded", sans-serif;
     font-weight:600;
     font-size:14px;
     letter-spacing:.01em;
@@ -608,16 +731,34 @@
   @media (max-width:900px){ .topbar-links{display:none;} }
 
   /* ---------- SCROLL PROGRESS ---------- */
+  .scroll-progress-track{
+    position:fixed;
+    top:0; left:0;
+    height:2.5px;
+    width:100%;
+    background:var(--line);
+    z-index:59;
+  }
   .scroll-progress{
     position:fixed;
     top:0; left:0;
     height:2.5px;
     width:100%;
-    background:var(--accent);
+    background:linear-gradient(90deg, var(--accent) 0%, var(--accent) 80%, transparent 100%);
     transform:scaleX(0);
     transform-origin:left;
     z-index:60;
-    box-shadow:0 0 8px rgba(224,138,91,.55);
+  }
+  .scroll-progress::after{
+    content:"";
+    position:absolute;
+    top:50%; right:0;
+    width:14px; height:14px;
+    background:var(--accent);
+    border-radius:50%;
+    filter:blur(7px);
+    transform:translate(50%, -50%);
+    opacity:.8;
   }
   @media (prefers-reduced-motion: reduce){ .scroll-progress{transition:none;} }
 
@@ -637,8 +778,9 @@
   /* ---------- SCROLL REVEAL ---------- */
   .reveal{
     opacity:0;
-    transform:translateY(16px);
-    transition:opacity .6s ease, transform .6s ease;
+    transform:translateY(18px);
+    transition:opacity .62s cubic-bezier(.16,1,.3,1), transform .62s cubic-bezier(.16,1,.3,1);
+    transition-delay:var(--reveal-delay, 0ms);
   }
   .reveal.in-view{opacity:1; transform:translateY(0);}
   @media (prefers-reduced-motion: reduce){
@@ -674,6 +816,7 @@
 
 <div class="bg-ambient" aria-hidden="true" data-parallax-speed="0.06"></div>
 
+<div class="scroll-progress-track" aria-hidden="true"></div>
 <div class="scroll-progress" id="scrollProgress"></div>
 
 <div class="topbar">
@@ -692,29 +835,32 @@
 </div>
 
 <div class="hero">
+  <div class="hero-gradient" aria-hidden="true"></div>
   <div class="hero-shape" aria-hidden="true" data-parallax-speed="0.22"></div>
   <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="wrap hero-inner">
-    <p class="eyebrow" data-i18n="eyebrow">Минск, Беларусь</p>
-    <h1 data-i18n-html="hero-h1">Loopcraft —<br>пишем <em>код</em>, который <em>работает</em>.</h1>
-    <p class="hero-tagline" data-i18n="hero-tagline">
-      Занимаюсь разработкой сайтов и приложений: от идеи и логики до готового интерфейса.
-      Разбираюсь, как всё устроено внутри, и довожу решение до рабочего состояния —
-      без лишних обещаний.
-    </p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="#work" data-i18n="btn-projects">Смотреть проекты</a>
-      <a class="btn btn-ghost" href="#contact" data-i18n="btn-contact">Связаться</a>
+    <div class="hero-copy">
+      <p class="eyebrow" data-i18n="eyebrow">Минск, Беларусь</p>
+      <h1 data-i18n-html="hero-h1">Loopcraft —<br>пишем <em>код</em>, который <em>работает</em>.</h1>
+      <p class="hero-tagline" data-i18n="hero-tagline">
+        Занимаюсь разработкой сайтов и приложений: от идеи и логики до готового интерфейса.
+        Разбираюсь, как всё устроено внутри, и довожу решение до рабочего состояния —
+        без лишних обещаний.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#work" data-i18n="btn-projects">Смотреть проекты</a>
+        <a class="btn btn-ghost" href="#contact" data-i18n="btn-contact">Обсудим проект</a>
+      </div>
     </div>
-  </div>
-  <div class="hero-3d" id="hero3d" aria-hidden="true">
-    <div class="hero-3d-fallback">
-      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="60" cy="60" rx="46" ry="24" stroke="var(--accent)" stroke-width="2.4"/>
-        <ellipse cx="60" cy="60" rx="46" ry="24" stroke="var(--accent-2)" stroke-width="2.4" transform="rotate(60 60 60)"/>
-        <ellipse cx="60" cy="60" rx="46" ry="24" stroke="var(--accent)" stroke-width="2.4" opacity=".55" transform="rotate(120 60 60)"/>
-      </svg>
+    <div class="hero-3d" id="hero3d" aria-hidden="true">
+      <div class="hero-3d-fallback">
+        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="60" cy="60" rx="46" ry="24" stroke="var(--accent)" stroke-width="2.4"/>
+          <ellipse cx="60" cy="60" rx="46" ry="24" stroke="var(--accent-2)" stroke-width="2.4" transform="rotate(60 60 60)"/>
+          <ellipse cx="60" cy="60" rx="46" ry="24" stroke="var(--accent)" stroke-width="2.4" opacity=".55" transform="rotate(120 60 60)"/>
+        </svg>
+      </div>
     </div>
   </div>
 </div>
@@ -722,7 +868,7 @@
 <div class="wrap">
 
   <section id="work">
-    <div class="section-head">
+    <div class="section-head" data-num="01" data-label="work">
       <h2 data-i18n="sec5-h2">Что я делал</h2>
     </div>
     <div class="projects">
@@ -794,7 +940,7 @@
     </div>
   </section>
   <section id="directions">
-    <div class="section-head">
+    <div class="section-head" data-num="02" data-label="services">
       <h2 data-i18n="sec1-h2">Чем я занимаюсь</h2>
     </div>
     <div class="direction-list">
@@ -875,9 +1021,13 @@
     </div>
   </section>
   <section id="process">
-    <div class="section-head">
+    <div class="section-head" data-num="03" data-label="process">
       <h2 data-i18n="sec4-h2">Путь от заявки до готового решения</h2>
     </div>
+    <div class="process-wrap">
+      <svg class="process-loop" id="processLoop" aria-hidden="true" fill="none" preserveAspectRatio="none">
+        <path id="processPath" stroke="currentColor" stroke-width="1.4" vector-effect="non-scaling-stroke"/>
+      </svg>
     <div class="process">
       <div class="step reveal">
         <h4 data-i18n="step1-h4">Бриф</h4>
@@ -896,9 +1046,10 @@
         <p data-i18n="step4-p">Тестируем, передаём рабочую версию и код, при необходимости объясняем, как всё устроено и поддерживать дальше.</p>
       </div>
     </div>
+    </div>
   </section>
   <section id="about">
-    <div class="section-head">
+    <div class="section-head" data-num="04" data-label="about">
       <h2 data-i18n="sec2-h2">Пишу код и разбираюсь, как всё устроено</h2>
     </div>
     <div class="about-block">
@@ -949,7 +1100,7 @@
     "hero-h1": { ru: "Loopcraft —<br>пишем <em>код</em>, который <em>работает</em>.", en: "Loopcraft —<br>we write <em>code</em> that <em>works</em>." },
     "hero-tagline": { en: "I build websites and applications: from the idea and logic to a finished interface. I figure out how things work under the hood and take every solution all the way to production — no empty promises." },
     "btn-projects": { en: "View projects" },
-    "btn-contact": { en: "Get in touch" },
+    "btn-contact": { en: "Discuss a project" },
     "nav-work": { en: "Projects" },
     "nav-directions": { en: "What I do" },
     "nav-process": { en: "How I work" },
@@ -1061,8 +1212,12 @@
         }
       });
     }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
-    revealEls.forEach(function(el, i){
-      el.style.transitionDelay = (Math.min(i % 5, 4) * 60) + "ms";
+    // stagger within each group, not across the whole page — a global i % 5
+    // makes the third card of a row fire before the first
+    revealEls.forEach(function(el){
+      var siblings = el.parentNode ? el.parentNode.children : [el];
+      var idx = Array.prototype.indexOf.call(siblings, el);
+      el.style.setProperty("--reveal-delay", Math.min(idx, 5) * 70 + "ms");
       io.observe(el);
     });
   } else {
@@ -1165,6 +1320,64 @@
     updateParallax();
   }
 
+  // ---------- process loop: a closed path drawn by scroll ----------
+  (function processLoop(){
+    var svg = document.getElementById("processLoop");
+    var path = document.getElementById("processPath");
+    var wrap = svg ? svg.parentNode : null;
+    if (!svg || !path || !wrap) return;
+
+    var length = 0;
+
+    function geometry(){
+      var w = Math.round(wrap.clientWidth), h = Math.round(wrap.clientHeight);
+      if (!w || !h) { length = 0; return false; }
+      var r = Math.max(0, Math.min(64, h / 2 - 1, w / 2 - 1));
+      var d = "M " + r + " 0" +
+              " H " + (w - r) +
+              " A " + r + " " + r + " 0 0 1 " + w + " " + r +
+              " V " + (h - r) +
+              " A " + r + " " + r + " 0 0 1 " + (w - r) + " " + h +
+              " H " + r +
+              " A " + r + " " + r + " 0 0 1 0 " + (h - r) +
+              " V " + r +
+              " A " + r + " " + r + " 0 0 1 " + r + " 0 Z";
+      svg.setAttribute("viewBox", "0 0 " + w + " " + h);
+      path.setAttribute("d", d);
+      length = path.getTotalLength();
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = reduceMotion ? 0 : length;
+      return true;
+    }
+
+    function draw(){
+      if (!length || reduceMotion) return;
+      var rect = wrap.getBoundingClientRect();
+      var vh = window.innerHeight || 1;
+      // 0 when the block's top meets the bottom of the viewport,
+      // 1 once it has travelled roughly one viewport further up
+      var p = (vh - rect.top) / (vh * 0.75 + rect.height * 0.5);
+      path.style.strokeDashoffset = length * (1 - Math.min(1, Math.max(0, p)));
+    }
+
+    function refresh(){ if (geometry()) draw(); }
+
+    if (document.readyState === "complete") refresh();
+    else window.addEventListener("load", refresh, { once: true });
+
+    if (reduceMotion) return; // full loop, no scroll binding
+
+    var ticking = false;
+    window.addEventListener("scroll", function(){
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function(){ draw(); ticking = false; });
+    }, { passive: true });
+
+    if ("ResizeObserver" in window) new ResizeObserver(refresh).observe(wrap);
+    else window.addEventListener("resize", refresh, { passive: true });
+  })();
+
   // ---------- hero particle field (canvas 2D, no libraries) ----------
   (function initParticles(){
     var canvas = document.getElementById("heroParticles");
@@ -1210,9 +1423,9 @@
       }
     }
 
-    var accentRGB = "224,138,91";
+    var accentRGB = "47,181,131";
     try {
-      var hex = styleColor("--accent", "#e08a5b").replace("#", "");
+      var hex = styleColor("--accent", "#2fb583").replace("#", "");
       if (hex.length === 6) {
         accentRGB = [parseInt(hex.slice(0,2),16), parseInt(hex.slice(2,4),16), parseInt(hex.slice(4,6),16)].join(",");
       }
@@ -1290,136 +1503,761 @@
     resize();
   })();
 
-  // ---------- hero 3D object (Three.js, cursor-reactive + draggable) ----------
-  (function initHero3D(){
+  // ---------- hero gradient wave (vanilla WebGL, no framework) ----------
+  (function initGradientWave(){
+    var container = document.querySelector(".hero-gradient");
+    if (!container || reduceMotion) return;
+
+    function normalizeColor(hexCode){
+      return [
+        ((hexCode >> 16) & 255) / 255,
+        ((hexCode >> 8) & 255) / 255,
+        (255 & hexCode) / 255
+      ];
+    }
+
+    function MiniGl(canvas){
+      this.canvas = canvas;
+      this.meshes = [];
+      var gl = this.canvas.getContext("webgl", { antialias: true });
+      if (!gl) throw new Error("WebGL not supported");
+      this.gl = gl;
+      var context = this.gl;
+      var _miniGl = this;
+
+      this.Uniform = class {
+        constructor(e){
+          this.type = "float";
+          Object.assign(this, e);
+          var typeMap = { float:"1f", int:"1i", vec2:"2fv", vec3:"3fv", vec4:"4fv", mat4:"Matrix4fv" };
+          this.typeFn = typeMap[this.type] || "1f";
+        }
+        update(location){
+          if (this.value === undefined || location === null) return;
+          var isMatrix = this.typeFn.indexOf("Matrix") === 0;
+          var fn = "uniform" + this.typeFn;
+          if (isMatrix) context[fn](location, this.transpose || false, this.value);
+          else context[fn](location, this.value);
+        }
+        getDeclaration(name, type, length){
+          if (this.excludeFrom === type) return "";
+          if (this.type === "array") {
+            return this.value[0].getDeclaration(name, type, this.value.length) +
+              "\nconst int " + name + "_length = " + this.value.length + ";";
+          }
+          if (this.type === "struct") {
+            var nameNoPrefix = name.replace("u_", "");
+            nameNoPrefix = nameNoPrefix.charAt(0).toUpperCase() + nameNoPrefix.slice(1);
+            var self = this;
+            var fields = Object.keys(this.value).map(function(n){
+              return self.value[n].getDeclaration(n, type).replace(/^uniform/, "");
+            }).join("");
+            return "uniform struct " + nameNoPrefix + " \n{\n" + fields + "\n} " + name + (length ? "[" + length + "]" : "") + ";";
+          }
+          return "uniform " + this.type + " " + name + (length ? "[" + length + "]" : "") + ";";
+        }
+      };
+
+      this.Attribute = class {
+        constructor(e){
+          this.type = context.FLOAT;
+          this.normalized = false;
+          this.buffer = context.createBuffer();
+          Object.assign(this, e);
+        }
+        update(){
+          if (this.values) {
+            context.bindBuffer(this.target, this.buffer);
+            context.bufferData(this.target, this.values, context.STATIC_DRAW);
+          }
+        }
+        attach(e, t){
+          var n = context.getAttribLocation(t, e);
+          if (this.target === context.ARRAY_BUFFER) {
+            context.bindBuffer(this.target, this.buffer);
+            context.enableVertexAttribArray(n);
+            context.vertexAttribPointer(n, this.size, this.type, this.normalized, 0, 0);
+          }
+          return n;
+        }
+        use(e){
+          context.bindBuffer(this.target, this.buffer);
+          if (this.target === context.ARRAY_BUFFER) {
+            context.enableVertexAttribArray(e);
+            context.vertexAttribPointer(e, this.size, this.type, this.normalized, 0, 0);
+          }
+        }
+      };
+
+      this.Material = class {
+        constructor(vertexShaders, fragments, uniforms){
+          uniforms = uniforms || {};
+          var material = this;
+          this.uniformInstances = [];
+
+          function getShader(type, source){
+            var shader = context.createShader(type);
+            context.shaderSource(shader, source);
+            context.compileShader(shader);
+            if (!context.getShaderParameter(shader, context.COMPILE_STATUS)) {
+              console.error(context.getShaderInfoLog(shader));
+              throw new Error("Shader compilation error");
+            }
+            return shader;
+          }
+
+          function getUniformDeclarations(uniformSet, type){
+            return Object.keys(uniformSet).map(function(uniform){
+              return uniformSet[uniform].getDeclaration(uniform, type);
+            }).join("\n");
+          }
+
+          material.uniforms = uniforms;
+          var prefix = "precision highp float;";
+
+          var vertexSource = prefix + "\n" +
+            "attribute vec4 position;\nattribute vec2 uv;\nattribute vec2 uvNorm;\n" +
+            getUniformDeclarations(_miniGl.commonUniforms, "vertex") + "\n" +
+            getUniformDeclarations(uniforms, "vertex") + "\n" + vertexShaders;
+
+          var fragmentSource = prefix + "\n" +
+            getUniformDeclarations(_miniGl.commonUniforms, "fragment") + "\n" +
+            getUniformDeclarations(uniforms, "fragment") + "\n" + fragments;
+
+          material.program = context.createProgram();
+          context.attachShader(material.program, getShader(context.VERTEX_SHADER, vertexSource));
+          context.attachShader(material.program, getShader(context.FRAGMENT_SHADER, fragmentSource));
+          context.linkProgram(material.program);
+
+          if (!context.getProgramParameter(material.program, context.LINK_STATUS)) {
+            console.error(context.getProgramInfoLog(material.program));
+            throw new Error("Program linking error");
+          }
+
+          context.useProgram(material.program);
+          material.attachUniforms(undefined, _miniGl.commonUniforms);
+          material.attachUniforms(undefined, material.uniforms);
+        }
+        attachUniforms(name, uniforms){
+          var self = this;
+          if (name === undefined) {
+            Object.keys(uniforms).forEach(function(n){ self.attachUniforms(n, uniforms[n]); });
+          } else if (uniforms.type === "array") {
+            uniforms.value.forEach(function(u, i){ self.attachUniforms(name + "[" + i + "]", u); });
+          } else if (uniforms.type === "struct") {
+            Object.keys(uniforms.value).forEach(function(u){ self.attachUniforms(name + "." + u, uniforms.value[u]); });
+          } else {
+            this.uniformInstances.push({ uniform: uniforms, location: context.getUniformLocation(this.program, name) });
+          }
+        }
+      };
+
+      this.PlaneGeometry = class {
+        constructor(){
+          this.width = 1; this.height = 1; this.vertexCount = 0; this.xSegCount = 0; this.ySegCount = 0;
+          this.attributes = {
+            position: new _miniGl.Attribute({ target: context.ARRAY_BUFFER, size: 3 }),
+            uv: new _miniGl.Attribute({ target: context.ARRAY_BUFFER, size: 2 }),
+            uvNorm: new _miniGl.Attribute({ target: context.ARRAY_BUFFER, size: 2 }),
+            index: new _miniGl.Attribute({ target: context.ELEMENT_ARRAY_BUFFER, size: 3, type: context.UNSIGNED_SHORT })
+          };
+        }
+        setTopology(xSegs, ySegs){
+          xSegs = xSegs || 1; ySegs = ySegs || 1;
+          this.xSegCount = xSegs; this.ySegCount = ySegs;
+          this.vertexCount = (this.xSegCount + 1) * (this.ySegCount + 1);
+          var quadCount = this.xSegCount * this.ySegCount * 2;
+          this.attributes.uv.values = new Float32Array(2 * this.vertexCount);
+          this.attributes.uvNorm.values = new Float32Array(2 * this.vertexCount);
+          this.attributes.index.values = new Uint16Array(3 * quadCount);
+          for (var y = 0; y <= this.ySegCount; y++){
+            for (var x = 0; x <= this.xSegCount; x++){
+              var i = y * (this.xSegCount + 1) + x;
+              this.attributes.uv.values[2*i] = x / this.xSegCount;
+              this.attributes.uv.values[2*i+1] = 1 - y / this.ySegCount;
+              this.attributes.uvNorm.values[2*i] = (x / this.xSegCount) * 2 - 1;
+              this.attributes.uvNorm.values[2*i+1] = 1 - (y / this.ySegCount) * 2;
+              if (x < this.xSegCount && y < this.ySegCount) {
+                var s = y * this.xSegCount + x;
+                this.attributes.index.values[6*s] = i;
+                this.attributes.index.values[6*s+1] = i + 1 + this.xSegCount;
+                this.attributes.index.values[6*s+2] = i + 1;
+                this.attributes.index.values[6*s+3] = i + 1;
+                this.attributes.index.values[6*s+4] = i + 1 + this.xSegCount;
+                this.attributes.index.values[6*s+5] = i + 2 + this.xSegCount;
+              }
+            }
+          }
+          this.attributes.uv.update();
+          this.attributes.uvNorm.update();
+          this.attributes.index.update();
+        }
+        setSize(width, height){
+          width = width || 1; height = height || 1;
+          this.width = width; this.height = height;
+          this.attributes.position.values = new Float32Array(3 * this.vertexCount);
+          var offsetX = width / -2, offsetY = height / -2;
+          var segWidth = width / this.xSegCount, segHeight = height / this.ySegCount;
+          for (var y = 0; y <= this.ySegCount; y++){
+            var posY = offsetY + y * segHeight;
+            for (var x = 0; x <= this.xSegCount; x++){
+              var posX = offsetX + x * segWidth;
+              var idx = y * (this.xSegCount + 1) + x;
+              this.attributes.position.values[3*idx] = posX;
+              this.attributes.position.values[3*idx+1] = -posY;
+              this.attributes.position.values[3*idx+2] = 0;
+            }
+          }
+          this.attributes.position.update();
+        }
+      };
+
+      this.Mesh = class {
+        constructor(geometry, material){
+          this.geometry = geometry;
+          this.material = material;
+          this.attributeInstances = [];
+          var self = this;
+          Object.keys(this.geometry.attributes).forEach(function(e){
+            self.attributeInstances.push({
+              attribute: self.geometry.attributes[e],
+              location: self.geometry.attributes[e].attach(e, self.material.program)
+            });
+          });
+          _miniGl.meshes.push(this);
+        }
+        draw(){
+          context.useProgram(this.material.program);
+          this.material.uniformInstances.forEach(function(o){ o.uniform.update(o.location); });
+          this.attributeInstances.forEach(function(o){ o.attribute.use(o.location); });
+          context.drawElements(context.TRIANGLES, this.geometry.attributes.index.values.length, context.UNSIGNED_SHORT, 0);
+        }
+      };
+
+      var identityMatrix = [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1];
+      this.commonUniforms = {
+        projectionMatrix: new this.Uniform({ type: "mat4", value: identityMatrix }),
+        modelViewMatrix: new this.Uniform({ type: "mat4", value: identityMatrix }),
+        resolution: new this.Uniform({ type: "vec2", value: [1,1] }),
+        aspectRatio: new this.Uniform({ type: "float", value: 1 })
+      };
+    }
+    MiniGl.prototype.setSize = function(w, h){
+      w = w || 640; h = h || 480;
+      this.width = w; this.height = h;
+      this.canvas.width = w; this.canvas.height = h;
+      this.gl.viewport(0, 0, w, h);
+      this.commonUniforms.resolution.value = [w, h];
+      this.commonUniforms.aspectRatio.value = w / h;
+    };
+    MiniGl.prototype.setOrthographicCamera = function(){
+      this.commonUniforms.projectionMatrix.value = [
+        2/this.width, 0, 0, 0,
+        0, 2/this.height, 0, 0,
+        0, 0, -0.001, 0,
+        0, 0, 0, 1
+      ];
+    };
+    MiniGl.prototype.render = function(){
+      this.gl.clearColor(0,0,0,0);
+      this.gl.clearDepth(1);
+      this.meshes.forEach(function(m){ m.draw(); });
+    };
+
+    function Gradient(canvas, colors){
+      this.canvas = canvas;
+      this.colors = colors;
+      this.time = 0;
+      this.last = 0;
+      this.isPlaying = false;
+      this.minigl = new MiniGl(canvas);
+      this.init();
+    }
+    Gradient.prototype.init = function(){
+      var sectionColors = this.colors.map(function(hex){
+        return normalizeColor(parseInt(hex.replace("#", "0x"), 16));
+      });
+
+      var uniforms = {
+        u_time: new this.minigl.Uniform({ value: 0 }),
+        u_shadow_power: new this.minigl.Uniform({ value: 5 }),
+        u_darken_top: new this.minigl.Uniform({ value: 0 }),
+        u_active_colors: new this.minigl.Uniform({ value: [1,1,1,1], type: "vec4" }),
+        u_global: new this.minigl.Uniform({
+          value: {
+            noiseFreq: new this.minigl.Uniform({ value: [0.00014, 0.00029], type: "vec2" }),
+            noiseSpeed: new this.minigl.Uniform({ value: 0.000005 })
+          },
+          type: "struct"
+        }),
+        u_vertDeform: new this.minigl.Uniform({
+          value: {
+            incline: new this.minigl.Uniform({ value: 0 }),
+            offsetTop: new this.minigl.Uniform({ value: -0.5 }),
+            offsetBottom: new this.minigl.Uniform({ value: -0.5 }),
+            noiseFreq: new this.minigl.Uniform({ value: [3,4], type: "vec2" }),
+            noiseAmp: new this.minigl.Uniform({ value: 320 }),
+            noiseSpeed: new this.minigl.Uniform({ value: 10 }),
+            noiseFlow: new this.minigl.Uniform({ value: 3 }),
+            noiseSeed: new this.minigl.Uniform({ value: 5 })
+          },
+          type: "struct",
+          excludeFrom: "fragment"
+        }),
+        u_baseColor: new this.minigl.Uniform({ value: sectionColors[0], type: "vec3", excludeFrom: "fragment" }),
+        u_waveLayers: new this.minigl.Uniform({ value: [], excludeFrom: "fragment", type: "array" })
+      };
+
+      for (var i = 1; i < sectionColors.length; i++){
+        uniforms.u_waveLayers.value.push(new this.minigl.Uniform({
+          value: {
+            color: new this.minigl.Uniform({ value: sectionColors[i], type: "vec3" }),
+            noiseFreq: new this.minigl.Uniform({ value: [2 + i/sectionColors.length, 3 + i/sectionColors.length], type: "vec2" }),
+            noiseSpeed: new this.minigl.Uniform({ value: 11 + 0.3*i }),
+            noiseFlow: new this.minigl.Uniform({ value: 6.5 + 0.3*i }),
+            noiseSeed: new this.minigl.Uniform({ value: 5 + 10*i }),
+            noiseFloor: new this.minigl.Uniform({ value: 0.1 }),
+            noiseCeil: new this.minigl.Uniform({ value: 0.63 + 0.07*i })
+          },
+          type: "struct"
+        }));
+      }
+
+      var vertexShader = [
+        "vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }",
+        "vec4 mod289(vec4 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }",
+        "vec4 permute(vec4 x) { return mod289(((x*34.0)+1.0)*x); }",
+        "vec4 taylorInvSqrt(vec4 r) { return 1.79284291400159 - 0.85373472095314 * r; }",
+        "float snoise(vec3 v) {",
+        "  const vec2 C = vec2(1.0/6.0, 1.0/3.0);",
+        "  const vec4 D = vec4(0.0, 0.5, 1.0, 2.0);",
+        "  vec3 i  = floor(v + dot(v, C.yyy));",
+        "  vec3 x0 = v - i + dot(i, C.xxx);",
+        "  vec3 g = step(x0.yzx, x0.xyz);",
+        "  vec3 l = 1.0 - g;",
+        "  vec3 i1 = min(g.xyz, l.zxy);",
+        "  vec3 i2 = max(g.xyz, l.zxy);",
+        "  vec3 x1 = x0 - i1 + C.xxx;",
+        "  vec3 x2 = x0 - i2 + C.yyy;",
+        "  vec3 x3 = x0 - D.yyy;",
+        "  i = mod289(i);",
+        "  vec4 p = permute(permute(permute(i.z + vec4(0.0, i1.z, i2.z, 1.0)) + i.y + vec4(0.0, i1.y, i2.y, 1.0)) + i.x + vec4(0.0, i1.x, i2.x, 1.0));",
+        "  float n_ = 0.142857142857;",
+        "  vec3 ns = n_ * D.wyz - D.xzx;",
+        "  vec4 j = p - 49.0 * floor(p * ns.z * ns.z);",
+        "  vec4 x_ = floor(j * ns.z);",
+        "  vec4 y_ = floor(j - 7.0 * x_);",
+        "  vec4 x = x_ *ns.x + ns.yyyy;",
+        "  vec4 y = y_ *ns.x + ns.yyyy;",
+        "  vec4 h = 1.0 - abs(x) - abs(y);",
+        "  vec4 b0 = vec4(x.xy, y.xy);",
+        "  vec4 b1 = vec4(x.zw, y.zw);",
+        "  vec4 s0 = floor(b0)*2.0 + 1.0;",
+        "  vec4 s1 = floor(b1)*2.0 + 1.0;",
+        "  vec4 sh = -step(h, vec4(0.0));",
+        "  vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy;",
+        "  vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww;",
+        "  vec3 p0 = vec3(a0.xy,h.x);",
+        "  vec3 p1 = vec3(a0.zw,h.y);",
+        "  vec3 p2 = vec3(a1.xy,h.z);",
+        "  vec3 p3 = vec3(a1.zw,h.w);",
+        "  vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));",
+        "  p0 *= norm.x; p1 *= norm.y; p2 *= norm.z; p3 *= norm.w;",
+        "  vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);",
+        "  m = m * m;",
+        "  return 42.0 * dot(m*m, vec4(dot(p0,x0), dot(p1,x1), dot(p2,x2), dot(p3,x3)));",
+        "}",
+        "vec3 blendNormal(vec3 base, vec3 blend) { return blend; }",
+        "vec3 blendNormal(vec3 base, vec3 blend, float opacity) { return (blend * opacity + base * (1.0 - opacity)); }",
+        "varying vec3 v_color;",
+        "void main() {",
+        "  float time = u_time * u_global.noiseSpeed;",
+        "  vec2 noiseCoord = resolution * uvNorm * u_global.noiseFreq;",
+        "  float tilt = resolution.y / 2.0 * uvNorm.y;",
+        "  float incline = resolution.x * uvNorm.x / 2.0 * u_vertDeform.incline;",
+        "  float offset = resolution.x / 2.0 * u_vertDeform.incline * mix(u_vertDeform.offsetBottom, u_vertDeform.offsetTop, uv.y);",
+        "  float noise = snoise(vec3(",
+        "    noiseCoord.x * u_vertDeform.noiseFreq.x + time * u_vertDeform.noiseFlow,",
+        "    noiseCoord.y * u_vertDeform.noiseFreq.y,",
+        "    time * u_vertDeform.noiseSpeed + u_vertDeform.noiseSeed",
+        "  )) * u_vertDeform.noiseAmp;",
+        "  noise *= 1.0 - pow(abs(uvNorm.y), 2.0);",
+        "  noise = max(0.0, noise);",
+        "  vec3 pos = vec3(position.x, position.y + tilt + incline + noise - offset, position.z);",
+        "  v_color = u_baseColor;",
+        "  for (int i = 0; i < u_waveLayers_length; i++) {",
+        "    if (u_active_colors[i + 1] == 1.) {",
+        "      WaveLayers layer = u_waveLayers[i];",
+        "      float layerNoise = smoothstep(",
+        "        layer.noiseFloor,",
+        "        layer.noiseCeil,",
+        "        snoise(vec3(",
+        "          noiseCoord.x * layer.noiseFreq.x + time * layer.noiseFlow,",
+        "          noiseCoord.y * layer.noiseFreq.y,",
+        "          time * layer.noiseSpeed + layer.noiseSeed",
+        "        )) / 2.0 + 0.5",
+        "      );",
+        "      v_color = blendNormal(v_color, layer.color, pow(layerNoise, 4.));",
+        "    }",
+        "  }",
+        "  gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);",
+        "}"
+      ].join("\n");
+
+      var fragmentShader = [
+        "varying vec3 v_color;",
+        "void main() {",
+        "  vec3 color = v_color;",
+        "  if (u_darken_top == 1.0) {",
+        "    vec2 st = gl_FragCoord.xy/resolution.xy;",
+        "    color.g -= pow(st.y + sin(-12.0) * st.x, u_shadow_power) * 0.4;",
+        "  }",
+        "  gl_FragColor = vec4(color, 1.0);",
+        "}"
+      ].join("\n");
+
+      var material = new this.minigl.Material(vertexShader, fragmentShader, uniforms);
+      var geometry = new this.minigl.PlaneGeometry();
+      this.mesh = new this.minigl.Mesh(geometry, material);
+
+      this.resize();
+      var self = this;
+      window.addEventListener("resize", function(){ self.resize(); });
+    };
+    Gradient.prototype.resize = function(){
+      var rect = this.canvas.parentElement.getBoundingClientRect();
+      var width = Math.max(1, Math.round(rect.width));
+      var height = Math.max(1, Math.round(rect.height));
+      this.minigl.setSize(width, height);
+      this.minigl.setOrthographicCamera();
+      var xSegCount = Math.ceil(width * 0.02);
+      var ySegCount = Math.ceil(height * 0.05);
+      this.mesh.geometry.setTopology(xSegCount, ySegCount);
+      this.mesh.geometry.setSize(width, height);
+      this.mesh.material.uniforms.u_shadow_power.value = width < 600 ? 5 : 6;
+    };
+    Gradient.prototype.animate = function(timestamp){
+      if (!this.isPlaying) return;
+      this.time += Math.min(timestamp - this.last, 1000/15);
+      this.last = timestamp;
+      this.mesh.material.uniforms.u_time.value = this.time;
+      this.minigl.render();
+      this.animationId = requestAnimationFrame(this.animate.bind(this));
+    };
+    Gradient.prototype.start = function(){
+      if (this.isPlaying) return;
+      this.isPlaying = true;
+      this.last = performance.now();
+      this.animationId = requestAnimationFrame(this.animate.bind(this));
+    };
+    Gradient.prototype.stop = function(){
+      this.isPlaying = false;
+      if (this.animationId) cancelAnimationFrame(this.animationId);
+    };
+
+    var canvas = document.createElement("canvas");
+    container.appendChild(canvas);
+
+    try {
+      var gradient = new Gradient(canvas, ["#0b0f0d", "#0e3a2b", "#2fb583", "#0b0f0d", "#0a2c21"]);
+      gradient.mesh.material.uniforms.u_shadow_power.value = 6;
+      gradient.mesh.material.uniforms.u_darken_top.value = 1;
+      gradient.mesh.material.uniforms.u_global.value.noiseSpeed.value = 0.00001;
+      gradient.mesh.material.uniforms.u_global.value.noiseFreq.value = [0.0001, 0.0004];
+      Object.assign(gradient.mesh.material.uniforms.u_vertDeform.value, { incline: 0.15, noiseAmp: 180, noiseFlow: 4 });
+      gradient.start();
+
+      var heroEl = document.querySelector(".hero");
+      if ("IntersectionObserver" in window && heroEl) {
+        var gio = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if (entry.isIntersecting) gradient.start(); else gradient.stop();
+          });
+        }, { threshold: 0.05 });
+        gio.observe(heroEl);
+      }
+    } catch (e) {
+      container.remove();
+    }
+  })();
+
+  // ---------- hero 3D: Möbius ribbon ----------
+  // One surface, no beginning and no end — the brand mark, not a stock primitive.
+  (function heroRibbon(){
     var mount = document.getElementById("hero3d");
     if (!mount) return;
-    if (reduceMotion) return; // keep the static fallback under reduced motion
-    if (window.matchMedia && window.matchMedia("(max-width: 640px)").matches) return; // container is hidden anyway
     if (typeof THREE === "undefined") return; // CDN blocked/offline — static fallback stays visible
 
-    var w = mount.clientWidth || 260, h = mount.clientHeight || 260;
-    var renderer;
-    try {
-      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    } catch(e) { return; } // no WebGL — static fallback stays visible
+    var narrowMQ = window.matchMedia ? window.matchMedia("(max-width: 640px)") : null;
+    var themeMQ = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+    var heroSection = document.querySelector(".hero");
+    var live = null; // active scene, or null while torn down
 
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-    renderer.setSize(w, h);
-    mount.appendChild(renderer.domElement);
-    mount.classList.add("is-ready");
+    function readColor(name, fallback){
+      try {
+        var v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+        if (/^#([0-9a-f]{6})$/i.test(v)) return parseInt(v.slice(1), 16);
+      } catch(e){}
+      return fallback;
+    }
+    function hex(n){ var s = n.toString(16); while (s.length < 6) s = "0" + s; return "#" + s; }
 
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(40, w / h, 0.1, 100);
-    camera.position.set(0, 0, 6.2);
+    // Equirectangular studio gradient pushed through PMREM. This is what makes the
+    // metal read as metal — a MeshStandardMaterial with no environment is plastic.
+    function environmentTexture(renderer, accent, spec){
+      // the surroundings come from the theme, so the metal reflects the actual page
+      var sky = readColor("--bg", 0x0b0f0d);
+      var ground = readColor("--surface-2", 0x181d1a);
+      var c = document.createElement("canvas");
+      c.width = 16; c.height = 256;
+      var g2 = c.getContext("2d");
+      var grad = g2.createLinearGradient(0, 0, 0, 256);
+      grad.addColorStop(0.00, hex(sky));
+      grad.addColorStop(0.30, hex(spec));
+      grad.addColorStop(0.48, hex(accent));
+      grad.addColorStop(0.72, hex(ground));
+      grad.addColorStop(1.00, hex(sky));
+      g2.fillStyle = grad;
+      g2.fillRect(0, 0, 16, 256);
 
-    var accentHex = 0xe08a5b, accent2Hex = 0xc9a877;
-    try {
-      var hex1 = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();
-      var hex2 = getComputedStyle(document.documentElement).getPropertyValue("--accent-2").trim();
-      if (/^#([0-9a-f]{6})$/i.test(hex1)) accentHex = parseInt(hex1.slice(1), 16);
-      if (/^#([0-9a-f]{6})$/i.test(hex2)) accent2Hex = parseInt(hex2.slice(1), 16);
-    } catch(e){}
-
-    var geometry = new THREE.TorusKnotGeometry(1.15, 0.34, 110, 12);
-    var material = new THREE.MeshStandardMaterial({
-      color: accentHex,
-      metalness: 0.35,
-      roughness: 0.32,
-      emissive: accent2Hex,
-      emissiveIntensity: 0.08
-    });
-    var knot = new THREE.Mesh(geometry, material);
-    scene.add(knot);
-
-    var keyLight = new THREE.DirectionalLight(0xffffff, 1.1);
-    keyLight.position.set(3, 4, 5);
-    scene.add(keyLight);
-    var fillLight = new THREE.DirectionalLight(accent2Hex, 0.6);
-    fillLight.position.set(-4, -2, 2);
-    scene.add(fillLight);
-    scene.add(new THREE.AmbientLight(0xffffff, 0.35));
-
-    var targetX = 0, targetY = 0;
-    var dragging = false, lastX = 0, lastY = 0;
-    var dragRotX = 0, dragRotY = 0;
-    var hoverActive = window.matchMedia && window.matchMedia("(hover: hover)").matches;
-
-    if (hoverActive) {
-      document.addEventListener("mousemove", function(e){
-        if (dragging) return;
-        var rect = mount.getBoundingClientRect();
-        var cx = rect.left + rect.width / 2;
-        var cy = rect.top + rect.height / 2;
-        var dx = (e.clientX - cx) / (window.innerWidth / 2);
-        var dy = (e.clientY - cy) / (window.innerHeight / 2);
-        targetY = dx * 0.6;
-        targetX = dy * 0.4;
-      }, { passive: true });
+      var tex = new THREE.CanvasTexture(c);
+      tex.mapping = THREE.EquirectangularReflectionMapping;
+      var pmrem = new THREE.PMREMGenerator(renderer);
+      var rt = pmrem.fromEquirectangular(tex);
+      tex.dispose();
+      pmrem.dispose();
+      return rt;
     }
 
-    function pointerDown(e){
-      dragging = true;
-      mount.style.cursor = "grabbing";
-      lastX = (e.touches ? e.touches[0].clientX : e.clientX);
-      lastY = (e.touches ? e.touches[0].clientY : e.clientY);
-    }
-    function pointerMove(e){
-      if (!dragging) return;
-      var cx = (e.touches ? e.touches[0].clientX : e.clientX);
-      var cy = (e.touches ? e.touches[0].clientY : e.clientY);
-      dragRotY += (cx - lastX) * 0.01;
-      dragRotX += (cy - lastY) * 0.01;
-      lastX = cx; lastY = cy;
-      e.preventDefault();
-    }
-    function pointerUp(){
-      dragging = false;
-      mount.style.cursor = "grab";
-    }
-    mount.addEventListener("mousedown", pointerDown);
-    mount.addEventListener("touchstart", pointerDown, { passive: true });
-    window.addEventListener("mousemove", pointerMove);
-    window.addEventListener("touchmove", pointerMove, { passive: false });
-    window.addEventListener("mouseup", pointerUp);
-    window.addEventListener("touchend", pointerUp);
-
-    var lastFrame = 0;
-    var frameInterval = 1000 / 60;
-    var idle = 0;
-    var raf3d;
-    var mountVisible = true;
-
-    function animate(ts){
-      raf3d = requestAnimationFrame(animate);
-      if (!mountVisible) return;
-      if (ts - lastFrame < frameInterval) return;
-      lastFrame = ts;
-      idle += 0.004;
-      knot.rotation.x += (targetX + dragRotX - knot.rotation.x + Math.sin(idle) * 0.05) * 0.06;
-      knot.rotation.y += (targetY + dragRotY - knot.rotation.y + idle * 0.15) * 0.06;
-      renderer.render(scene, camera);
-    }
-    raf3d = requestAnimationFrame(animate);
-
-    if ("IntersectionObserver" in window) {
-      var io3d = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){ mountVisible = entry.isIntersecting; });
-      }, { threshold: 0.05 });
-      io3d.observe(mount);
+    // Parametric Möbius band: u runs around the loop, v across the ribbon,
+    // and the half-turn of `twists` is what closes the surface onto itself.
+    function ribbonGeometry(uSeg, vSeg, radius, halfWidth, twists){
+      var pos = [], uv = [], idx = [], i, j;
+      for (i = 0; i <= uSeg; i++){
+        var u = i / uSeg * Math.PI * 2;
+        var half = u * twists / 2;
+        var cosH = Math.cos(half), sinH = Math.sin(half);
+        for (j = 0; j <= vSeg; j++){
+          var v = (j / vSeg - 0.5) * 2 * halfWidth;
+          var r = radius + v * cosH;
+          pos.push(r * Math.cos(u), v * sinH, r * Math.sin(u));
+          uv.push(i / uSeg, j / vSeg);
+        }
+      }
+      for (i = 0; i < uSeg; i++){
+        for (j = 0; j < vSeg; j++){
+          var a = i * (vSeg + 1) + j;
+          var b = a + vSeg + 1;
+          idx.push(a, b, a + 1, b, b + 1, a + 1);
+        }
+      }
+      var geo = new THREE.BufferGeometry();
+      geo.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
+      geo.setAttribute("uv", new THREE.Float32BufferAttribute(uv, 2));
+      geo.setIndex(idx);
+      geo.computeVertexNormals();
+      return geo;
     }
 
-    var resizeTimer3d;
-    window.addEventListener("resize", function(){
-      clearTimeout(resizeTimer3d);
-      resizeTimer3d = setTimeout(function(){
-        if (window.matchMedia && window.matchMedia("(max-width: 640px)").matches) return;
-        var nw = mount.clientWidth || w, nh = mount.clientHeight || h;
-        renderer.setSize(nw, nh);
+    function build(){
+      var w = Math.max(1, mount.clientWidth), h = Math.max(1, mount.clientHeight);
+      var renderer;
+      try {
+        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
+      } catch(e) { return null; } // no WebGL — static fallback stays visible
+
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, w > 900 ? 2 : 1.5));
+      renderer.setSize(w, h, false);
+      renderer.outputEncoding = THREE.sRGBEncoding;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.05;
+      mount.appendChild(renderer.domElement);
+      mount.classList.add("is-ready");
+
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera(34, w / h, 0.1, 100);
+      camera.position.set(0, 0.15, 5.6);
+
+      var accent = readColor("--accent", 0x2fb583);
+      var spec = readColor("--spec", 0xd8cfc0);
+
+      var envRT = environmentTexture(renderer, accent, spec);
+      scene.environment = envRT.texture;
+
+      var geometry = ribbonGeometry(280, 18, 1.5, 0.42, 1);
+      // anodised, not plastic: dark body, accent lives in the specular response.
+      // On a light page the white environment would wash the ribbon out, so the
+      // metal is dialled back and the body carries more of the colour.
+      var bgColor = new THREE.Color(readColor("--bg", 0x0b0f0d));
+      var isLight = (bgColor.r + bgColor.g + bgColor.b) / 3 > 0.5;
+      var material = new THREE.MeshStandardMaterial({
+        color: new THREE.Color(accent).multiplyScalar(isLight ? 0.8 : 0.42),
+        metalness: isLight ? 0.82 : 0.96,
+        roughness: isLight ? 0.26 : 0.19,
+        side: THREE.DoubleSide,
+        envMapIntensity: isLight ? 0.85 : 1.6
+      });
+      var ribbon = new THREE.Mesh(geometry, material);
+      var group = new THREE.Group();
+      group.add(ribbon);
+      group.rotation.set(0.5, 0.2, 0.12);
+      scene.add(group);
+
+      // one hard key, one cold rim, almost no fill — contrast over evenness
+      var keyLight = new THREE.DirectionalLight(0xffffff, 1.15);
+      keyLight.position.set(3.2, 4.4, 3.0);
+      scene.add(keyLight);
+      var rimLight = new THREE.DirectionalLight(spec, 0.85);
+      rimLight.position.set(-4, 1.5, -3);
+      scene.add(rimLight);
+      scene.add(new THREE.AmbientLight(0xffffff, 0.18));
+
+      var pointerX = 0, pointerY = 0;          // cursor parallax target
+      var dragX = 0, dragY = 0;                // accumulated drag
+      var velX = 0, velY = 0;                  // drag inertia
+      var spin = 0, scrollT = 0;
+      var dragging = false, lastX = 0, lastY = 0;
+      var visible = true, raf = 0, lastFrame = 0;
+      var cleanup = [];
+
+      function on(target, type, fn, opts){
+        target.addEventListener(type, fn, opts);
+        cleanup.push(function(){ target.removeEventListener(type, fn, opts); });
+      }
+
+      function render(){ renderer.render(scene, camera); }
+
+      function frame(ts){
+        raf = requestAnimationFrame(frame);
+        if (!visible || document.hidden) return;
+        if (ts - lastFrame < 1000 / 60) return;
+        lastFrame = ts;
+
+        spin += 0.0016;
+        dragX += velX; dragY += velY;
+        velX *= 0.94; velY *= 0.94;
+
+        var wantY = pointerY + dragY + spin + scrollT * 0.6;
+        var wantX = pointerX + dragX + 0.5;
+        group.rotation.y += (wantY - group.rotation.y) * 0.055;
+        group.rotation.x += (wantX - group.rotation.x) * 0.055;
+        // the ribbon sinks into the next section rather than merely scrolling away
+        group.position.z = -scrollT * 1.8;
+        group.position.y = scrollT * 0.35;
+        render();
+      }
+
+      // cursor parallax stays scoped to the hero — no document-wide mousemove
+      if (heroSection && window.matchMedia && window.matchMedia("(hover: hover)").matches && !reduceMotion){
+        on(heroSection, "mousemove", function(e){
+          if (dragging) return;
+          var rect = mount.getBoundingClientRect();
+          var dx = (e.clientX - (rect.left + rect.width / 2)) / (window.innerWidth / 2);
+          var dy = (e.clientY - (rect.top + rect.height / 2)) / (window.innerHeight / 2);
+          pointerY = dx * 0.22;
+          pointerX = dy * 0.14;
+        }, { passive: true });
+      }
+
+      function moveHandler(e){
+        if (!dragging) return;
+        velY = (e.clientX - lastX) * 0.004;
+        velX = (e.clientY - lastY) * 0.004;
+        lastX = e.clientX; lastY = e.clientY;
+      }
+      function upHandler(e){
+        if (!dragging) return;
+        dragging = false;
+        mount.style.cursor = "grab";
+        try { mount.releasePointerCapture(e.pointerId); } catch(err){}
+      }
+      if (window.PointerEvent){
+        on(mount, "pointerdown", function(e){
+          dragging = true;
+          lastX = e.clientX; lastY = e.clientY;
+          velX = velY = 0;
+          mount.style.cursor = "grabbing";
+          try { mount.setPointerCapture(e.pointerId); } catch(err){}
+        });
+        on(mount, "pointermove", moveHandler);
+        on(mount, "pointerup", upHandler);
+        on(mount, "pointercancel", upHandler);
+      }
+
+      if (!reduceMotion){
+        on(window, "scroll", function(){
+          var hh = heroSection ? heroSection.offsetHeight : window.innerHeight;
+          scrollT = Math.min(1, Math.max(0, (window.scrollY || 0) / Math.max(1, hh)));
+        }, { passive: true });
+      }
+
+      var io3d = null;
+      if ("IntersectionObserver" in window){
+        io3d = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){ visible = entry.isIntersecting; });
+        }, { threshold: 0.02 });
+        io3d.observe(mount);
+        cleanup.push(function(){ io3d.disconnect(); });
+      }
+
+      function resize(){
+        var nw = Math.max(1, mount.clientWidth), nh = Math.max(1, mount.clientHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, nw > 900 ? 2 : 1.5));
+        renderer.setSize(nw, nh, false);
         camera.aspect = nw / nh;
         camera.updateProjectionMatrix();
-      }, 150);
-    }, { passive: true });
+        render();
+      }
+
+      function destroy(){
+        if (raf) cancelAnimationFrame(raf);
+        cleanup.forEach(function(fn){ fn(); });
+        cleanup.length = 0;
+        geometry.dispose();
+        material.dispose();
+        envRT.dispose();
+        renderer.dispose();
+        if (renderer.domElement.parentNode) renderer.domElement.parentNode.removeChild(renderer.domElement);
+        mount.classList.remove("is-ready");
+      }
+
+      if (reduceMotion) render();                    // one still frame, no loop
+      else raf = requestAnimationFrame(frame);
+
+      return { resize: resize, destroy: destroy };
+    }
+
+    // --- lifecycle: the scene must survive crossing the breakpoint in both directions
+    function shouldRun(){ return !(narrowMQ && narrowMQ.matches); }
+
+    function sync(){
+      if (shouldRun() && !live) live = build();
+      else if (!shouldRun() && live) { live.destroy(); live = null; }
+    }
+    function rebuild(){
+      if (live) { live.destroy(); live = null; }
+      sync();
+    }
+
+    // Boot on `load`, not on rAF: a page opened in a background tab never paints,
+    // so an rAF-based bootstrap would leave the scene uninitialised until focus.
+    // If the mount still measures zero here, the ResizeObserver below picks it up.
+    if (document.readyState === "complete") sync();
+    else window.addEventListener("load", sync, { once: true });
+
+    if (narrowMQ){
+      if (narrowMQ.addEventListener) narrowMQ.addEventListener("change", sync);
+      else if (narrowMQ.addListener) narrowMQ.addListener(sync);
+    }
+    if (themeMQ){ // palette changes -> environment and material must be rebuilt
+      if (themeMQ.addEventListener) themeMQ.addEventListener("change", rebuild);
+      else if (themeMQ.addListener) themeMQ.addListener(rebuild);
+    }
+    if ("ResizeObserver" in window){
+      new ResizeObserver(function(){ if (live) live.resize(); else sync(); }).observe(mount);
+    } else {
+      window.addEventListener("resize", function(){ if (live) live.resize(); else sync(); }, { passive: true });
+    }
   })();
 })();
 </script>
