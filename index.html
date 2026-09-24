@@ -55,8 +55,8 @@
     position:sticky;top:env(safe-area-inset-top,0px);z-index:50;
     background:var(--nb);box-shadow:0 1px 0 var(--nhair);
     backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);
-    transition:background .35s ease,box-shadow .35s ease;
   }
+  header.nav.settled{transition:background .35s ease,box-shadow .35s ease}
   header.nav.light{
     --nb:rgba(251,251,253,.8); --nf:#1D1D1F; --nf2:#1D1D1F; --nseg:rgba(0,0,0,.06);
     --nsegon:#1D1D1F; --nsegonf:#F5F5F7; --nhair:rgba(0,0,0,.08); --nmenu:rgba(251,251,253,.97); --nmhair:var(--hair);
@@ -212,15 +212,9 @@
   /* motion: transform-only reveal from a visible resting state */
   .rv{transition:transform 1s cubic-bezier(.2,.7,.2,1)}
   .rv.pre{transform:translateY(36px)}
-  .hero-text > *{animation:up 1.1s cubic-bezier(.2,.7,.2,1) both}
-  .hero-text > :nth-child(2){animation-delay:.08s}
-  .hero-text > :nth-child(3){animation-delay:.16s}
-  .hero-text > :nth-child(4){animation-delay:.24s}
-  @keyframes up{from{transform:translateY(22px)}to{transform:none}}
   @media (prefers-reduced-motion:reduce){
     .rv,.work,.shot img,.pill{transition:none}
     .rv.pre{transform:none}
-    .hero-text > *{animation:none}
     .work:hover,.work:hover .shot img{transform:none}
   }
 </style>
@@ -542,12 +536,13 @@
     var ticking = false;
     function update(){
       ticking = false;
-      var y = nav.getBoundingClientRect().bottom - 1, dark = false;
+      var y = nav.getBoundingClientRect().bottom + 1, dark = false;
       for(var i=0;i<darks.length;i++){
         var r = darks[i].getBoundingClientRect();
         if(r.top <= y && r.bottom > y){ dark = true; break; }
       }
       nav.classList.toggle('light', !dark);
+      if(!nav.classList.contains('settled')) requestAnimationFrame(function(){ nav.classList.add('settled'); });
     }
     function req(){ if(!ticking){ ticking = true; requestAnimationFrame(update); } }
     window.addEventListener('scroll', req, {passive:true});
